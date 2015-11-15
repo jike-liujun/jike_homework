@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Web大前端课程表</title>
+    <style>
+    div#course {
+        margin-top: 100px;
+        font-family: Arial, Helvetica, "Microsoft YaHei", sans-serif;
+    }
+    
+    table {
+        text-align: center;
+        width: 800px;
+        height: 360px;
+        border-collapse: collapse;
+        color: #3E9D99;
+        border:2px solid #666;
+    }
+    
+    caption {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #555;
+    }
+    
+    th {
+        letter-spacing: 5px;
+        color: #007640;
+        font-size: 25px;
+    }
+    
+    td {
+        font-size: 20px;
+    }
+    
+    #week,
+    .daytime {
+        font-weight: bold;
+        color: #54AB4D;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="course">
+        <table border="2" align="center" cellspacing="0" cellpadding="2" background="water.jpg">
+            <caption>Web大前端课程表</caption>
+            <tr>
+                <th>项目</th>
+                <th colspan="5">上课</th>
+                <th colspan="2">休息</th>
+            </tr>
+            <tr id="week">
+                <td>星期</td>
+                <td>星期一</td>
+                <td>星期二</td>
+                <td>星期三</td>
+                <td>星期四</td>
+                <td>星期五</td>
+                <td>星期六</td>
+                <td>星期天</td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="daytime">上午</td>
+                <td>HTML5</td>
+                <td>Javascript</td>
+                <td>HTML5</td>
+                <td>Javascript</td>
+                <td>HTML5</td>
+                <td>LESS</td>
+                <td rowspan="4" class="daytime">休息</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>jQuery</td>
+                <td>CSS3</td>
+                <td>jQuery</td>
+                <td>SASS</td>
+                <td>FIS</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>Nodejs</td>
+                <td>Javascript</td>
+                <td>React</td>
+                <td>Nodejs</td>
+                <td>Grunt</td>
+            </tr>
+            <tr>
+                <td>jQuery</td>
+                <td>linux</td>
+                <td>jQuery</td>
+                <td>Web性能优化</td>
+                <td>Web安全</td>
+                <td>Gulp</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="daytime">下午</td>
+                <td>Bootstrap</td>
+                <td>AngularJS</td>
+                <td>jQuery</td>
+                <td>PHP</td>
+                <td>Bootstrap</td>
+                <td>Bower</td>
+                <td rowspan="2" class="daytime">休息</td>
+            </tr>
+            <tr>
+                <td>Ajax</td>
+                <td>jQuery UI</td>
+                <td>MySQL</td>
+                <td>MySQL</td>
+                <td>PHP</td>
+                <td>Yeoman</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>百度一下，你就知道</title>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #top {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    
+    #top a.top_nav {
+        color: #333;
+        font-weight: bold;
+        line-height: 24px;
+        margin-left: 10px;
+        font-size: 13px;
+        text-decoration: underline;
+    }
+    
+    #top a.top_nav:hover {
+        color: #1F2AF2;
+    }
+    
+    #middle {
+        text-align: center;
+        margin-top: 65px;
+    }
+    
+    #logo {
+        margin-bottom: 20px;
+    }
+    
+    #search_content {
+        border: 1px solid #b6b6b6;/* chrome中默认border宽度为2px */
+        background: #fff;
+        display: inline-block;
+        vertical-align: top;
+        padding: 1px;/* chrome中默认padding宽度为1px */
+        width: 539px;
+        height: 34px;
+        border-right-width: 0;
+    }
+    
+    #search_content:focus {
+        border: 1px solid #3385ff;
+        outline: none;
+        display: inline-block;
+        border-right-width: 0;
+    }
+    
+    #baidu {
+        width: 100px;
+        height: 38px;
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background: #3385ff;
+        border: none;
+    }
+    
+    #baidu:hover {
+        background: #317ef3;
+        box-shadow: 1px 1px 1px #ccc;
+        cursor: pointer;
+    }
+    
+    #bottom {
+        position: relative;
+        top: 250px;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    #about a {
+        color: #00C;
+        line-height: 24px;
+        margin-left: 10px;
+        text-decoration: underline;
+    }
+    #cp{
+        color: #333;
+        margin-top: -10px;
+    }
+    #cp a {
+        color: #333;
+    }
+
+    #cp .c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+    background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_15f748ea.gif);
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 页面顶部：右上角导航栏部分 -->
+    <div id="top">
+        <a href="http://news.baidu.com/" class="top_nav">新闻</a>
+        <a href="http://www.hao123.com/" class="top_nav">hao123</a>
+        <a href="http://map.baidu.com/" class="top_nav">地图</a>
+        <a href="http://v.baidu.com/" class="top_nav">视频</a>
+        <a href="http://tieba.baidu.com/" class="top_nav">贴吧</a>
+        <a href="https://www.baidu.com/" class="top_nav">登录</a>
+        <a href="https://www.baidu.com/" class="top_nav">设置</a>
+        <a href="http://www.baidu.com/more/" class="top_nav">更多产品</a>
+    </div>
+    <!-- 页面中部：Logo以及搜索框部分 -->
+    <div id="middle">
+        <div id="logo">
+            <img src="https://www.baidu.com/img/bd_logo1.png" alt="百度logo" width="270" height="129">
+        </div>
+        <div id="main_zone">
+            <form>
+                <input type="text" id="search_content"><input type="submit" value="百度一下" id="baidu">
+            </form>
+        </div>
+    </div>
+    <!-- 页面底部：百度简介、版权以及备案信息部分 -->
+    <div id="bottom">
+        <p id="about">
+            <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为首页</a>
+            <a href="http://home.baidu.com/">关于百度</a>
+            <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-homeprofile">About  Baidu</a>
+        </p>
+        <p id="cp">&copy;2015&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp;<a href="http://jianyi.baidu.com/">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i class="c-icon-icrlogo"></i></p>
+    </div>
+</body>
+
+</html>
