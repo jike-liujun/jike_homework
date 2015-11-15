@@ -1,0 +1,288 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+div {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+#wrapper{
+    min-width: 320px;
+}
+
+/*头部工具栏：百度首页、个人中心、搜索、订阅*/
+header #toolbar {
+    position: relative;
+    min-width: 320px;
+    height: 44px;
+    background-color: #3e98f0;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    background-image: url(../img/bg-news-logo.png);
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    background-size: 77px auto;
+}
+
+.toolbar-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.toolbar-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.toolbar-btn {
+    width: 34px;
+    height: 100%;
+    font-size: 15px;
+    line-height: 44px;
+    background-image: url(../img/bg-new-toolbar.png);
+    background-size: 40px 500px;
+}
+
+.bd-logo {
+    background-position: center 4px;
+    float: left;
+}
+
+.bd-login {
+    background-position: center -463px;
+    margin-left: 10px;
+    float: left;
+}
+
+.bd-search {
+    background-position: center -162px;
+    margin-right: 10px;
+    float: right;
+}
+
+.bd-subscribe {
+    background-position: center -107px;
+    float: right;
+}
+
+.divider {
+    height: 1px;
+    margin: 0 10px;
+    background-color: #5dabf0;
+}
+
+/*版块导航标签：推荐、百家、本地、图片、娱乐、社会、军事、科技、互联网、体育*/
+.nav-bar {
+    width: 100%;
+    min-width: 320px;
+    height: 74px;
+    background-color: #3e98f0;
+}
+
+.nav-bar ul li {
+    font-family: arial;
+    display: block;
+    -webkit-box-sizing: border-box;
+    list-style: none;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.nav-bar ul li span {
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+.nav-bar ul li span.current {
+    border-bottom: 1px solid #fff;
+}
+
+/*新闻内容显示区*/
+.content {
+    position: relative;
+    margin: 0 10px;
+}
+
+.content .box-wrapper {
+    position: relative;
+    width: 100%;
+    height: 91px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.box {
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    margin: 10px 0;
+}
+
+.box .news-image {
+    position: relative;
+    width: 97px;
+    height: 70px;
+    border: 1px solid #e8e8e8;
+    float: left;
+    -webkit-flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.box .news-info {
+    position: relative;
+    margin-left: 10px;
+    -webkit-flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.news-info .news-info-top {
+    position: relative;
+    height: 40px;
+}
+
+.news-title {
+    font-size: 16px;
+    line-height: 20px;
+    color: #262b31;
+}
+
+.news-info .news-info-bottom {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+}
+
+.news-time {
+    float: left;
+    font-size: 13px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+
+.news-source {
+    float: right;
+    background-color: #e02f2f;
+    border: 1px solid transparent;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 2px;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*【百度新闻】--本地*/
+.content .box-wrapper.local {
+    position: relative;
+    width: 100%;
+    height: 111px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.local .box {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    margin: 10px 0;
+}
+.local .box .news-info {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin:0;
+}
+.local .box .news-main {
+    font-size: 13px;
+    line-height: 13px;
+    height:13px;
+    margin-top:5px;
+    color: #b8bac0;
+    font-weight: 400;
+    padding:0;
+    overflow: hidden;
+}
+
+/*【百度新闻】--图片*/
+.picture-box {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.picture-box .news-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.picture-box .news-info {
+    position: relative;
+    width: 100%;
+    height: 32px;
+}
+
+.picture-box .news-title {
+    position: relative;
+    float:left;
+    line-height: 22px;
+    font-size: 15px;
+    color: #262b31;
+    padding: 5px 0;
+}
+.picture-box .news-like {
+    position: relative;
+    float:right;
+    width:48px;
+    height:22px;
+    line-height: 22px;
+    font-size: 15px;
+    text-align: right;
+    color: #262b31;
+    padding: 5px 0;
+    background: url(../img/bg-image-like.png) no-repeat;
+    background-size: 50px 150px;
+    -webkit-background-size: 50px 150px;
+    background-position: -6px -65px;
+}

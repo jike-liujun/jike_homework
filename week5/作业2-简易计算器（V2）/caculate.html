@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/calculate.css">
+    <script src="./js/calculate.js"></script>
+    <title>简易计算器逻辑实现</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="container">
+        <div class="row">
+            <div class="col-md-4" id="page">
+                <h2>简易计算器</h2>
+                <!-- x、y、操作符输入区域 -->
+                <div class="form-group" id="input-box">
+                    <label>输入参数x、y:</label><br>
+                    x:&nbsp;<input type="text" class="form-control" id="value-x" placeholder="x" autofocus onkeypress="shiftInput()">
+                    y:&nbsp;<input type="text" class="form-control" id="value-y" placeholder="y">
+                    <br><br>
+                    <label>选择操作符:</label><br>
+                    <button class="btn btn-success operater" id="plus" onclick="plus()">&#43;</button>
+                    <button class="btn btn-success operater" id="minus" onclick="minus()">&#45;</button>
+                    <button class="btn btn-success operater" id="times" onclick="times()">&times;</button>
+                    <button class="btn btn-success operater" id="divide" onclick="divide()">&divide;</button>
+                    <button class="btn btn-success operater" id="clear" onclick="clearValue()">C</button>
+                </div>
+                <!-- 计算结果输出区域 -->
+                <div class="form-group" id="output-box">
+                    <label>计算结果为:</label>
+                    <input type="text" class="form-control" id="outcome">
+                </div>             
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/jquery.dataTables.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/backend.css">
+    <title>【百度新闻】后台管理界面</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 页面顶部：百度Logo、标题 -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/baidu.png" alt="brand_logo">
+                    </a>
+                    <p class="nav navbar-nav page-title">【百度新闻】后台数据管理</p>
+                </div>
+            </div>
+        </nav>
+        <!-- 页面主体部分 -->
+        <div class="container-fluid" id="page">
+            <div class="row">
+                <!-- 左侧边栏：后台管理导航标签 -->
+                <div class="col-sm-2 col-md-1 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <button type="button" class="btn btn-primary column-title">版块精选</button>
+                        <li class="nav-tag active"><a href="#recommend">推荐</a></li>
+                        <li class="nav-tag"><a href="#allin">百家</a></li>
+                        <li class="nav-tag"><a href="#local">本地</a></li>
+                        <li class="nav-tag"><a href="#picture">图片</a></li>
+                        <li class="nav-tag"><a href="#entertainment">娱乐</a></li>
+                        <li class="nav-tag"><a href="#society">社会</a></li>
+                        <li class="nav-tag"><a href="#military">军事</a></li>
+                        <li class="nav-tag"><a href="#technology">科技</a></li>
+                        <li class="nav-tag"><a href="#internet">互联网</a></li>
+                        <li class="nav-tag"><a href="#sports">体育</a></li>
+                    </ul>
+                </div>
+                <!-- 主区域：数据表显示区 -->
+                <div class="col-sm-10 col-sm-offset-2 col-md-11 col-md-offset-1 main">
+                    <!-- 【推荐】版块 -->
+                    <div class="panel panel-info mypanel" id="recommend">
+                        <div class="panel-heading">【版块精选】——>【推荐】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success" id="add-recommend">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <table id="mytable1" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>新闻标题</th>
+                                        <th>新闻地址</th>
+                                        <th>发布时间</th>
+                                        <th>新闻来源</th>
+                                        <th>图片地址</th>
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>新闻标题</th>
+                                        <th>新闻地址</th>
+                                        <th>发布时间</th>
+                                        <th>新闻来源</th>
+                                        <th>图片地址</th>
+                                        <th>编辑</th>
+                                        <th>删除</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 【百家】版块 -->
+                    <div class="panel panel-info mypanel" id="allin">
+                        <div class="panel-heading">【版块精选】——>【百家】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-allin">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable2" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【本地】版块 -->
+                    <div class="panel panel-info mypanel" id="local">
+                        <div class="panel-heading">【版块精选】——>【本地】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-local">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable3" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>主要内容</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>新闻来源</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>主要内容</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>新闻来源</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【图片】版块 -->
+                    <div class="panel panel-info mypanel" id="picture">
+                        <div class="panel-heading">【版块精选】——>【图片】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-picture">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable4" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>图片地址</th>
+                                            <th>点赞个数</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>图片地址</th>
+                                            <th>点赞个数</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【娱乐】版块 -->
+                    <div class="panel panel-info mypanel" id="entertainment">
+                        <div class="panel-heading">【版块精选】——>【娱乐】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-entertainment">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable5" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【社会】版块 -->
+                    <div class="panel panel-info mypanel" id="society">
+                        <div class="panel-heading">【版块精选】——>【社会】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-society">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable6" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【军事】版块 -->
+                    <div class="panel panel-info mypanel" id="military">
+                        <div class="panel-heading">【版块精选】——>【军事】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-military">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable7" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【科技】版块 -->
+                    <div class="panel panel-info mypanel" id="technology">
+                        <div class="panel-heading">【版块精选】——>【科技】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-technology">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable8" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【互联网】版块 -->
+                    <div class="panel panel-info mypanel" id="internet">
+                        <div class="panel-heading">【版块精选】——>【互联网】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-internet">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable9" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 【体育】版块 -->
+                    <div class="panel panel-info mypanel" id="sports">
+                        <div class="panel-heading">【版块精选】——>【体育】</div>
+                        <div class="panel-body">
+                            <div id="first">
+                                <button type="button" class="btn btn-success left" id="add-sports">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            </div>
+                            <div id="tablebox">
+                                <table id="mytable10" class="display table table-bordered table-striped table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>新闻标题</th>
+                                            <th>新闻地址</th>
+                                            <th>发布时间</th>
+                                            <th>图片地址</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/jquery.dataTables.js"></script>
+    <script src="./js/backend.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+/* --------通用设置：字体样式、颜色及页面背景-------- */
+body{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+	background: url(../img/bg.jpg) repeat;
+	color:#FFF;
+}
+
+/* --------页面主体部分-------- */
+#page{
+	width:80%;
+}
+
+#page #login{
+    background: url("../img/lockscreen.png") repeat scroll rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+#page #login h2{
+	text-align: center;
+}
+
+/* 使用注册账号登录 */
+#page #login form button{
+	width: 100%;
+}
+#page #login form button a{
+	color:#FFF;
+}
+/* 使用已有社交账号登录 */
+#page #login .other{
+	margin-top: 15px;
+}
+#page #login .other .center{
+	text-align: center;
+	margin-bottom: 10px;
+}
+#page #login .other .social{
+	display: inline-block;
+	margin:0 5px;
+}
+#page #login .other .social img{
+	width:40px;
+	height:40px;
+}
+/* 一些帮助信息：忘记密码处理及新用户注册链接 */
+#page #login .login_help{
+	margin-bottom: 20px;
+}
+#page #login .login_help a{
+	color:#FFF;
+	font-size: 16px;
+	font-weight: 800;
+}
+#page #login .login_help a:hover{
+	color:#E64C35;
+}

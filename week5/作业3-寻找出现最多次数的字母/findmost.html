@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>找出最多的字母及序号</title>
+<script>
+// 定义冒泡排序函数bubbleSort（将数组arr按数字从大到小排序）
+function bubbleSort(arr) {
+    for (i = 0; i < arr.length; i++) {
+        for (j = i; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                var temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+// 定义函数findTimes，找出数组arr中每个位置字母的出现次数，并用出现次数组成新的数字数组times，顺序与原字母数组一一对应。
+function findTimes(arr) {
+    var times = new Array(arr.length); // 定义数字数组times，长度和数组arr相同
+    for (i = 0; i < arr.length; i++) {
+        var count = 0; // 变量count用于记录字母出现的次数，初始值为0
+        for (j = 0; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+            }
+        }
+        times[i] = count;
+    }
+    return times;
+}
+
+var myArray = ["a", "x", "b", "d", "m", "a", "k", "m", "p", "j", "a"]; //需要处理的对象数组myArray
+var test1 = findTimes(myArray); //变量test1，获取数字数组
+var test2 = findTimes(myArray); //变量test2，获取数字数组
+bubbleSort(test1); //用冒泡排序函数对数组test1排序
+var most = test1[0]; //找出最大的数字，序号0对应的数字即字母出现最多的次数
+
+// 输出出现最多次数的字母
+for (i = 0; i < myArray.length; i++) {
+    if (test2[i] == most) {
+        console.log("出现最多次数的字母是：" + myArray[i]);
+        break;
+    }
+}
+
+// 输出该字母的次数
+console.log("该字母总共出现了" + most + "次");
+
+// 输出该字母在字母数组中的序号
+console.log("该字母出现的顺序分别是：");
+for (i = 0; i < myArray.length; i++) {
+    if (test2[i] == most) {
+        console.log(i);
+    }
+}
+</script>
+
+<body>
+</body>

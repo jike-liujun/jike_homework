@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒模型</title>
+    <style type="text/css">
+    .container {
+        display: -webkit-flex;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .flexbox1,
+    .flexbox2,
+    .flexbox3 {
+        height: 100px;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        font-size: 2em;
+        color: #FFF;
+    }
+    
+    .flexbox1 {
+        background-color: #FFC700;
+    }
+    
+    .flexbox2 {
+        background-color: #00BDFF;
+    }
+    
+    .flexbox3 {
+        background-color: #7FBA00;
+    }
+    
+    /* 根据老师的修改建议：由于设定的样式相同，为精简代码，删除left1、middle1和right1三个id，将样式合并到test类 */
+    .test {
+        -webkit-flex: 1;
+    }
+
+    /*#left1 {
+        -webkit-flex: 1;
+    }
+    
+    #middle1 {
+        -webkit-flex: 1;
+    }
+    
+    #right1 {
+        -webkit-flex: 1;
+    }*/
+    
+    #left2 {
+        -webkit-flex: 3 3 200px;
+    }
+    
+    #middle2 {
+        -webkit-flex: 2 2 200px;
+    }
+    
+    #right2 {
+        -webkit-flex: 1 1 200px;
+    }
+    
+    #left3 {
+        width: 200px;
+        -webkit-flex-grow: 2;
+        -webkit-flex-shrink: 2;
+        -webkit-order: 3;
+    }
+    
+    #middle3 {
+        width: 200px;
+        -webkit-flex-grow: 0;/* 扩展比率默认为0(不可扩展)，可以不作设定 */
+        -webkit-flex-shrink: 0;/* 设定收缩比率为0(不可压缩)，默认为1 */
+        -webkit-order: 1;/* 设定排序在第一个位置 */
+    }
+    
+    #right3 {
+        width: 200px;
+        -webkit-flex-grow: 1;
+        -webkit-flex-shrink: 1;
+        -webkit-order: 2;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 方案一：三个矩形块按同等比率扩展和压缩 -->
+    <div class="container"><!-- 根据老师的修改建议：删除left1、middle1和right1三个id，同时添加test类 -->
+        <div class="flexbox1 test">Left1</div>
+        <div class="flexbox2 test">Middle1</div>
+        <div class="flexbox3 test">Right1</div>
+    </div>
+    <!-- 方案二：三个矩形块按不同比率扩展和压缩 -->
+    <div class="container">
+        <div id="left2" class="flexbox1">Left2</div>
+        <div id="middle2" class="flexbox2">Middle2</div>
+        <div id="right2" class="flexbox3">Right2</div>
+    </div>
+    <!-- 方案三：自定义排列顺序；其中一个矩形块不可被扩展和压缩，另外两个矩形块以不同的比率扩展和压缩 -->
+    <div class="container">
+        <div id="left3" class="flexbox1">Left3</div>
+        <div id="middle3" class="flexbox2">Middle3</div>
+        <div id="right3" class="flexbox3">Right3</div>
+    </div>
+</body>
+
+</html>

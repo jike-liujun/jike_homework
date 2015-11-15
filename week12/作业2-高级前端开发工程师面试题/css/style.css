@@ -1,0 +1,95 @@
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    color: #000;
+}
+
+header {
+    background-color: #eee;
+    text-align: center;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+.col-md-9>ul>li {
+    list-style: none;
+}
+
+.col-md-9 h2 {
+    text-align: center;
+}
+
+.col-md-9 ul div {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.col-md-9 ul div ul {
+    margin-left: -20px;
+}
+
+/*侧边导航栏*/  
+ul.nav-tabs {
+    width: 260px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    background-color: #eee;
+}
+
+ul.nav-tabs li.category>a {
+    font-size: 16px;
+}
+
+ul.nav-tabs li {
+    margin: 0;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+}
+
+ul.nav-tabs li:first-child {
+    border-top: none;
+}
+
+ul.nav li.active>a {
+    font-weight: bold;
+    border-radius: 0;
+}
+
+/*子菜单默认隐藏*/ 
+ul.nav ul.nav {
+    display: none;
+    border-radius: 0;
+}
+
+/*当滚动到该区域时显示对应子菜单*/
+ul.nav li.active ul.nav {
+    display: block;
+}
+
+ul.nav-tabs li a {
+    font-size: 12px;
+    margin: 0;
+    padding: 1px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+ul.nav-tabs li.active>a,
+ul.nav-tabs li.active>a:hover {
+    color: #fff;
+    border: 1px solid #337ab7;
+    background: rgba(51, 122, 183, 0.8);
+}
+
+/*侧边导航栏距离顶部偏移距离*/ 
+ul.nav-tabs.affix {
+    top: 20px;
+}

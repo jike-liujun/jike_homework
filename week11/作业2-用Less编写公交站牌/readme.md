@@ -1,0 +1,1 @@
+执行grunt命令，程序将自动监控./css/style.less文件的变化并适时编译为./css/style.css文件

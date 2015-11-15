@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web高级前端工程师面试题</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+    <div class="container">
+        <header class="navbar">
+            <h1>Web高级前端工程师面试题</h1>
+        </header>
+        <div class="row">
+            <div class="col-md-3" id="myScrollspy">
+                <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                    <li class="active category">
+                        <a href="#section-html">HTML</a>
+                        <ul class="nav">
+                            <li><a href="#html1">1. 常见的浏览器内核有哪些？</a></li>
+                            <li><a href="#html2">2. Doctype作用？标准模式与兼容模式各有什么区别?</a></li>
+                            <li><a href="#html3">3. HTML5为什么只需要写&lt;DOCTYPE HTML&gt;？</a></li>
+                            <li><a href="#html4">4. 行内元素有哪些？块级元素有哪些？空(void)元素有那些？</a></li>
+                            <li><a href="#html5">5. 页面导入样式时，使用link和@import有什么区别？</a></li>
+                            <li><a href="#html6">6. 介绍一下你对浏览器内核的理解？</a></li>
+                            <li><a href="#html7">7. 简述一下你对HTML语义化的理解？</a></li>
+                            <li><a href="#html8">8. 以前端角度出发做好SEO需要考虑什么？</a></li>
+                            <li><a href="#html9">9. html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分HTML和HTML5？</a></li>
+                            <li><a href="#html10">10. 请描述一下 cookies，sessionStorage和localStorage的区别？</a></li>
+                            <li><a href="#html11">11. 浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</a></li>
+                            <li><a href="#html12">12. iframe有那些缺点？</a></li>
+                            <li><a href="#html13">13. div+css的布局较table布局有什么优点？</a></li>
+                            <li><a href="#html14">14. 渐进增强和优雅降级之间的区别?</a></li>
+                            <li><a href="#html15">15. display:none与visibility:hidden的区别是什么？</a></li>
+                            <li><a href="#html16">16. 网页制作会用到的图片格式有哪些？</a></li>
+                            <li><a href="#html17">17. 谈谈对微格式的理解及如何使用？</a></li>
+                            <li><a href="#html18">18.  一个页面上有大量的图片（大型电商网站）加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验？</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#section-css">CSS</a>
+                        <ul class="nav">
+                            <li><a href="#css1">1. CSS选择器有哪些？哪些属性可以继承？优先级算法如何计算？CSS3新增伪类有那些？</a></li>
+                            <li><a href="#css2">2. 介绍一下CSS的盒子模型？</a></li>
+                            <li><a href="#css3">3. CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</a></li>
+                            <li><a href="#css4">4. 什么是Css Hack？ie6,7,8的hack分别是什么？</a></li>
+                            <li><a href="#css5">5. 行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</a></li>
+                            <li><a href="#css6">6. 什么是外边距重叠？重叠的结果是什么？</a></li>
+                            <li><a href="#css7">7. rgba( )和opacity的透明效果有什么不同？</a></li>
+                            <li><a href="#css8">8. 列出display的值和position的值，说明它们的作用</a></li>
+                            <li><a href="#css9">9. 写出几种IE BUG的解决方法</a></li>
+                            <li><a href="#css10">10. 为什么要初始化CSS样式？</a></li>
+                            <li><a href="#css11">11. 如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</a></li>
+                            <li><a href="#css12">12. Sass、LESS是什么？大家为什么要使用他们？</a></li>
+                            <li><a href="#css13">13. 什么是CSS清除浮动？以及清除浮动的技巧？</a></li>
+                            <li><a href="#css14">14. 知道css有个content属性吗？有什么作用？</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#section-js">Javascript</a>
+                        <ul class="nav">
+                            <li><a href="#js1">1. 介绍下js的基本数据类型</a></li>
+                            <li><a href="#js2">2. Javascript如何实现继承？</a></li>
+                            <li><a href="#js3">3. 说几条写JavaScript的基本规范？</a></li>
+                            <li><a href="#js4">4. eval是做什么的？</a></li>
+                            <li><a href="#js5">5. 写一个通用的事件侦听器函数</a></li>
+                            <li><a href="#js6">6.  Node.js的适用场景？</a></li>
+                            <li><a href="#js7">7. ["1", "2", "3"].map(parseInt) 答案是多少？</a></li>
+                            <li><a href="#js8">8. 谈谈对This的理解</a></li>
+                            <li><a href="#js9">9. 事件是？IE与火狐的事件机制有什么区别？如何阻止冒泡？</a></li>
+                            <li><a href="#js10">10. 当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？</a></li>
+                            <li><a href="#js11">11. 什么是Ajax和JSON，它们的优缺点？</a></li>
+                            <li><a href="#js12">12. new操作符具体干了什么呢?</a></li>
+                            <li><a href="#js13">13. Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</a></li>
+                            <li><a href="#js14">14. js延迟加载的方式有哪些？</a></li>
+                            <li><a href="#js15">15. 模块化怎么做？</a></li>
+                            <li><a href="#js16">16. Jquery与jQuery UI有啥区别？</a></li>
+                            <li><a href="#js17">17. jquery中如何将数组转化为json字符串，然后再转化回来？</a></li>
+                            <li><a href="#js18">18. 针对jQuery的优化方法？</a></li>
+                            <li><a href="#js19">19. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）</a></li>
+                            <li><a href="#js20">20. 想实现一个对页面某个节点的拖曳？如何做？（使用原生JS）</a></li>
+                            <li><a href="#js21">21. 在Javascript中什么是伪数组？如何将伪数组转化为标准数组？</a></li>
+                            <li><a href="#js22">22. apply和call方法的异同</a></li>
+                            <li><a href="#js23">23. 写代码，消除一个数组里面重复的元素？</a></li>
+                            <li><a href="#js24">24. 把两个数组合并，并删除第二个元素。</a></li>
+                            <li><a href="#js25">25. 怎样添加、移除、移动、复制、创建和查找节点（原生JS）</a></li>
+                            <li><a href="#js26">26. 看下列代码，将会输出什么?(变量声明提升)</a></li>
+                            <li><a href="#js27">27. 看下面代码，给出输出结果。</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <a href="#section-others">其它</a>
+                        <ul class="nav">
+                            <li><a href="#others1">1. 你有哪些性能优化的方法？</a></li>
+                            <li><a href="#others2">2. http状态码有那些？分别代表是什么意思？</a></li>
+                            <li><a href="#others3">3. 一个页面从输入URL到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</a></li>
+                            <li><a href="#others4">4. 对前端工程师这个职位是怎么样理解的？它的前景会怎么样？</a></li>
+                            <li><a href="#others5">5. 平时如何管理你的项目？</a></li>
+                            <li><a href="#others6">6. 前端开发面试知识点大纲</a></li>
+                            <li><a href="#others7">7. 作为一名前端工程师，无论工作年头长短都应该必须掌握的知识点</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <h2 id="section-html">HTML部分</h2>
+                <ul>
+                    <li id="html1">
+                        <h4>1. 常见的浏览器内核有哪些？</h4>
+                        <div>
+                            <ul>
+                                <li>IE:&nbsp;trident内核</li>
+                                <li>Firefox:&nbsp;gecko内核</li>
+                                <li>Safari:&nbsp;webkit内核</li>
+                                <li>Opera:&nbsp;以前是presto内核，Opera现已改用Google Chrome的Blink内核</li>
+                                <li>Chrome:&nbsp;Blink(基于webkit，<a href="http://baike.baidu.com/view/1369399.htm#1_5" target="_blank">Google与Opera Software共同开发</a>)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html2">
+                        <h4>2. Doctype作用？标准模式与兼容模式各有什么区别?</h4>
+                        <div>
+                            <ul>
+                                <li>&lt;!DOCTYPE&gt;声明位于位于HTML文档中的第一行，处于 &lt;html&gt; 标签之前，告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。</li>
+                                <li>标准模式的排版和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html3">
+                        <h4>3. HTML5为什么只需要写&lt;DOCTYPE HTML&gt;？</h4>
+                        <div>
+                            <ul>
+                                <li>HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；</li>
+                                <li>而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html4">
+                        <h4>4. 行内元素有哪些？块级元素有哪些？空(void)元素有那些？</h4>
+                        <div>
+                            首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+                            <br> （1）行内元素有：a b span img input select strong（强调的语气）
+                            <br>（2）块级元素有：div ul ol li dl dt dd h1-h6 p
+                            <br>（3）常见的空元素：&lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鲜为人知的是：&lt;area&gt; &lt;base&gt; &lt;col&gt; &lt;command&gt; &lt;embed&gt; &lt;keygen&gt; &lt;param&gt; &lt;source&gt; &lt;track&gt; &lt;wbr&gt;
+                        </div>
+                    </li>
+                    <li id="html5">
+                        <h4>5. 页面导入样式时，使用link和@import有什么区别？</h4>
+                        <div>
+                            （1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS;定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;
+                            <br>（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
+                            <br>（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;
+                        </div>
+                    </li>
+                    <li id="html6">
+                        <h4>6. 介绍一下你对浏览器内核的理解？</h4>
+                        <div>
+                            <b>主要分成两部分：</b>渲染引擎(layout engineer或Rendering Engine)和JS引擎。
+                            <ul>
+                                <li>
+                                    渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
+                                </li>
+                                <li>JS引擎：解析和执行javascript来实现网页的动态效果。</li>
+                            </ul>
+                            最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
+                        </div>
+                    </li>
+                    <li id="html7">
+                        <h4>7. 简述一下你对HTML语义化的理解？</h4>
+                        <div>
+                            <ul>
+                                <li>用正确的标签做正确的事情。</li>
+                                <li>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</li>
+                                <li>即使在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的;</li>
+                                <li>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</li>
+                                <li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html8">
+                        <h4>8. 以前端角度出发做好SEO需要考虑什么？</h4>
+                        <div>
+                            <ul>
+                                <li>
+                                    <b>了解搜索引擎如何抓取网页和如何索引网页</b>
+                                    <p>你需要知道一些搜索引擎的基本工作原理，各个搜索引擎之间的区别，搜索机器人（SE robot 或叫 web crawler）如何进行工作，搜索引擎如何对搜索结果进行排序等等。</p>
+                                </li>
+                                <li>
+                                    <b>Meta标签优化</b>
+                                    <p>主要包括主题（Title)，网站描述(Description)，和关键词（Keywords）。还有一些其它的隐藏文字比如Author（作者），Category（目录），Language（编码语种）等。</p>
+                                </li>
+                                <li>
+                                    <b>如何选取关键词并在网页中放置关键词</b>
+                                    <p>搜索就得用关键词。关键词分析和选择是SEO最重要的工作之一。首先要给网站确定主关键词（一般在5个上下），然后针对这些关键词进行优化，包括关键词密度（Density），相关度（Relavancy），突出性（Prominency）等等。</p>
+                                </li>
+                                <li>
+                                    <b>了解主要的搜索引擎</b>
+                                    <p>虽然搜索引擎有很多，但是对网站流量起决定作用的就那么几个。比如英文的主要有Google，Yahoo，Bing等；中文的有百度，搜狗，有道等。不同的搜索引擎对页面的抓取和索引、排序的规则都不一样。还要了解各搜索门户和搜索引擎之间的关系，比如AOL网页搜索用的是Google的搜索技术，MSN用的是Bing的技术。</p>
+                                </li>
+                                <li>
+                                    <b>主要的互联网目录</b>
+                                    <p>Open Directory自身不是搜索引擎，而是一个大型的网站目录，他和搜索引擎的主要区别是网站内容的收集方式不同。目录是人工编辑的，主要收录网站主页；搜索引擎是自动收集的，除了主页外还抓取大量的内容页面。</p>
+                                </li>
+                                <li>
+                                    <b>按点击付费的搜索引擎</b>
+                                    <p>搜索引擎也需要生存，随着互联网商务的越来越成熟，收费的搜索引擎也开始大行其道。最典型的有Overture和百度，当然也包括Google的广告项目Google Adwords。越来越多的人通过搜索引擎的点击广告来定位商业网站，这里面也大有优化和排名的学问，你得学会用最少的广告投入获得最多的点击。</p>
+                                </li>
+                                <li>
+                                    <b>搜索引擎登录</b>
+                                    <p>网站做完了以后，别躺在那里等着客人从天而降。要让别人找到你，最简单的办法就是将网站提交（submit）到搜索引擎。如果你的是商业网站，主要的搜索引擎和目录都会要求你付费来获得收录（比如Yahoo要299美元），但是好消息是（至少到目前为止）最大的搜索引擎Google目前还是免费，而且它主宰着60％以上的搜索市场。</p>
+                                </li>
+                                <li>
+                                    <b>链接交换和链接广泛度（Link Popularity）</b>
+                                    <p>网页内容都是以超文本（Hypertext）的方式来互相链接的，网站之间也是如此。除了搜索引擎以外，人们也每天通过不同网站之间的链接来Surfing（“冲浪”）。其它网站到你的网站的链接越多，你也就会获得更多的访问量。更重要的是，你的网站的外部链接数越多，会被搜索引擎认为它的重要性越大，从而给你更高的排名</p>
+                                </li>
+                                <li>
+                                    <b>合理的标签使用</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html9">
+                        <h4>9. html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分HTML和HTML5？</h4>
+                        <div>
+                            <ul>
+                                <li><b>HTML5现在已经不是SGML的子集，主要是关于图像，位置，存储，多任务等功能的增加。</b>
+                                    <ul>
+                                        <li>
+                                            新增的元素：
+                                            <ol>
+                                                <li>绘画 canvas;</li>
+                                                <li>用于媒介回放的 video 和 audio 元素;</li>
+                                                <li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;</li>
+                                                <li>sessionStorage 的数据在浏览器关闭后自动删除;</li>
+                                                <li>语意化更好的内容元素，比如 article、footer、header、nav、section;</li>
+                                                <li>表单控件，calendar、date、time、email、url、search;</li>
+                                                <li>新的技术webworker, websockt, Geolocation;</li>
+                                            </ol>
+                                        </li>
+                                        <li>移除的元素：</li>
+                                        <ol>
+                                            <li> 纯表现的元素：basefont，big，center，font, s，strike，tt，u;</li>
+                                            <li>对可用性产生负面影响的元素：frame，frameset，noframes；</li>
+                                        </ol>
+                                    </ul>
+                                </li>
+                                <li><b>支持HTML5新标签：</b>
+                                    <ul>
+                                        <li>IE8/IE7/IE6支持通过document.createElement方法产生的标签，可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式。</li>
+                                        <li>
+                                            <p>当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架
+                                                <br>&lt;!--[if lt IE 9]&gt;
+                                                <br>&lt;script&gt; src="http://html5shim.googlecode.com/svn/trunk/html5.js"&lt;/script&gt;
+                                                <br>&lt;![endif]--&gt;
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>如何区分？</b>
+                                    <p>DOCTYPE声明\新增的结构元素\功能元素</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html10">
+                        <h4>10. 请描述一下cookies，sessionStorage和localStorage的区别？</h4>
+                        <div>
+                            <ul>
+                                <li>
+                                    <b>功能描述：</b>
+                                    <p>（1）cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。 cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
+                                        <br>（2）sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。</p>
+                                </li>
+                                <li><b>存储大小：</b>
+                                    <ul>
+                                        <li>cookie数据大小不能超过4k。 </li>
+                                        <li>
+                                            sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><b>有效时间：</b>
+                                    <ul>
+                                        <li>localStorage 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据;</li>
+                                        <li>sessionStorage 数据在当前浏览器窗口关闭后自动删除;</li>
+                                        <li>cookie 设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html11">
+                        <h4>11. 浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</h4>
+                        <div>
+                            在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。 离线的情况下，浏览器就直接使用离线存储的资源。
+                        </div>
+                    </li>
+                    <li id="html12">
+                        <h4>12. iframe有那些缺点？</h4>
+                        <div>
+                            <ul>
+                                <li>iframe会阻塞主页面的Onload事件；
+                                </li>
+                                <li>搜索引擎的检索程序无法解读这种页面，不利于SEO;</li>
+                                <li>iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</li>
+                                使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript 动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html13">
+                        <h4>13. div+css的布局较table布局有什么优点？</h4>
+                        <div>
+                            <ul>
+                                <li>改版的时候更方便 只要改css文件。</li>
+                                <li>页面加载速度更快、结构化清晰、页面显示简洁。</li>
+                                <li>表现与结构相分离。</li>
+                                <li>易于优化（seo）搜索引擎更友好，排名更容易靠前。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html14">
+                        <h4>14. 渐进增强和优雅降级之间的区别?</h4>
+                        <div>
+                            <ul>
+                                <li><b>概念描述</b></li>
+                                <ul>
+                                    <li>渐进增强（progressive enhancement）</li>
+                                    针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+                                    <li>优雅降级（graceful degradation）</li>
+                                    一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。
+                                </ul>
+                                <li><b>区别</b></li>
+                                <ul>
+                                    <li>
+                                        优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。
+                                    </li>
+                                </ul>
+                                <li><b>观点</b></li>
+                                <ul>
+                                    <li>渐进增强</li>
+                                    “渐进增强”观点则认为应关注于内容本身。 内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。
+                                    <li>优雅降级</li>
+                                    “优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html15">
+                        <h4>15. display:none与visibility:hidden的区别是什么？</h4>
+                        <div>
+                            <ul>
+                                <li><strong>display:none</strong></li>
+                                隐藏对应的元素但不挤占该元素原来的空间。
+                                <li><strong>visibility:hidden</strong></li>
+                                隐藏对应的元素并且挤占该元素原来的空间。
+                                <hr> 即是，使用CSS display:none属性后，HTML元素（对象）的宽度、高度等各种属性值都将“丢失”;而使用visibility:hidden属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在。
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html16">
+                        <h4>16. 网页制作会用到的图片格式有哪些？</h4>
+                        <div>
+                            主要图片格式有：png-8，png-24，jpeg，gif，svg。
+                            <br>
+                            <b>但是上面的那些都不是面试官想要的最后答案。面试官希望听到是Webp，Apng。（是否有关注新技术，新鲜事物）</b>
+                            <br>
+                            <ul>
+                                <li>Webp：WebP格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay等知名网站已经开始测试并使用WebP格式。 在质量相同的情况下，WebP格式图像的体积要比JPEG格式图像小40%。
+                                </li>
+                                <li>Apng：全称是“Animated Portable Network Graphics”, 是PNG的位图动画扩展，可以实现png格式的动态图片效果。04年诞生，但一直得不到各大浏览器厂商的支持，直到日前得到 iOS safari 8的支持，有望代替GIF成为下一代动态图标准。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="html17">
+                        <h4>17. 谈谈对微格式的理解及如何使用？</h4>
+                        <div>
+                            <b>微格式（Microformats）：</b>是建立在已有的、被广泛采用的标准基础之上的一组简单的、开放的数据格式（microformats.org官方定义）。是把语义嵌入到HTML以便有助于分离式开发而制定的一些简单约定，是兼顾人机可读性设计的数据表达方式，对Web网页进行语义注解的方法。这种方法依托于标准的Web页面写作技术，例如，XHTML，这样引入语义信息对浏览器等所有现存的Web技术冲击最小。采用Microformat的 Web页面，在XHTML文档中给一些标签（Tag）增加一些属性（attribute），这些属性对信息的语义结构进行注解，处理XHTML文档的软件，例如，浏览器等，如果不认识这些属性可以跳过，并不造成任何不良影响。设计师和开发人员使用微格式来添加结构和针对网络发布有意义的信息，需要作的仅仅是为现有的(X)HTML元素添加元数据和其他属性。
+                            <br>
+                            <b>优点：</b>微格式按照某种已有的被广泛应用的标准，通过对内容块的语义标记，可以让外部应用程序、聚合程序和搜索引擎能够做以下事情：
+                            <br> （1）、在爬取Web内容时，能够更为准确地识别内容块的语义；
+                            <br>（2）、对内容进行操作，包括提供访问、校对，还可以将其转化成其他的相关格式，提供给外部程序和Web服务使用。
+                        </div>
+                    </li>
+                    <li id="html18">
+                        <h4>18. 一个页面上有大量的图片（大型电商网站）加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验？</h4>
+                        <div>
+                            <ul>
+                                <li>图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。</li>
+                                <li>如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。</li>
+                                <li>如果图片为css图片，可以使用CSSsprite，SVGsprite，Iconfont、Base64等技术。</li>
+                                <li>如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。</li>
+                                <li>如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <h2 id="section-css">CSS部分</h2>
+                <ul>
+                    <li id="css1">
+                        <h4>1. CSS选择器有哪些？哪些属性可以继承？优先级算法如何计算？CSS3新增伪类有那些？</h4>
+                        <div>
+                            <ul>
+                                <li><b>CSS选择器如下：</b></li>
+                                <ul>
+                                    <li>id选择器（#myid）</li>
+                                    <li>类选择器（.myclassname）</li>
+                                    <li>标签选择器（div, h1, p）</li>
+                                    <li>相邻选择器（h1 + p）</li>
+                                    <li>子选择器（ul&gt;li）</li>
+                                    <li>后代选择器（li a）</li>
+                                    <li>通配符选择器（ * ）</li>
+                                    <li>属性选择器（a[rel="external"]）</li>
+                                    <li>伪类选择器（a:hover, li:nth-child）</li>
+                                </ul>
+                                <li><b>哪些属性可以继承？</b></li>
+                                <ul>
+                                    <li>所有元素可继承：visibility和cursor。</li>
+                                    <li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。 终端块状元素可继承：text-indent和text-align。</li>
+                                    <li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+                                    <li>表格元素可继承：border-collapse。</li>
+                                </ul>
+                                <li><b>优先级算法如何计算？</b></li>
+                                !important > 内联 > id > class > tag
+                                <br> 一般而言，选择器越特殊，它的优先级越高。也就是选择器指向的越准确，它的优先级就越高。使用!important可以改变优先级别为最高，其次是内联style对象，然后是id > class >tag ，另外在同级样式按照申明的顺序后出现的样式具有高优先级。
+                                <li><b>CSS3新增伪类有那些？</b></li>
+                                <ul>
+                                    <li>p:first-of-type 选择属于其父元素的首个 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素的每个 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素。 </li>
+                                    <li>p:last-of-type 选择属于其父元素的最后 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素的每个 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素。</li>
+                                    <li>p:only-of-type 选择属于其父元素唯一的 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素的每个 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素。</li>
+                                    <li>p:only-child 选择属于其父元素的唯一子元素的每个 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素。</li>
+                                    <li>p:nth-child(2) 选择属于其父元素的第二个子元素的每个 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> 元素。</li>
+                                    <li>:enabled :disabled 控制表单控件的禁用状态。</li>
+                                    <li>:checked 单选框或复选框被选中。</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css2">
+                        <h4>2. 介绍一下CSS的盒子模型？</h4>
+                        <div>
+                            <ul>
+                                <b>盒子模型有两种：标准W3C盒子模型(标准盒模型)、IE盒子模型(怪异盒模型)</b>
+                                <li>标准盒模型：内容(content)、填充(padding)、边界(margin)、 边框(border).</li>
+                                <li>怪异盒模型：其content部分包含了 border 和 pading;</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css3">
+                        <h4>3. CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</h4>
+                        <div>
+                            <ul>
+                                <li><b>最基本的：</b></li>
+                                设置display属性为none，或者设置visibility属性为hidden
+                                <li><b>技巧性：</b></li>
+                                设置宽高为0，设置透明度为0，设置z-index位置在-1000
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css4">
+                        <h4>4. 什么是Css Hack？ie6,7,8的hack分别是什么？</h4>
+                        <div>
+                            针对不同的浏览器写不同的CSS code的过程，就是CSS hack。示例如下：
+                            <br>
+                            <pre>
+    #test {<br>
+    width:300px;<br> 
+    height:300px;<br>                             
+    background-color:blue;        /*firefox*/<br>          
+    background-color:red\9;       /*all ie*/<br>           
+    background-color:yellow\0;    /*ie8*/<br>           
+    +background-color:pink;       /*ie7*/<br>           
+    _background-color:orange;     /*ie6*/<br>    
+    } <br>      
+    :root #test { background-color:purple\9; }  /*ie9*/<br>    
+    @media all and (min-width:0px){<br> 
+    #test {background-color:black\0;} <br>
+    }  /*opera*/ <br>      
+    @media screen and (-webkit-min-device-pixel-ratio:0){<br>
+    #test {background-color:gray;} <br> 
+    }       /*chrome and safari*/
+    </pre>
+                        </div>
+                    </li>
+                    <li id="css5">
+                        <h4>5. 行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</h4>
+                        <div>
+                            <ul>
+                                <li>
+                                    <b>块级元素(block)特性：</b>
+                                    <p>总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示; 宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;</p>
+                                </li>
+                                <li>
+                                    <b>内联元素(inline)特性：</b>
+                                    <p>和相邻的内联元素在同一行; 宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变（也就是padding和margin的left和right是可以设置的），就是里面文字或图片的大小。</p>
+                                </li>
+                                <li>
+                                    <b>那么问题来了，浏览器还有默认的天生inline-block元素（拥有内在尺寸，可设置高宽，但不
+                                    会自动换行），有哪些？</b>
+                                    <p>答案：&lt;input&gt; 、 &lt;img&gt; 、&l t;button&gt; 、&lt;texterea&gt; 、&lt;label&gt;。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css6">
+                        <h4>6. 什么是外边距重叠？重叠的结果是什么？</h4>
+                        <div>
+                            <p>外边距重叠就是margin-collapse。</p>
+                            <p>在CSS当中，相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。</p>
+                            <b>折叠结果遵循下列计算规则：</b>
+                            <ol>
+                                <li>两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+                                </li>
+                                <li>两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+                                </li>
+                                <li>两个外边距一正一负时，折叠结果是两者的相加的和。</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li id="css7">
+                        <h4>7. rgba()和opacity的透明效果有什么不同？</h4>
+                        <div>
+                            rgba( )和opacity都能实现透明效果。
+                            <br>但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度;
+                            <br>而rgba( )只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）
+                        </div>
+                    </li>
+                    <li id="css8">
+                        <h4>8. 列出display的值和position的值，说明它们的作用</h4>
+                        <div>
+                            <ul>
+                                <li>
+                                    <b>display属性的值</b>
+                                    <ul>
+                                        <li>block 像块类型元素一样显示。</li>
+                                        <li>none 缺省值。像行内元素类型一样显示。</li>
+                                        <li>inline-block 像行内元素一样显示，但其内容像块类型元素一样显示。</li>
+                                        <li>list-item 像块类型元素一样显示，并添加样式列表标记。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>position属性的值</b>
+                                    <ul>
+                                        <li>absolute: 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。 </li>
+                                        <li>fixed:（老IE不支持）生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
+                                        <li>relative: 生成相对定位的元素，相对于其正常位置进行定位。</li>
+                                        <li>static: 默认值。没有定位，元素出现在正常的流中</li>
+                                        <li>inherit: 规定从父元素继承position属性的值。</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css9">
+                        <h4>9. 写出几种IE BUG的解决方法</h4>
+                        <div>
+                            <ul>
+                                <b><li>双边距BUG</li></b>
+                                <b>Bug描述：</b>
+                                <br>双边距的产生是由于float元素的浮动方向跟margin的方向一致导致的。也就是说float是left的时候，只有添加了margin-left才会产生双边距bug，要是添加了margin-right也不会产生这个bug。当有多个同行元素都浮动了，而且都有同方向的margin，则只有最靠近浮动方向的元素有双边距bug。
+                                <br>
+                                <b>解决这个bug有两个方法：</b>
+                                <br> 1. 给float的元素添加一个display：inline
+                                <br> 2. 给ie6写一个hack，其值是正常值的一半；这个方法不推荐，因为要加hack写法，但是这个正好能够说明这个bug的真实存在。
+                                <b><li>3像素BUG</li></b>
+                                <b>Bug描述：</b>
+                                <br>ie6下两个相邻的div之间会出现3个像素的bug，这个bug是在当对其中一个div使用了float，而另外一个没有使用时会出现。
+                                <br>
+                                <b>解决这个bug有两个方法：</b>
+                                <br> 1. 对另一个元素同时使用float；
+                                <br> 2. 为已经浮动的div添加一条语句：margin-right:-3px（比如向左浮动）;
+                                <b><li>超链接访问过后hover样式就不出现</li></b>
+                                <b>Bug描述：</b>
+                                <br>被点击访问过的超链接样式不再具有hover和active样式了。
+                                <br>
+                                <b>解决方法：</b>
+                                <br> 改变CSS属性的排列顺序: L-V-H-A（link visited hover active）。
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css10">
+                        <h4>10. 为什么要初始化CSS样式？</h4>
+                        <div>
+                            <ul>
+                                <li>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。</li>
+                                <li>当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</li>
+                                <li>最简单的初始化方法就是： * {padding: 0; margin: 0;} （不建议）</li>
+                                <li>淘宝的样式初始化：</li>
+                                <code>body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }</code>
+                                <br>
+                                <code>body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }</code>
+                                <br>
+                                <code>h1, h2, h3, h4, h5, h6{ font-size:100%; }</code>
+                                <br>
+                                <code>address, cite, dfn, em, var { font-style:normal; }</code>
+                                <br>
+                                <code>code, kbd, pre, samp { font-family:couriernew, courier, monospace; }</code>
+                                <br>
+                                <code>small{ font-size:12px; }</code>
+                                <br>
+                                <code>ul, ol { list-style:none; }</code>
+                                <br>
+                                <code>a { text-decoration:none; }</code>
+                                <br>
+                                <code>a:hover { text-decoration:underline; }</code>
+                                <br>
+                                <code>sup { vertical-align:text-top; }</code>
+                                <br>
+                                <code>sub{ vertical-align:text-bottom; }</code>
+                                <br>
+                                <code>legend { color:#000; }</code>
+                                <br>
+                                <code>fieldset, img { border:0; }</code>
+                                <br>
+                                <code>button, input, select, textarea { font-size:100%; }</code>
+                                <br>
+                                <code>table { border-collapse:collapse; border-spacing:0; }</code>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css11">
+                        <h4>11. 如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</h4>
+                        <div>
+                            多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms
+                        </div>
+                    </li>
+                    <li id="css12">
+                        <h4>12. Sass、LESS是什么？大家为什么要使用他们？</h4>
+                        <div>
+                            <ul>
+                                <li>Sass、LESS是什么？</li>
+                                <ul>
+                                    <li>它们都是CSS预处理器，是CSS上的一种抽象层。他们用一种特殊的语法/语言编译成CSS。 例如Less是一种动态样式语言. 将CSS赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。</li>
+                                </ul>
+                                <li>为什么要使用它们？</li>
+                                <ul>
+                                    <li>结构清晰，便于扩展。</li>
+                                    <li>可以方便地屏蔽浏览器私有语法差异。封装对浏览器语法差异的重复处理，减少无意义的机械劳动。</li>
+                                    <li>可以轻松实现多重继承。</li>
+                                    <li>完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css13">
+                        <h4>13. 什么是CSS清除浮动？以及清除浮动的技巧？</h4>
+                        <div>
+                            <ul>
+                                <li><b>什么是CSS清除浮动？</b></li>
+                                <p>在非IE浏览器（如Firefox）下，当容器的高度为auto，且容器的内容中有浮动（float为left或right）的元素，在这种情况下，容器的高度不能自动伸长以适应内容的高度，使得内容溢出到容器外面而影响（甚至破坏）布局的现象。这个现象叫浮动溢出，为了防止这个现象的出现而进行的CSS处理，就叫CSS清除浮动。</p>
+                                <li><b>清除浮动的方法</b></li>
+                                <ul>
+                                    <li>方法一：使用带clear属性的空元素</li>
+                                    <p>在浮动元素后使用一个空元素如&lt;div class="clear"&gt;&lt;/div&gt;，并在CSS中赋予.clear{clear:both;}属性即可清理浮动。亦可使用&lt;br class="clear" /&gt;或&lt;hr class="clear" /&gt;来进行清理。</p>
+                                    <li>方法二：使用CSS的overflow属性</li>
+                                    <p>给浮动元素的容器添加overflow:hidden;或overflow:auto;可以清除浮动，另外在 IE6 中还需要触发 hasLayout ，例如为父元素设置容器宽高或设置 zoom:1。</p>
+                                    <p>在添加overflow属性后，浮动元素又回到了容器层，把容器高度撑起，达到了清理浮动的效果。</p>
+                                    <li>方法三：给浮动的元素的容器添加浮动</li>
+                                    <p>给浮动元素的容器也添加上浮动属性即可清除内部浮动，但是这样会使其整体浮动，影响布局，不推荐使用。</p>
+                                    <li>方法四：使用邻接元素处理</li>
+                                    <p>什么都不做，给浮动元素后面的元素添加clear属性。</p>
+                                    <li>方法五：使用CSS的:after伪元素</li>
+                                    <p>结合 :after 伪元素（注意这不是伪类，而是伪元素，代表一个元素之后最近的元素）和 IEhack ，可以完美兼容当前主流的各大浏览器，这里的 IEhack 指的是触发 hasLayout。</p>
+                                    <p>给浮动元素的容器添加一个clearfix的class，然后给这个class添加一个:after伪元素实现元素末尾添加一个看不见的块元素（Block element）清理浮动。</p>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="css14">
+                        <h4>14. 知道css有个content属性吗？有什么作用？</h4>
+                        <div>
+                            css的content属性专门应用在before/after伪元素上，用于来插入生成内容。
+                            <br> 最常见的应用是利用伪类清除浮动。例如：
+                            <br>//一种常见利用伪类清除浮动的代码
+                            <br>
+                            <code>.clearfix:after {</code>
+                            <br>
+                            <code>content:"."; </code>//这里利用到了content属性
+                            <br>
+                            <code>display:block; </code>
+                            <br>
+                            <code>height:0; </code>
+                            <br>
+                            <code>visibility:hidden; </code>
+                            <br>
+                            <code>clear:both; } </code>
+                            <br>         after伪元素通过 content在元素的后面生成了内容为一个点的块级元素，再利用clear:both清除浮动。
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <h2 id="section-js">Javascript部分</h2>
+                <ul>
+                    <li id="js1">
+                        <h4>1. 介绍下js的基本数据类型</h4>
+                        <div>
+                            number,string,boolean,object(Array,Date,RegExp,Function),undefined
+                        </div>
+                    </li>
+                    <li id="js2">
+                        <h4>2. Javascript如何实现继承？</h4>
+                        <div>
+                            通过原型和构造器
+                        </div>
+                    </li>
+                    <li id="js3">
+                        <h4>3. 说几条写JavaScript的基本规范？</h4>
+                        <div>
+                            <ol>
+                                <li>不要在同一行声明多个变量。</li>
+                                <li>请使用 ===/!==来比较true/false或者数值</li>
+                                <li>使用对象字面量替代new Array这种形式</li>
+                                <li>不要使用全局函数。</li>
+                                <li>Switch语句必须带有default分支</li>
+                                <li>函数不应该有时候有返回值，有时候没有返回值。</li>
+                                <li>For循环必须使用大括号</li>
+                                <li>If语句必须使用大括号</li>
+                                <li>for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li id="js4">
+                        <h4>4. eval是做什么的？</h4>
+                        <div>
+                            它的功能是把对应的字符串解析成JS代码并运行；
+                            <br> 应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+                        </div>
+                    </li>
+                    <li id="js5">
+                        <h4>5. 写一个通用的事件侦听器函数</h4>
+                        <div>
+                            <pre>
+    // event(事件)工具集，来源：github.com/markyun
+    markyun.Event = {
+        // 页面加载完成后
+        readyEvent : function(fn) {
+            if (fn==null) {
+                fn=document;
+            }
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = fn;
+            } else {
+                window.onload = function() {
+                    oldonload();
+                    fn();
+                };
+            }
+        },
+        // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+        // 参数： 操作的元素,事件名称 ,事件处理程序
+        addEvent : function(element, type, handler) {
+            if (element.addEventListener) {
+                //事件类型、需要执行的函数、是否捕捉
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + type, function() {
+                    handler.call(element);
+                });
+            } else {
+                element['on' + type] = handler;
+            }
+        },
+        // 移除事件
+        removeEvent : function(element, type, handler) {
+            if (element.removeEventListener) {
+                element.removeEventListener(type, handler, false);
+            } else if (element.datachEvent) {
+                element.detachEvent('on' + type, handler);
+            } else {
+                element['on' + type] = null;
+            }
+        },
+        // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+        stopPropagation : function(ev) {
+            if (ev.stopPropagation) {
+                ev.stopPropagation();
+            } else {
+                ev.cancelBubble = true;
+            }
+        },
+        // 取消事件的默认行为
+        preventDefault : function(event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        },
+        // 获取事件目标
+        getTarget : function(event) {
+            return event.target || event.srcElement;
+        },
+        // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+        getEvent : function(e) {
+            var ev = e || window.event;
+            if (!ev) {
+                var c = this.getEvent.caller;
+                while (c) {
+                    ev = c.arguments[0];
+                    if (ev && Event == ev.constructor) {
+                        break;
+                    }
+                    c = c.caller;
+                }
+            }
+            return ev;
+        }
+    };
+                            </pre>
+                        </div>
+                    </li>
+                    <li id="js6">
+                        <h4>6. Node.js的适用场景？</h4>
+                        <div>
+                            高并发、聊天、实时消息推送
+                        </div>
+                    </li>
+                    <li id="js7">
+                        <h4>7. ["1", "2", "3"].map(parseInt) 答案是多少？</h4>
+                        <div>
+                            [1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix)，其中 radix 表示解析时用的基数。map 传了 3 个 (element, index, array)，对应的 radix 不合法导致解析失败。
+                        </div>
+                    </li>
+                    <li id="js8">
+                        <h4>8. 谈谈对This的理解</h4>
+                        <div>
+                            <p>this是js的一个关键字，随着函数使用场合不同，this的值会发生变化。</p>
+                            <p>但是有一个总原则，那就是this指的是调用函数的那个对象。</p>
+                            <p>this一般情况下：是全局对象Global。 作为方法调用，那么this就是指这个对象</p>
+                        </div>
+                    </li>
+                    <li id="js9">
+                        <h4>9. 事件是？IE与火狐的事件机制有什么区别？如何阻止冒泡？</h4>
+                        <div>
+                            <p>1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。</p>
+                            <p>2. 事件处理机制：IE是事件冒泡、火狐是 事件捕获；</p>
+                            <p>3. ev.stopPropagation();</p>
+                        </div>
+                    </li>
+                    <li id="js10">
+                        <h4>10. 当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？</h4>
+                        <div>
+                            <ol>
+                                <li>&nbsp;直接在DOM里绑定事件：&lt;div&nbsp;onclick=”test()”&gt;&lt;/div&gt;</li>
+                                <li>&nbsp;在JS里通过onclick绑定：xxx.onclick&nbsp;=&nbsp;test</li>
+                                <li>&nbsp;通过事件添加进行绑定：addEventListener(xxx,&nbsp;‘click’,&nbsp;test)</li>
+                            </ol>
+                            <b>那么问题来了，Javascript的事件流模型都有什么？</b>
+                            <ul>
+                                <li>“事件冒泡”：事件开始由最具体的元素接受，然后逐级向上传播</li>
+                                <li>“事件捕捉”：事件由最不具体的节点先接收，然后逐级向下，一直到最具体的</li>
+                                <li>“DOM事件流”：三个阶段：事件捕捉，目标阶段，事件冒泡</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="js11">
+                        <h4>11. 什么是Ajax和JSON，它们的优缺点？</h4>
+                        <div>
+                            <ul>
+                                <li>Ajax是异步JavaScript和XML，用于在Web页面中实现异步数据交互。</li>
+                                <ul>
+                                    <li>优点：</li>
+                                    <ol>
+                                        <li>可以使得页面不重载全部内容的情况下加载局部内容，降低数据传输量</li>
+                                        <li>避免用户不断刷新或者跳转页面，提高用户体验</li>
+                                    </ol>
+                                    <li>缺点：</li>
+                                    <ol>
+                                        <li>对搜索引擎不友好</li>
+                                        <li>要实现ajax下的前后退功能成本较大</li>
+                                        <li>可能造成请求数的增加</li>
+                                        <li>跨域问题限制</li>
+                                    </ol>
+                                </ul>
+                                <li>JSON是一种轻量级的数据交换格式，ECMA的一个子集</li>
+                                <p>优点：轻量级、占用带宽小、易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组、对象、字符串、数字）</p>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="js12">
+                        <h4>12. new操作符具体干了什么呢?</h4>
+                        <div>
+                            <ol>
+                                <li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</li>
+                                <li>属性和方法被加入到 this 引用的对象中。</li>
+                                <li>新创建的对象由 this 所引用，并且最后隐式的返回this 。</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li id="js13">
+                        <h4>13. Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</h4>
+                        <div>
+                            hasOwnProperty
+                        </div>
+                    </li>
+                    <li id="js14">
+                        <h4>14. js延迟加载的方式有哪些？</h4>
+                        <div>
+                            defer和async、动态创建DOM方式（用得最多）、按需异步载入js
+                        </div>
+                    </li>
+                    <li id="js15">
+                        <h4>15. 模块化怎么做？</h4>
+                        <div>
+                            <p>立即执行函数,不暴露私有成员。例如：</p>
+                            <pre>
+    var module1 = (function(){
+　　　　var _count = 0;
+　　　　var m1 = function(){
+　　　　　　//...
+　　　　};
+　　　　var m2 = function(){
+　　　　　　//...
+　　　　};
+　　　　return {
+　　　　　　m1 : m1,
+　　　　　　m2 : m2
+　　　　};
+    })();
+                            </pre>
+                        </div>
+                    </li>
+                    <li id="js16">
+                        <h4>16. Jquery与jQuery UI 有啥区别？</h4>
+                        <div>
+                            <ul>
+                                <li>jQuery是一个js库，主要提供的功能是选择器，属性修改和事件绑定等等。</li>
+                                <li>jQuery UI则是在jQuery的基础上，利用jQuery的扩展性，设计的插件。 提供了一些常用的界面元素，诸如对话框、拖动行为、改变大小行为等等
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="js17">
+                        <h4>17. jquery中如何将数组转化为json字符串，然后再转化回来？</h4>
+                        <div>
+                            <p>jQuery中没有提供这个功能，所以你需要先编写两个jQuery的扩展：</p>
+                            <pre>
+    $.fn.stringifyArray = function(array) {
+        return JSON.stringify(array)
+    }
+
+    $.fn.parseArray = function(array) {
+        return JSON.parse(array)
+    }
+
+    然后调用：
+    $("").stringifyArray(array)
+                            </pre>
+                        </div>
+                    </li>
+                    <li id="js18">
+                        <h4>18. 针对 jQuery 的优化方法？</h4>
+                        <div>
+                            <ul>
+                                <li>基于Class的选择性的性能相对于Id选择器开销很大，因为需遍历所有DOM元素。</li>
+                                <li>频繁操作的DOM，先缓存起来再操作。用Jquery的链式调用更好。
+                                    <br>比如：var str=$("a").attr("href");</li>
+                                <li>
+                                    for (var i = size; i
+                                    < arr.length; i++) {} <br>
+                                        for 循环每一次循环都查找了数组 (arr) 的.length 属性，在开始循环的时候设置一个变量来存储这个数字，可以让循环跑得更快：
+                                        <br> for (var i = size, length = arr.length; i
+                                        < length; i++) {} </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li id="js19">
+                            <h4>19. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）</h4>
+                            <div>
+                                通过判断Global对象是否为window，如果不为window，则当前脚本没有运行在浏览器中。
+                            </div>
+                        </li>
+                        <li id="js20">
+                            <h4>20. 想实现一个对页面某个节点的拖曳？如何做？（使用原生JS）</h4>
+                            <div>
+                                <p>回答出概念即可，下面是几个要点:</p>
+                                <ul>
+                                    <li>给需要拖拽的节点绑定mousedown, mousemove, mouseup事件</li>
+                                    <li>mousedown事件触发后，开始拖拽</li>
+                                    <li>mousemove时，需要通过event.clientX和clientY获取拖拽位置，并实时更新位置</li>
+                                    <li>mouseup时，拖拽结束</li>
+                                    <li>需要注意浏览器边界的情况</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="js21">
+                            <h4>21. 在Javascript中什么是伪数组？如何将伪数组转化为标准数组？</h4>
+                            <div>
+                                伪数组（类数组）：无法直接调用数组方法或期望length属性有什么特殊的行为，但仍可以对真正数组遍历方法来遍历它们。典型的是函数的argument参数，还有像调用getElementsByTagName,document.childNodes之类的,它们都返回NodeList对象都属于伪数组。可以使用Array.prototype.slice.call(fakeArray)将数组转化为真正的Array对象。
+                            </div>
+                        </li>
+                        <li id="js22">
+                            <h4>22. apply和call方法的异同</h4>
+                            <div>
+                                <p>对于apply和call两者在作用上是相同的，即是调用一个对象的一个方法，以另一个对象替换当前对象。将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。</p>
+                                <p>但两者在参数上有区别的。对于第一个参数意义都一样，但对第二个参数： apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。 如 func.call(func1,var1,var2,var3)对应的apply写法为：func.apply(func1,[var1,var2,var3]) 。</p>
+                            </div>
+                        </li>
+                        <li id="js23">
+                            <h4>23. 写代码，消除一个数组里面重复的元素？</h4>
+                            <div>
+                                <pre>
+    var arr=[1,2,3,3,4,4,5,5,6,1,9,3,25,4];
+    function deRepeat(){
+        var newArr=[];
+        var obj={};
+        var index=0;
+        var l=arr.length;
+        for(var i=0;i&lt;l;i++){
+            if(obj[arr[i]]==undefined)
+              {
+                obj[arr[i]]=1;
+                newArr[index++]=arr[i];
+              }
+            else if(obj[arr[i]]==1)
+              continue;
+        }
+        return newArr;
+    }
+    var newArr2=deRepeat(arr);
+    alert(newArr2); 
+    //输出1,2,3,4,5,6,9,25
+                            </pre>
+                            </div>
+                        </li>
+                        <li id="js24">
+                            <h4>24. 把两个数组合并，并删除第二个元素。</h4>
+                            <div>
+                                <pre>
+    var array1 = ['a','b','c'];
+    var bArray = ['d','e','f'];
+    var cArray = array1.concat(bArray);
+    cArray.splice(1,1);</pre>
+                            </div>
+                        </li>
+                        <li id="js25">
+                            <h4>25. 怎样添加、移除、移动、复制、创建和查找节点（原生JS）</h4>
+                            <div>
+                                <ul>
+                                    <li><b>创建新节点</b></li>
+                                    createDocumentFragment()&nbsp;&nbsp;//创建一个DOM片段
+                                    <br> createElement()&nbsp;&nbsp;//创建一个具体的元素
+                                    <br> createTextNode()&nbsp;&nbsp;//创建一个文本节点
+                                    <li><b>添加、移除、替换、插入</b></li>
+                                    appendChild()&nbsp;&nbsp;//添加
+                                    <br> removeChild()&nbsp;&nbsp;//移除
+                                    <br> replaceChild()&nbsp;&nbsp;//替换
+                                    <br> insertBefore()&nbsp;&nbsp;//插入
+                                    <li><b>查找</b></li>
+                                    getElementsByTagName()&nbsp;&nbsp;//通过标签名称
+                                    <br> getElementsByName()&nbsp;&nbsp;//通过元素的Name属性的值
+                                    <br> getElementById()&nbsp;&nbsp;//通过元素Id，唯一性
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="js26">
+                            <h4>26. 看下列代码，将会输出什么?(变量声明提升)</h4>
+                            <div>
+                                <pre>
+    function foo(){
+        console.log(foo);
+        var foo = 2;
+        console.log(foo);
+    }
+    foo();</pre>
+                                <p>输出undefined 和 2。上面代码相当于：</p>
+                                <pre>
+    function foo(){
+        var foo;
+        console.log(foo); 
+    //undefined
+        foo = 2;
+        console.log(foo); 
+    // 2;   
+    }
+    foo();</pre>
+                                <p>函数声明与变量声明会被JavaScript引擎隐式地提升到当前作用域的顶部，但是只提升名称不会提升赋值部分。</p>
+                            </div>
+                        </li>
+                        <li id="js27">
+                            <h4>27. 看下面代码，给出输出结果。</h4>
+                            <div>
+                                <pre>
+    for(var i=1;i&lt;=3;i++){
+      setTimeout(function(){
+          console.log(i);    
+      },0);  
+    };</pre>
+                                <p>答案：4 4 4。</p>
+                                <p>原因：Javascript事件处理器在线程空闲之前不会运行。追问，如何让上述代码输出1 2 3？</p>
+                                <pre>
+    for(var i=1;i<=3;i++){
+       setTimeout((function(a){  
+       //改成立即执行函数
+           console.log(a);    
+       })(i),0);  
+    };         
+//输出1 2 3</pre>
+                            </div>
+                        </li>
+                </ul>
+                <hr>
+                <h2 id="section-others">其它部分</h2>
+                <ul>
+                    <li id="others1">
+                        <h4>1. 你有哪些性能优化的方法？</h4>
+                        <div>
+                            <ul>
+                                <li>减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。</li>
+                                <li>前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数</li>
+                                <li>用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。</li>
+                                <li>当需要设置的样式很多时设置className而不是直接操作style。</li>
+                                <li>避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。</li>
+                                <li>少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。</li>
+                                <li>图片预加载，将样式表放在顶部，将脚本放在底部加上时间戳。</li>
+                                <li>避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢。 对普通的网站有一个统一的思路，就是尽量向前端优化、减少数据库操作、减少磁盘IO。向前端优化指的是，在不影响功能和体验的情况下，能在浏览器执行的不要在服务端执行，能在缓存服务器上直接返回的不要到应用服务器，程序能直接取得的结果不要到外部取得，本机内能取得的数据不要到远程取，内存能取到的不要到磁盘取，缓存中有的不要去数据库查询。减少数据库操作指减少更新次数、缓存结果减少查询次数、将数据库执行的操作尽可能的让你的程序完成（例如join查询），减少磁盘IO指尽量不使用文件系统作为缓存、减少读写文件次数等。程序优化永远要优化慢的部分，换语言是无法“优化”的。
+                                </li>
+                                <br>
+                                <p><b>详见雅虎性能优化军规：</b><a href="https://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a></p>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="others2">
+                        <h4>2. http状态码有那些？分别代表是什么意思？</h4>
+                        <div>
+                            <ul>
+                                <li>100-199 用于指定客户端应相应的某些动作。</li>
+                                <li>200-299 用于表示请求成功。</li>
+                                <li>300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。</li>
+                                <li>400-499 用于指出客户端的错误。400-语义有误，当前请求无法被服务器理解。401-当前请求需要用户验证 403-服务器已经理解请求，但是拒绝执行它。404-文件找不到。</li>
+                                <li>500-599 用于支持服务器错误。 503 – 服务不可用。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="others3">
+                        <h4>3. 一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</h4>
+                        <div>
+                            查找浏览器缓存
+                            <br> DNS解析、查找该域名对应的IP地址、重定向（301）、发出第二个GET请求
+                            <br> 进行HTTP协议会话
+                            <br> 客户端发送报头(请求报头)
+                            <br> 服务器回馈报头(响应报头)
+                            <br> html文档开始下载
+                            <br> 文档树建立，根据标记请求所需指定MIME类型的文件
+                            <br> 文件显示
+                            <br> 浏览器这边做的工作大致分为以下几步：
+                            <br> (1)加载：根据请求的URL进行域名解析，向服务器发起请求，接收文件（HTML、JS、CSS、图象等）。
+                            <br> (2)解析：对加载到的资源（HTML、JS、CSS等）进行语法解析，建议相应的内部数据结构（比如HTML的DOM树，JS的（对象）属性表，CSS的样式规则等等）
+                        </div>
+                    </li>
+                    <li id="others4">
+                        <h4>4. 对前端工程师这个职位是怎么样理解的？它的前景会怎么样？</h4>
+                        <div>
+                            <ul>
+                                <li>前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近。前端的能力就是实现界面交互，提升用户体验，能让产品从90分进化到100分，甚至更好。</li>
+                                <ul>
+                                    <b>前端工程师的主要工作内容是：</b>
+                                    <li>参与项目，快速高质量完成实现效果图，精确到1px；</li>
+                                    <li>与团队成员，UI设计，产品经理的沟通；</li>
+                                    <li>做好的页面结构，页面重构和用户体验；</li>
+                                    <li>处理hack，兼容、写出优美的代码格式；</li>
+                                    <li>针对服务器的优化、拥抱最新前端技术。</li>
+                                    <li>有了Node.js，前端可以实现服务端的一些事情</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="others5">
+                        <h4>5. 平时如何管理你的项目？</h4>
+                        <div>
+                            <ul>
+                                <li>先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；</li>
+                                <li>编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；</li>
+                                <li>标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；</li>
+                                <li>页面进行标注（例如 页面 模块 开始和结束）；</li>
+                                <li>CSS跟HTML分文件夹并行存放，命名都得统一（例如style.css）；</li>
+                                <li>JS分文件夹存放，命名以该JS功能为准的英文翻译；</li>
+                                <li>图片采用整合的images.png png8格式文件使用，尽量整合在一起使用方便将来的管理。</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="others6">
+                        <h4>6. 前端开发面试知识点大纲</h4>
+                        <div>
+                            <ul>
+                                <li><b>HTML&CSS：</b></li>
+                                <p>对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级及使用、HTML5、CSS3、移动端适应 </p>
+                                <li><b>JavaScript：</b></li>
+                                <p>数据类型、面向对象、继承、闭包、插件、作用域、跨域、原型链、模块化、自定义事件、内存泄漏、事件机制、异步装载回调、模板引擎、Nodejs、JSON、ajax等。</p>
+                                <li><b>其他：</b></li>
+                                <p>HTTP、安全、正则、优化、重构、响应式、移动端、团队协作、可维护、SEO、UED、架构、职业生涯 </p>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="others7">
+                        <h4>7. 作为一名前端工程师，无论工作年头长短都应该必须掌握的知识点</h4>
+                        <div>
+                            <ol>
+                                <li>DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。</li>
+                                <li>DOM操作 ——如何添加、移除、移动、复制、创建和查找节点等。</li>
+                                <li>事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</li>
+                                <li>XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。</li>
+                                <li>严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。</li>
+                                <li>盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型</li>
+                                <li>块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们</li>
+                                <li>浮动元素 ——怎么使用它们、它们有什么问题以及怎么解决这些问题。</li>
+                                <li>HTML与XHTML ——二者有什么区别，你觉得应该使用哪一个并说出理由。</li>
+                                <li>JSON —— 作用、用途、设计结构。</li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

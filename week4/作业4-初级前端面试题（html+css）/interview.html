@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+    <link rel="stylesheet" href="./css/interview.css">
+    <title>初级前端面试题(HTML+CSS)</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="page">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2" id="main">
+                <h2 id="html">初级前端面试题(HTML+CSS部分)</h2>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                  1. 对WEB标准以及W3C的理解与认识
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                标签闭合、标签小写、不乱嵌套，提高搜索机器人搜索几率，使用外链css和js脚本、结构行为表现的分离，文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问，更少的代码和组件、容易维护、改版方便、不需要变动页面内容，提供打印版本而不需要复制内容、提高网站易用性。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
+                                  2. xhtml和html有什么区别？
+                                </a>
+                             </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的标记语言，看起来与HTML有些相象，只有一些小的但重要的区别，XHTML就是一个扮演着类似HTML的角色的可扩展标记语言（XML）。所以，本质上说，XHTML是一个过渡技术，结合了部分XML的强大功能及大多数HTML的简单特性。 两者最主要的不同：
+                                <ul>
+                                    <li>XHTML 元素必须被正确地嵌套。</li>
+                                    <li>XHTML元素必须被关闭。</li>
+                                    <li>XHTML标签名必须用小写字母。</li>
+                                    <li>XHTML 文档必须拥有根元素。</li>
+                                </ul>
+                                HTML允许一些不规范的写法，如： HTML下可以写 &lt;br&gt;；而XHTML有严格限制，每个标签都得关闭，要写成 &lt;br /&gt;。 HTML &lt;table width=100&gt;，可以不写引号&quot;&quot;，而XHTML必须正确的写成： &lt;table width=&quot;100&quot;&gt;。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapseThree">
+                                  3. web标准网站有那些优点？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ol>
+                                    <li>Web标准网站结构和布局分离，使网站的访问和维护更加容易。</li>
+                                    <li>Web标准网站结构，布局以及页面访问都标准化，使网站能在更多的web标准设备中访问，兼容性更好。</li>
+                                    <li>Web标准网站语义化更好，语义化的HTML不仅对用户友好，对搜索引擎也友好。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                  4. CSS引入的方式有哪些? link和@import的区别?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <strong>引入css的方式有下面四种：</strong>
+                                <br> （1）使用style属性，将css样式直接定义在HTML元素内部。
+                                <br> （2）使用style标签，将css代码放在&lt;head&gt;标签内部。
+                                <br> （3）使用link标签，引入一个外部css文件。
+                                <br> （4）使用@import在style标签内或css文件内引入：@import url(CSS文件路径地址)。
+                                <br>
+                                <strong>Link和@import区别：</strong>
+                                <br> （1）link属于HTML标签，@import是CSS提供的一种方式。Link除了加载CSS外，还可以做很多事情，如定义RSS，rel连接属性等；@import只能加载CSS。
+                                <br> （2）加载顺序不同，当页面被加载的时候，link加载的CSS随之加载，而@import引用的CSS会等到页面完全下载完之后才会加载。
+                                <br> （3）兼容性差别，由于@import是CSS2.1提出的，所以老的浏览器不支持，IE系列的浏览器IE5以上 才能识别，而link没有这个问题。使用DOM控制样式的差别，使用JavaScript控制DOM去改变样式的时候，只能操作link，@import不可以被DOM操作。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                                  5. CSS选择器有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><strong>选择器如下：</strong></li>
+                                    <ul>
+                                        <li>id选择器（#myid）</li>
+                                        <li>类选择器（.myclassname）</li>
+                                        <li>标签选择器（div, h1, p）</li>
+                                        <li>相邻选择器（h1 + p）</li>
+                                        <li>子选择器（ul&gt;li）</li>
+                                        <li>后代选择器（li a）</li>
+                                        <li>通配符选择器（ * ）</li>
+                                        <li>属性选择器（a[rel="external"]）</li>
+                                        <li>伪类选择器（a:hover, li:nth-child）</li>
+                                    </ul>
+                                    <li><strong>哪些属性可以继承？</strong></li>
+                                    <ul>
+                                        <li>所有元素可继承：visibility和cursor。</li>
+                                        <li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。 终端块状元素可继承：text-indent和text-align。</li>
+                                        <li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+                                        <li>表格元素可继承：border-collapse。</li>
+                                    </ul>
+                                    <li><strong>优先级算法如何计算？</strong></li>
+                                    一般而言，选择器越特殊，它的优先级越高。也就是选择器指向的越准确，它的优先级就越高。使用!important可以改变优先级别为最高，其次是style对象，然后是id > class >tag ，另外在同级样式按照申明的顺序后出现的样式具有高优先级。
+                                    <li><strong>内联和important哪个优先级高？</strong></li>
+                                    important比内联优先级高。
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapseThree">
+                                  6. 行内元素有哪些？块级元素有哪些？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                块级元素：div p h1 h2 h3 h4 form ul table hr dl等
+                                <br> 行内元素: a b br i span input select img q strong sub等
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                                  7. 什么是CSS的盒模型？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                网页设计中常听的属性名：内容(content)、填充(padding)、边框(border)、边界(margin)，这些属性我们可以把它转移到我们日常生活中的盒子（箱子）上来理解，日常生活中所见的盒子也就是能装东西的一种箱子，也具有这些属性，所以叫它盒子模式。
+                                <br> CSS盒子模型就是在网页设计中经常用到的CSS技术所使用的一种思维模型。如下图所示：
+                                <br>
+                                <img src="./img/BoxModel.png" alt="The Box Model">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapseThree">
+                                  8. 你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                IE（IE内核）、Firefox（Gecko内核）、Chrome和Safari（webkit内核）、opeara（Presto内核，现已改用webkit内核）
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapseThree">
+                                  9. CSS的基本语句构成是？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                选择器{属性1:值1;属性2:值2;……}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapseThree">
+                                  10. 写出几种IE BUG的解决方法
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ol>
+                                    <strong><li>双边距BUG</li></strong>
+                                    <b>Bug描述：</b>
+                                    <br>双边距的产生是由于float元素的浮动方向跟margin的方向一致导致的。也就是说float是left的时候，只有添加了margin-left才会产生双边距bug，要是添加了margin-right也不会产生这个bug。当有多个同行元素都浮动了，而且都有同方向的margin，则只有最靠近浮动方向的元素有双边距bug。
+                                    <br>
+                                    <b>解决这个bug有两个方法：</b>
+                                    <br> 1. 给float的元素添加一个display：inline
+                                    <br> 2. 给ie6写一个hack，其值是正常值的一半；这个方法不推荐，因为要加hack写法，但是这个正好能够说明这个bug的真实存在。
+                                    <strong><li>3像素BUG</li></strong>
+                                    <b>Bug描述：</b>
+                                    <br>ie6下两个相邻的div之间会出现3个像素的bug，这个bug是在当对其中一个div使用了float，而另外一个没有使用时会出现。
+                                    <br>
+                                    <b>解决这个bug有两个方法：</b>
+                                    <br> 1. 对另一个元素同时使用float；
+                                    <br> 2. 为已经浮动的div添加一条语句：margin-right:-3px（比如向左浮动）;
+                                    <strong><li>超链接访问过后hover样式就不出现</li></strong>
+                                    <b>Bug描述：</b>
+                                    <br>被点击访问过的超链接样式不再具有hover和active样式了。
+                                    <br>
+                                    <b>解决方法：</b>
+                                    <br> 改变CSS属性的排列顺序: L-V-H-A（link visited hover active）。
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapseThree">
+                                  11. &lt;img&gt;标签上title与alt属性的区别是什么？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        Alt属性是在你的图片因为某种原因不能加载时在页面显示的提示信息，它会直接输出在原本加载图片的地方；
+                                    </li>
+                                    <li>Title属性是在你鼠标悬停在该图片上时显示一个小提示，鼠标离开就没有了，类似于hover的效果。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapseThree">
+                                  12. 描述css reset的作用和用途。有哪些reset文件？说说normalize.css。
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        Reset重置浏览器的css默认属性。因为浏览器的品种很多，每个浏览器的默认样式也是不同的，比如&lt;button&gt;标签，在IE浏览器、Firefox浏览器以及Safari浏览器中的样式都是不同的，所以，通过重置button标签的CSS属性，然后再将它统一定义，就可以产生相同的显示效果。
+                                    </li>
+                                    <li>
+                                        重置样式非常多，凡是一个前端开发人员肯定有一个常用的重置CSS文件并知道如何使用它们。不同的浏览器对一些元素有不同的默认样式，如果你不处理，在不同的浏览器下会存在必要的风险，或者更有戏剧性的性发生。使用广泛地reset文件有reset.css、normalize.css、neat.css等。
+                                    </li>
+                                    <li>
+                                        Normalize.css没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" aria-controls="collapseThree">
+                                  13. 什么是css sprites，如何使用？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                CSS Sprites就是把网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-image”，“background- repeat”，“background-position”的组合进行背景定位，background-position可以用数字精确地定位出背景图片的位置。这样一来，当访问该页面时，载入的图片就不会像以前那样一幅一幅地慢慢显示出来了，提高了网页的加载速度。
+                                <br>
+                                <strong>优点：</strong>
+                                <ol>
+                                    <li>
+                                        减少对服务器的http请求，从而大大的提高页面的性能，这也是CSS Sprites最大的优点，也是其被广泛传播和应用的主要原因；
+                                    </li>
+                                    <li>
+                                        能减少图片的字节，曾经比较过多次3张图片合并成1张图片的字节总是小于这3张图片的字节总和。
+                                    </li>
+                                    <li>
+                                        解决了网页设计师在图片命名上的困扰，只需对一张集合的图片上命名就可以了，不需要对每一个小元素进行命名，从而提高了网页的制作效率。
+                                    </li>
+                                    <li>
+                                        更换风格方便，只需要在一张或少张图片上修改图片的颜色或样式，整个网页的风格就可以改变。维护起来更加方便。
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" aria-controls="collapseThree">
+                                  14. 什么是语义化的HTML？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        默认样式是浏览器设定的一些常用tag的表现形式，语义化（Semantics）的主要目的就是让大家直观的认识标签(markup)和属性(attribute)的用途和作用，很明显&lt;h1>&gt;看起来很像标题，因为拥有粗体和较大的字号。&lt;strong&gt;和&lt;em&gt;用来区别于其他文字，起到了强调的作用。而列表和表格很明显的告诉你它们是做什么的。
+                                    </li>
+                                    <li>
+                                        语义化的网页的好处，最主要的就是对搜索引擎友好，有了良好的结构和语义你的网页内容自然容易被搜索引擎抓取，你网站的推广便可以省下不少的功夫。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" aria-controls="collapseThree">
+                                  15. 你如何对网站的文件和资源进行优化？期待的解决方案包括哪些？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                文件合并、文件最小化/文件压缩、使用CDN托管、缓存的使用
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="false" aria-controls="collapseThree">
+                                  16. 每个HTML文件里开头都有个很重要的东西Doctype，知道这是干什么的吗？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                &lt;!DOCTYPE&gt; 声明位于文档中的最前面的位置，处于 &lt;html&gt; 标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。 （重点：告诉浏览器按照何种规范解析页面）
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="false" aria-controls="collapseThree">
+                                  17. 关于盒模型，Quirks模式和Standards模式有什么区别？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度。而在Quirks 模式下，IE的宽度和高度还包含了padding和border。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse18" aria-expanded="false" aria-controls="collapseThree">
+                                  18. div+css的布局较table布局有什么优点？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>页面加载速度更快、结构化清晰、页面显示简洁。</li>
+                                    <li>表现与结构相分离。</li>
+                                    <li>易于优化（seo）搜索引擎更友好，排名更容易靠前。</li>
+                                    <li>改版的时候更方便 只要改css文件。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse19" aria-expanded="false" aria-controls="collapseThree">
+                                  19. 你能描述一下渐进增强和优雅降级之间的不同吗?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><strong>概念描述</strong></li>
+                                    <ul>
+                                        <li>渐进增强（progressive enhancement）</li>
+                                        针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+                                        <li>优雅降级（graceful degradation）</li>
+                                        一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。
+                                    </ul>
+                                    <li><strong>区别</strong></li>
+                                    <ul>
+                                        <li>
+                                            优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。
+                                        </li>
+                                    </ul>
+                                    <li><strong>观点</strong></li>
+                                    <ul>
+                                        <li>渐进增强</li>
+                                        “渐进增强”观点则认为应关注于内容本身。 内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。
+                                        <li>优雅降级</li>
+                                        “优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse20" aria-expanded="false" aria-controls="collapseThree">
+                                  20. 为什么利用多个域名来存储网站资源会更有效？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>CDN缓存更方便</li>
+                                    <li>突破浏览器并发限制</li>
+                                    <li>节约cookie带宽</li>
+                                    <li>节约主域名的连接数，优化页面响应速度</li>
+                                    <li>防止不必要的安全问题
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse21" aria-expanded="false" aria-controls="collapseThree">
+                                  21. 请谈一下你对网页标准和标准制定机构重要性的理解
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        网页标准和标准制定机构都是为了能让web发展的更‘健康’，开发者遵循统一的标准，降低开发难度，开发成本，SEO也会更好做，也不会因为滥用代码导致各种BUG、安全问题，最终提高网站易用性。
+                                    </li>
+                                    <li>
+                                        W3C给我们定了一个很好的标准，在团队中大家都遵循这个标准，可以减少很多差异化的东西，方便开发和维护，提高开发效率，甚至实现模块化开发。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse22" aria-expanded="false" aria-controls="collapseThree">
+                                  22. 简述一下src与href的区别
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <b>src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。</b>
+                                <ul>
+                                    <li>src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。 例如：&lt;script src ="js.js"&gt;&lt;/script&gt;，当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。
+                                    </li>
+                                    <li>href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加 &lt;link href="common.css" rel="stylesheet"/&gt;那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse23" aria-expanded="false" aria-controls="collapseThree">
+                                  23. 你知道的网页制作会用到的图片格式有哪些？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                主要图片格式有：png-8，png-24，jpeg，gif，svg。
+                                <br>
+                                <b>但是上面的那些都不是面试官想要的最后答案。面试官希望听到是Webp，Apng。（是否有关注新技术，新鲜事物）</b>
+                                <br>
+                                <ul>
+                                    <li>Webp：WebP格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay等知名网站已经开始测试并使用WebP格式。 在质量相同的情况下，WebP格式图像的体积要比JPEG格式图像小40%。
+                                    </li>
+                                    <li>Apng：全称是“Animated Portable Network Graphics”, 是PNG的位图动画扩展，可以实现png格式的动态图片效果。04年诞生，但一直得不到各大浏览器厂商的支持，直到日前得到 iOS safari 8的支持，有望代替GIF成为下一代动态图标准。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse24" aria-expanded="false" aria-controls="collapseThree">
+                                  24. 知道什么是微格式吗？谈谈理解。在前端构建中应该考虑微格式吗？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <strong>微格式（Microformats）：</strong>是建立在已有的、被广泛采用的标准基础之上的一组简单的、开放的数据格式（microformats.org官方定义）。是把语义嵌入到HTML以便有助于分离式开发而制定的一些简单约定，是兼顾人机可读性设计的数据表达方式，对Web网页进行语义注解的方法。这种方法依托于标准的Web页面写作技术，例如，XHTML，这样引入语义信息对浏览器等所有现存的Web技术冲击最小。采用Microformat的 Web页面，在XHTML文档中给一些标签（Tag）增加一些属性（attribute），这些属性对信息的语义结构进行注解，处理XHTML文档的软件，例如，浏览器等，如果不认识这些属性可以跳过，并不造成任何不良影响。设计师和开发人员使用微格式来添加结构和针对网络发布有意义的信息，需要作的仅仅是为现有的(X)HTML元素添加元数据和其他属性。
+                                <br>
+                                <strong>优点：</strong>微格式按照某种已有的被广泛应用的标准，通过对内容块的语义标记，可以让外部应用程序、聚合程序和搜索引擎能够做以下事情：
+                                <br> （1）、在爬取Web内容时，能够更为准确地识别内容块的语义；
+                                <br>（2）、对内容进行操作，包括提供访问、校对，还可以将其转化成其他的相关格式，提供给外部程序和Web服务使用。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse25" aria-expanded="false" aria-controls="collapseThree">
+                                  25. CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><strong>最基本的：</strong></li>
+                                    设置display属性为none，或者设置visibility属性为hidden
+                                    <li><strong>技巧性：</strong></li>
+                                    设置宽高为0，设置透明度为0，设置z-index位置在-1000
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse26" aria-expanded="false" aria-controls="collapseThree">
+                                  26. 什么是Css Hack？ie6,7,8的hack分别是什么？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                针对不同的浏览器写不同的CSS code的过程，就是CSS hack。示例如下：
+                                <br>
+                                <pre>
+                            #test {<br>
+                            width:300px;<br> 
+                            height:300px;<br>                             
+                            background-color:blue;        /*firefox*/<br>          
+                            background-color:red\9;       /*all ie*/<br>           
+                            background-color:yellow\0;    /*ie8*/<br>           
+                            +background-color:pink;       /*ie7*/<br>           
+                            _background-color:orange;     /*ie6*/<br>    
+                            } <br>      
+                            :root #test { background-color:purple\9; }  /*ie9*/<br>    
+                            @media all and (min-width:0px){<br> 
+                            #test {background-color:black\0;} <br>
+                            }  /*opera*/ <br>      
+                            @media screen and (-webkit-min-device-pixel-ratio:0){<br>
+                            #test {background-color:gray;} <br> 
+                            }       /*chrome and safari*/
+                            </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse27" aria-expanded="false" aria-controls="collapseThree">
+                                  27. 行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><strong>块级元素(block)特性：</strong></li>
+                                    <ul>
+                                        <li>总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;
+                                        </li>
+                                        <li>宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;
+                                        </li>
+                                    </ul>
+                                    <li><strong>内联元素(inline)特性：</strong></li>
+                                    <ul>
+                                        <li>和相邻的内联元素在同一行;
+                                        </li>
+                                        <li>宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变（也就是padding和margin的left和right是可以设置的）。
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse28" aria-expanded="false" aria-controls="collapseThree">
+                                  28. 浏览器还有默认的天生inline-block元素（拥有内在尺寸，可设置高宽，但不会自动换行），有哪些？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse28" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                &lt;input&gt;、&lt;img&gt;、&lt;button&gt; 、&lt;textarea&gt;、&lt;label&gt;。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse29" aria-expanded="false" aria-controls="collapseThree">
+                                  29. 什么是外边距重叠？重叠的结果是什么？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse29" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                外边距重叠就是margin-collapse。在CSS当中，相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。
+                                <ol>
+                                    <strong>折叠结果遵循下列计算规则：</strong>
+                                    <li>两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+                                    </li>
+                                    <li>两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+                                    </li>
+                                    <li>两个外边距一正一负时，折叠结果是两者的相加的和。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse30" aria-expanded="false" aria-controls="collapseThree">
+                                  30. rgba()和opacity的透明效果有什么不同？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                rgba()和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，而rgba()只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse31" aria-expanded="false" aria-controls="collapseThree">
+                                  31. css中可以让文字在垂直和水平方向上重叠的两个属性是什么？
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>垂直方向：line-height
+                                    </li>
+                                    <li>
+                                        水平方向：letter-spacing。可用于消除inline-block元素间的换行符空格间隙问题。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse32" aria-expanded="false" aria-controls="collapseThree">
+                                  32. Sass、LESS是什么？大家为什么要使用他们？
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse32" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Sass、LESS是什么？</li>
+                                        <ul>
+                                            <li>它们都是CSS预处理器，是CSS上的一种抽象层。他们用一种特殊的语法/语言编译成CSS。 例如Less是一种动态样式语言. 将CSS赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。</li>
+                                        </ul>
+                                        <li>为什么要使用它们？</li>
+                                        <ul>
+                                            <li>结构清晰，便于扩展。</li>
+                                            <li>可以方便地屏蔽浏览器私有语法差异。封装对浏览器语法差异的重复处理，减少无意义的机械劳动。</li>
+                                            <li>可以轻松实现多重继承。</li>
+                                            <li>完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse33" aria-expanded="false" aria-controls="collapseThree">
+                                  33. display:none与visibility:hidden的区别是什么？
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse33" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><strong>display:none</strong></li>
+                                        隐藏对应的元素但不挤占该元素原来的空间。
+                                        <li><strong>visibility:hidden</strong></li>
+                                        隐藏对应的元素并且挤占该元素原来的空间。
+                                        <hr> 即是，使用CSS display:none属性后，HTML元素（对象）的宽度、高度等各种属性值都将“丢失”;而使用visibility:hidden属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在。
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse34" aria-expanded="false" aria-controls="collapseThree">
+                                  34. 知道css有个content属性吗？有什么作用？有什么应用？
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse34" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    css的content属性专门应用在before/after伪元素上，用于来插入生成内容。
+                                    <br> 最常见的应用是利用伪类清除浮动。例如：
+                                    <pre>
+                //一种常见利用伪类清除浮动的代码     
+                .clearfix:after {        
+                content:".";       //这里利用到了content属性        
+                display:block;         
+                height:0;        
+                visibility:hidden;         
+                clear:both; } 
+                </pre>       after伪元素通过 content在元素的后面生成了内容为一个点的块级元素，再利用clear:both清除浮动。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse35" aria-expanded="false" aria-controls="collapseThree">
+                                  35. CSS3有哪些新特性？
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse35" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px）</li>
+                                        <li>
+                                            对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+                                        </li>
+                                        <li>增加了更多的CSS选择器，多背景rgba</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse36" aria-expanded="false" aria-controls="collapseThree">
+                                  36. 谈谈你对HTML5和CSS3的了解情况？
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse36" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>
+                                            有所了解，HTML5和CSS3分别是新推出的HTML和CSS规范，前世是XHTML2和CSS2，HTML5已于2014年10月定稿，它得到了Apple，Opera，Mozilla，Google，Microsoft不同程度的支持，也开发出了不少基于他们的应用。
+                                        </li>
+                                        <li>HTML5相对于原来的HTML规范有一些变化：</li>
+                                        <ol>
+                                            <li>DOCTYPE更简洁 </li>
+                                            <li>新增了一些语义化标签，如article,header,footer,aside,dialog等</li>
+                                            <li>新增了一些高级标签，如&lt;vedio&gt;，&lt;audio&gt;，&lt;canvas&gt;</li>
+                                        </ol>
+                                        <li>CSS3相对于CSS2也新增了不少功能</li>
+                                        <ol>
+                                            <li>选择器更加丰富</li>
+                                            <li>支持为元素设置阴影,无需图片就能设置圆角</li>
+                                            <li>利用transition和animation设置动画</li>
+                                        </ol>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

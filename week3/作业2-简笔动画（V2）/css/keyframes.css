@@ -1,0 +1,58 @@
+/* ---------------动画：车体直线移动效果--------------- */
+@-webkit-keyframes car {
+    0% {margin-left: -252px;}
+    25% {margin-left: -597px;}
+    50% {margin-left: -252px;} 
+    75% {margin-left: 93px;}
+    100% {margin-left: -252px;}
+}
+@-moz-keyframes car {
+    0% {margin-left: -252px;}
+    25% {margin-left: -597px;}
+    50% {margin-left: -252px;} 
+    75% {margin-left: 93px;}
+    100% {margin-left: -252px;}
+}
+@-o-keyframes car {
+    0% {margin-left: -252px;}
+    25% {margin-left: -597px;}
+    50% {margin-left: -252px;} 
+    75% {margin-left: 93px;}
+    100% {margin-left: -252px;}
+}
+@keyframes car {
+    0% {margin-left: -252px;}
+    25% {margin-left: -597px;}
+    50% {margin-left: -252px;} 
+    75% {margin-left: 93px;}
+    100% {margin-left: -252px;}
+}
+/* ---------------动画：车轮旋转效果--------------- */
+@-webkit-keyframes wheel {
+    0% {-webkit-transfrom: rotate(0deg);}
+    25% {-webkit-transform: rotate(-360deg);}
+    50% {-webkit-transform: rotate(0deg);}
+    75% {-webkit-transform: rotate(360deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes wheel {
+    0% {-moz-transfrom: rotate(0deg);}
+    25% {-moz-transform: rotate(-360deg);}
+    50% {-moz-transform: rotate(0deg);}
+    75% {-moz-transform: rotate(360deg);}
+    100% {-moz-transform: rotate(0deg);}
+}
+@-o-keyframes wheel {
+    0% {-o-transfrom: rotate(0deg);}
+    25% {-o-transform: rotate(-360deg);}
+    50% {-o-transform: rotate(0deg);}
+    75% {-o-transform: rotate(360deg);}
+    100% {-o-transform: rotate(0deg);}
+}
+@keyframes wheel {
+    0% {transfrom: rotate(0deg);}
+    25% {transform: rotate(-360deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}

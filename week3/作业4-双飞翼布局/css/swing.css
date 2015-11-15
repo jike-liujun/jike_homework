@@ -1,0 +1,177 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, "Microsoft YaHei", sans-serif;
+    }
+    
+    /* 定义顶部导航栏、中部内容栏及底部信息栏宽度均为1000px，并设置为左右居中 */
+    header,
+    article,
+    footer {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    
+    /* 定义整体链接样式 */
+    body a {
+        text-decoration: none;
+        color: #495A80;
+    }
+
+    /* 此处有个疑问一直弄不明白：如不指定父级元素body，则左、右侧边栏的a:hover样式无法生效，但文档其余部分测试则有效？*/
+    body a:hover {
+        color: #228FE3;
+        text-decoration: underline;
+    }
+    
+    h1 {
+        color: #009BFF;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    /* -------------------顶部导航栏部分样式设置------------------- */
+    header {
+        height: 80px;
+        background-color: #C5C8CE;
+    }
+    
+    nav {
+        height: 45px;
+        line-height: 45px;
+        background-color: #434343;
+    }
+    
+    nav a {
+        color: #FFF;
+        padding: 6px;
+    }
+    
+    nav a.bigf {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    nav a.normf {
+        font-size: 14px;
+    }
+    
+    nav a:hover {
+        text-decoration: none;
+    }
+    
+    /* -------------------中间主体内容部分样式设置------------------- */
+    article {
+        overflow: hidden;
+    }
+    
+    /* 主体部分三栏双飞翼布局 */
+    .main,
+    .left,
+    .right {
+        float: left;
+    }
+    
+    .left,
+    .right {
+        width: 200px;
+        background: #F5FBF9;
+        margin-bottom: -9999px;
+        padding-bottom: 9999px;
+    }
+    
+    .left {
+        margin-left: -100%;
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    .right {
+        margin-left: -200px;
+    }
+    
+    /* 主体中间内容区样式设置 */
+    .main .content {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    
+    .main .content h1 {
+        text-align: center;
+        margin: 15px;
+    }
+    
+    .main .content p {
+        margin: 10px;
+        font-size: 14px;
+    }
+    
+    /* 主体左侧边栏样式设置 */
+    .left ul {
+        list-style: outside;
+    }
+
+    .left li {
+        line-height: 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 17px;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+
+    /* 主体右侧边栏样式设置 */
+    .right ul {
+        list-style: none;
+    }
+    
+    .right li {
+        margin-bottom: 5px;
+    }
+    
+    .right li a {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .right li img {
+        width: 36px;
+        height: 36px;
+        float: left;
+        margin: 5px 4px 0 12px;
+    }
+    
+    .right li p {
+        font-size: 12px;
+    }
+    
+    /* -------------------底部信息栏部分样式设置------------------- */
+    footer {
+        height: 120px;
+        margin-top: 50px;
+    }
+    
+    footer p,
+    footer a {
+        color: #999;
+        text-align: center;
+        line-height: 25px;
+        font-size: 12px;
+    }
+    
+    footer #p1 {
+        margin: 10px;
+    }
+    
+    footer a:hover {
+        color: #F00;
+    }

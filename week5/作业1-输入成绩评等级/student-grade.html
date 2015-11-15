@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/grade.css">
+    <script src="./js/grade.js"></script>
+    <title>输入成绩评等级</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="container">
+        <div class="row">
+            <div class="col-md-4" id="page">
+                <h2>输入成绩评等级</h2>
+                <div class="form-group" id="input-box">
+                    <label for="score">请输入你的成绩 :</label>
+                    <input type="text" class="form-control" id="score" placeholder="输入0到100之间的数字">
+                </div>
+                <div class="form-group" id="output-box">
+                    <label for="grade">你的等级为 :</label>
+                    <input type="text" class="form-control" id="grade">
+                </div>
+                <p id="info"></p>
+                <button type="submit" class="btn btn-primary" onclick="calGrade()">提 交</button>
+                <!-- 有个大大地疑问：为什么将button放入form标签内就不能实现呢？这时候改变的内容会一闪而过 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

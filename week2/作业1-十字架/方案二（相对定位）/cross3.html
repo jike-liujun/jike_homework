@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>十字架</title>
+    <style type="text/css">
+    /* 设置所有元素的margin和padding均为0 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* 通过绝对定位，使十字架整体在浏览器窗口中呈现垂直居中和水平居中 */
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 310px;
+        height: 310px;
+        margin-left: -155px;
+        margin-top: -155px;
+    }
+    /* 定义十字架的组成：5个100*100的矩形框 */
+    .container div {
+        width: 100px;
+        height: 100px;
+    }
+    /* 1、定位十字架中间矩形框并设置背景色和阴影；2、通过设置属性display为tabel-cell的方法使框内24*24图片呈现垂直和水平居中 */
+    .middle {
+        position: relative;
+        left: 105px;
+        top: 105px;
+        background-color: #C0C0C0;
+        box-shadow: 0px 0px 5px 5px rgba(192,192,192, .3);
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    /* 设置十字架中间矩形框中图片尺寸24*24 */
+    .middle img.apple {
+        width: 24px;
+        height: 24px;
+    }
+    /* 定位十字架顶部矩形框并设置背景色和阴影 */
+    .up {
+        position: relative;
+        left: 105px;
+        top: -100px;
+        background-color: #1BC1FC;
+        box-shadow: 5px 0px 5px 0px rgba(27,193,252, .2), 
+        			-5px 0px 5px 0px rgba(27,193,252, .2), 
+        			0px -5px 5px 0px rgba(27,193,252, .2);
+    }
+    /* 定位十字架右边矩形框并设置背景色和阴影 */
+    .right {
+        position: relative;
+        left: 210px;
+        top: -95px;
+        background-color: #45AB72;
+        box-shadow: 5px 0px 5px 0px rgba(69,171,114, .2), 
+        			0px 5px 5px 0px rgba(69,171,114, .2), 
+        			0px -5px 5px 0px rgba(69,171,114, .2);
+    }
+    /* 定位十字架底部矩形框并设置背景色和阴影 */
+    .down {
+        position: relative;
+        left: 105px;
+        top: -90px;
+        background-color: #CC66C1;
+        box-shadow: 5px 0px 5px 0px rgba(204,102,193, .2), 
+        			-5px 0px 5px 0px rgba(204,102,193, .2), 
+        			0px 5px 5px 0px rgba(204,102,193, .2);
+    }
+    /* 定位十字架左边矩形框并设置背景色和阴影 */
+    .left {
+        position: relative;
+        left: 0;
+        top: -295px;
+        background-color: #F36816;
+        box-shadow: -5px 0px 5px 0px rgba(243,104,22, .2), 
+        			0px 5px 5px 0px rgba(243,104,22, .2), 
+        			0px -5px 5px 0px rgba(243,104,22, .2);
+    }
+    /* 1、定位十字架四周矩形框中图片并设置尺寸为50*50 */
+    img.twitter, img.facebook, img.path, img.linkedin {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="middle">
+            <img src="Apple4.png" alt="apple_logo" class="apple">
+        </div>
+        <div class="up">
+            <img src="Twitter.png" alt="twitter_logo" class="twitter">
+        </div>
+        <div class="right">
+            <img src="Facebook.png" alt="facebook_logo" class="facebook">
+        </div>
+        <div class="down">
+            <img src="Path.png" alt="path_logo" class="path">
+        </div>
+        <div class="left">
+            <img src="Linkedin.png" alt="linkedin_logo" class="linkedin">
+        </div>
+    </div>
+</body>
+
+</html>

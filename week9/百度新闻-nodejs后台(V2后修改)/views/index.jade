@@ -1,0 +1,34 @@
+extends header
+
+block content
+  div#wrapper
+    header
+      div#toolbar
+        div.toolbar-left
+          a(href="https://m.baidu.com/")
+            div(class="bd-logo toolbar-btn")
+          a(href="http://m.baidu.com/news#userhome")
+            div(class="bd-login toolbar-btn")
+        div.toolbar-right
+          a(href="http://m.baidu.com/news#subscribe")
+            div(class="bd-subscribe toolbar-btn")
+          a(href="http://m.baidu.com/news#searchbox")
+            div(class="bd-search toolbar-btn")
+    div#page
+      div.nav-bar
+        div.divider
+        ul
+          li: span(id="recommend",class="current") 推荐
+          li: span(id="allin") 百家
+          li: span(id="local") 本地
+          li: span(id="picture") 图片
+          li: span(id="entertainment") 娱乐
+          li: span(id="society") 社会
+          li: span(id="military") 军事
+          li: span(id="technology") 科技
+          li: span(id="internet") 互联网
+          li: span(id="sports") 体育
+      div.content
+        //- 此处数据由Ajax发送请求，后端nodejs推送回来
+        
+  include footer

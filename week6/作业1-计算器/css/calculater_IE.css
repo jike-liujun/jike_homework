@@ -1,0 +1,42 @@
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    color: #35904F;
+    margin:0;
+    padding:0;
+}
+
+#page {
+    width: 298px;
+    *width: 258px; 
+    height:410px;
+    *height:425px;
+    background-color: #DCE7E9;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -148px;
+}
+
+#page h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+#page input {
+    *width: 250px;
+    *height:20px;
+}
+
+#page button{
+    display: block;
+    margin-left: 3px;
+    float:left;
+    margin-top:3px;
+    padding:0;
+    width:50px;
+    height:50px;
+    font-size:20px;
+    line-height: 50px;
+}

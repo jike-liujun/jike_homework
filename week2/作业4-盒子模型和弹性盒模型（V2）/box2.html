@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        position: absolute;
+        width: 200px;
+        height: 450px;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -225px;
+    }
+    /* 根据老师的修改建议：删除最外层多余的<div class="box1"> */
+    /*.box1 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+    }*/
+    
+    .outer1 {
+        position: absolute;/* 由于删除.box1样式，增加本行 */
+        top: 0;/* 由于删除.box1样式，增加本行 */
+        width: 150px;
+        height: 150px;
+        padding: 20px;
+        border: 5px solid green;
+        box-sizing: content-box;/* 设置为标准盒模型，浏览器默认方案 */
+    }
+    
+    .inner1 {
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+        line-height: 150px;
+        text-align: center;
+    }
+    /* 根据老师的修改建议：删除最外层多余的<div class="box2"> */
+    /*.box2 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+    }*/
+    
+    .outer2 {
+        position: absolute;/* 由于删除.box2样式，增加本行 */
+        bottom: 0;/* 由于删除.box2样式，增加本行 */
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        border: 5px solid green;
+        box-sizing: border-box;/* 设置为怪异盒模型 */
+    }
+    
+    .inner2 {
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+        line-height: 150px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 根据老师的修改建议：删除最外层多余的<div class="box1">以及<div class="box2"> -->
+    <div class="container">
+        <!-- <div class="box1"> -->
+            <div class="outer1">
+                <div class="inner1">
+                    标准盒模型
+                </div>
+            </div>
+        <!-- </div> -->
+        <!-- <div class="box2"> -->
+            <div class="outer2">
+                <div class="inner2">
+                    怪异盒模型
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>

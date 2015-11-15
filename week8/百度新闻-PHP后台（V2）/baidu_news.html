@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>百度新闻</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="toolbar">
+                <div class="toolbar-left">
+                    <a href="https://m.baidu.com/">
+                        <div class="bd-logo toolbar-btn"></div>
+                    </a>
+                    <a href="http://m.baidu.com/news#userhome">
+                        <div class="bd-login toolbar-btn"></div>
+                    </a>
+                </div>
+                <div class="toolbar-right">
+                    <a href="http://m.baidu.com/news#subscribe">
+                        <div class="bd-subscribe toolbar-btn"></div>
+                    </a>
+                    <a href="http://m.baidu.com/news#searchbox">
+                        <div class="bd-search toolbar-btn"></div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div id="page">
+            <div class="nav-bar">
+                <div class="divider"></div>
+                <ul>
+                    <li><span id="recommend" class="current">推荐</span></li>
+                    <li><span id="all-in">百家</span></li>
+                    <li><span id="local">本地</span></li>
+                    <li><span id="picture">图片</span></li>
+                    <li><span id="entertainment">娱乐</span></li>
+                    <li><span id="society">社会</span></li>
+                    <li><span id="military">军事</span></li>
+                    <li><span id="technology">科技</span></li>
+                    <li><span id="internet">互联网</span></li>
+                    <li><span id="sports">体育</span></li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- 此处数据由Ajax发送请求，后端php推送回来 -->
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/baidu_news.js"></script>
+</body>
+
+</html>

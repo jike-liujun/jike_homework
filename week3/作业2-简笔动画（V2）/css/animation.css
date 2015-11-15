@@ -1,0 +1,14 @@
+/* 动画执行：使整个车体保持直线移动 */
+.container {
+    -webkit-animation: car 6s linear infinite;
+    -moz-animation: car 6s linear infinite;
+    -o-animation: car 6s linear infinite;
+    animation: car 6s linear infinite;
+}
+/* 动画执行：使车轮转动，需保证车轮转向、速度与车身运动方向、移动速度匹配 */
+.wheel {
+    -webkit-animation: wheel 6s linear infinite;
+    -moz-animation: wheel 6s linear infinite;
+    -o-animation: wheel 6s linear infinite;
+    animation: wheel 6s linear infinite;
+}

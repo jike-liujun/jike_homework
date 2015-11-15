@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/jkxy.css">
+    <title>极客学院IT在线教育平台-中国最大的IT职业在线教育平台</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 头部功能栏：极客学院Logo、搜索框、用户账号信息 -->
+        <div id="header" class="w-1000">
+            <a class="jk-logo" href="http://www.jikexueyuan.com/"><img src="./img/jk-logo.png" alt="极客学院"></a>
+            <div class="search-box">
+                <input class="search-text" type="text" placeholder="搜索课程、问答或&nbsp;Wiki">
+                <button class="submit-btn"><i></i></button>
+                <div class="hot-word">
+                    <a href="http://search.jikexueyuan.com/course/?q=Android" target="_blank">Android</a>
+                    <a href="http://search.jikexueyuan.com/course/?q=iOS" target="_blank">iOS</a>
+                    <a href="http://search.jikexueyuan.com/course/?q=HTML5" target="_blank">HTML5</a>
+                </div>
+            </div>
+            <div class="user-login">
+                <a href="http://www.jikexueyuan.com/member/mycourse.html" class="my-course" target="_blank">我的课程</a><em>&nbsp;|</em>
+                <a href="http://www.jikexueyuan.com/member/" class="vip-year" target="_blank"><img src="./img/vip-year.png"></a>
+                <a href="http://www.jikexueyuan.com/member/" class="user-name">James Blunt<i class="down"></i></a>
+            </div>
+            <ul id="user-info">
+                <li><a href="#">个人主页</a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的课程</a></li>
+                <li><a href="#">免费VIP</a></li>
+                <li><a href="#">我的F码</a></li>
+                <li><a href="#">账号设置</a></li>
+                <li><a href="#">一键绑定</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+        <!-- 页面头部加载条 -->
+        <div id="loading"></div>
+        <!-- 页面头部导航栏 -->
+        <div id="nav-top-wrapper">
+            <div id="nav-top" class="w-1000">
+                <div class="nav-box">
+                    <a href="http://www.jikexueyuan.com/">首页</a>
+                    <a href="http://www.jikexueyuan.com/course/">职业课程库</a>
+                    <a href="http://www.jikexueyuan.com/path/">知识体系图</a>
+                    <a href="http://www.jikexueyuan.com/practice/">实战路径图</a>
+                    <a href="http://wenda.jikexueyuan.com/">技术问答</a>
+                    <a href="http://wiki.jikexueyuan.com/">Wiki</a>
+                </div>
+                <div class="tool-box">
+                    <a href="http://www.jikexueyuan.com/vip/"><img src="./img/vip-icon.png" alt="VIP会员">&nbsp;VIP会员</a>
+                    <a href="http://press.jikexueyuan.com/topic/" target="_blank"><img src="./img/star-icon.png" alt="求课程">&nbsp;求课程</a>
+                    <a href="http://www.jikexueyuan.com/app/" target="_blank"><img src="./img/dl-icon.png" alt="客户端">&nbsp;客户端</a>
+                </div>
+            </div>
+        </div>
+        <!-- 页面主体：图片轮播、课程导航、课程推荐、实战路径图、知识体系图、战略合作企业、合作院校、媒体报道、网站地图等 -->
+        <div id="paper" class="w-1000">
+            <!-- 详细课程导航区、图片轮播展示、了解极客学院 -->
+            <div id="head-bar">
+                <div class="nav-tab">
+                    <ul>
+                        <li name="#mobile" class="s-mobile"><a href="http://www.jikexueyuan.com/course/mobile/">移动开发</a></li>
+                        <li name="#web" class="s-web"><a href="http://www.jikexueyuan.com/course/web/">前端开发</a></li>
+                        <li name="#dev" class="s-dev"><a href="http://www.jikexueyuan.com/course/dev/">后端开发</a></li>
+                        <li name="#base" class="s-base"><a href="http://www.jikexueyuan.com/course/base/">基础知识</a></li>
+                        <li name="#cloud" class="s-cloud"><a href="http://www.jikexueyuan.com/course/clouddata/">云计算&大数据</a></li>
+                        <li name="#intelligence" class="s-intelligence"><a href="http://www.jikexueyuan.com/course/intellegence/">智能硬件&物联网</a></li>
+                        <li name="#db" class="s-db"><a href="http://www.jikexueyuan.com/course/db/">数据库</a></li>
+                        <li name="#certificate" class="s-certificate"><a href="http://www.jikexueyuan.com/course/certificate/">认证考试</a></li>
+                        <li name="#enterpriseit" class="hidden s-enterpriseit"><a href="http://www.jikexueyuan.com/course/enterpriseit/">企业 IT</a></li>
+                        <li name="#testing" class="hidden s-testing"><a href="http://www.jikexueyuan.com/course/testing/">软件测试</a></li>
+                        <li name="#productdesign" class="hidden s-productdesign"><a href="http://www.jikexueyuan.com/course/productdesign/">设计产品</a></li>
+                    </ul>
+                </div>
+                <div id="nav-tab-box">
+                    <div id="mobile" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/app/">应用开发</a>
+                            <li><a href="http://www.jikexueyuan.com/course/android/">Android</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/ios/">iOS</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/games/">游戏开发</a>
+                            <li><a href="http://www.jikexueyuan.com/course/cocos/">Cocos</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/unity3d/">Unity3D</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/spritekit2d/">SpriteKit 2D</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/unreal/">Unreal</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/frame/">常用框架</a>
+                            <li><a href="http://www.jikexueyuan.com/course/cordova/">Cordova</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/reactnative1/">React Native</a></li>
+                        </ul>
+                    </div>
+                    <div id="web" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/webbase/">前端基础</a>
+                            <li><a href="http://www.jikexueyuan.com/course/html/">HTML</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/css/">CSS</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/javascript/">JavaScript</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/html5/">HTML5</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/css3/">CSS3</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/prospective/">技术前瞻</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/advance/">前端进阶</a>
+                            <li><a href="http://www.jikexueyuan.com/course/typescript/">Typescript</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/security/">前端安全</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/practice/">项目实践</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/webframe/">前端框架</a>
+                            <li><a href="http://www.jikexueyuan.com/course/jquery/">jQuery</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/jqueryui/">jQuery UI</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/jquerymobile/">jQuery Mobile</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/angularjs/">AngularJS</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/reactjs/">ReactJS</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/bootstrap/">BootStrap</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/reactnative/">React Native</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/backbone/">Backbone</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/threejs/">Three.js</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/mootools/">MoonTools</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/compass/">Compass</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="http://www.jikexueyuan.com/course/html5games/">HTML5游戏</a>
+                            <li><a href="http://www.jikexueyuan.com/course/canvas/">Canvas</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/svg/">SVG</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/webgl/">WebGL</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/cocos2djs/">Cocos2d-js</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/createjs/">CreateJS</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/webflash/">Flash</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/webunreal/">Unreal</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/webegret/">Egret</a></li>
+                            <span>|</span>
+                            <li><a href="http://www.jikexueyuan.com/course/phaser/">Phaser</a></li>
+                        </ul>
+                    </div>
+                    <div id="dev" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">Python</a>
+                            <li><a href="">Python基础</a></li>
+                            <span>|</span>
+                            <li><a href="">web2py</a></li>
+                            <span>|</span>
+                            <li><a href="">Django</a></li>
+                            <span>|</span>
+                            <li><a href="">Flask</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">PHP</a>
+                            <li><a href="">PHP基础</a></li>
+                            <span>|</span>
+                            <li><a href="">YII</a></li>
+                            <span>|</span>
+                            <li><a href="">ThinkPHP</a></li>
+                            <span>|</span>
+                            <li><a href="">WordPress</a></li>
+                            <span>|</span>
+                            <li><a href="">Phalcon</a></li>
+                            <span>|</span>
+                            <li><a href="">Apache</a></li>
+                            <span>|</span>
+                            <li><a href="">Facebook Hack</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">Node.js</a>
+                            <li><a href="">Node.js基础</a></li>
+                            <span>|</span>
+                            <li><a href="">express</a></li>
+                            <span>|</span>
+                            <li><a href="">Meteor</a></li>
+                            <span>|</span>
+                            <li><a href="">Hexo</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">ASP.NET</a>
+                            <li><a href="">C#</a></li>
+                            <span>|</span>
+                            <li><a href="">ASP.NET MVC</a></li>
+                            <span>|</span>
+                            <li><a href="">Entity Framework</a></li>
+                            <span>|</span>
+                            <li><a href="">WPF</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">J2EE</a>
+                            <li><a href="">JSP</a></li>
+                            <span>|</span>
+                            <li><a href="">Maven</a></li>
+                            <span>|</span>
+                            <li><a href="">Spring</a></li>
+                            <span>|</span>
+                            <li><a href="">SpringMVC</a></li>
+                            <span>|</span>
+                            <li><a href="">Struts2</a></li>
+                            <span>|</span>
+                            <li><a href="">MyBatis</a></li>
+                            <span>|</span>
+                            <li><a href="">Hibernate</a></li>
+                            <span>|</span>
+                            <li><a href="">Lucene</a></li>
+                            <span>|</span>
+                            <li><a href="">常用框架</a></li>
+                            <span>|</span>
+                            <li><a href="">项目实战</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">Ruby</a>
+                            <li><a href="">Ruby基础</a></li>
+                            <span>|</span>
+                            <li><a href="">Ruby on Rails</a></li>
+                            <span>|</span>
+                            <li><a href="">Grape</a></li>
+                            <span>|</span>
+                            <li><a href="">Ruby进阶</a></li>
+                            <span>|</span>
+                            <li><a href="">RubybyMine</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">Go</a>
+                            <li><a href="">Go基础</a></li>
+                            <span>|</span>
+                            <li><a href="">beego</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">Erlang</a>
+                            <li><a href="">Erlang基础</a></li>
+                        </ul>
+                    </div>
+                    <div id="base" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">基础语言</a>
+                            <li><a href="">C</a></li>
+                            <span>|</span>
+                            <li><a href="">C++</a></li>
+                            <span>|</span>
+                            <li><a href="">Objective-C</a></li>
+                            <span>|</span>
+                            <li><a href="">Swift</a></li>
+                            <span>|</span>
+                            <li><a href="">C#</a></li>
+                            <span>|</span>
+                            <li><a href="">Java</a></li>
+                            <span>|</span>
+                            <li><a href="">Perl</a></li>
+                            <span>|</span>
+                            <li><a href="">Shell</a></li>
+                            <span>|</span>
+                            <li><a href="">Qt</a></li>
+                            <span>|</span>
+                            <li><a href="">Scala</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">计算机基础</a>
+                            <li><a href="">计算机组成原理</a></li>
+                            <span>|</span>
+                            <li><a href="">网络工程</a></li>
+                            <span>|</span>
+                            <li><a href="">Word</a></li>
+                            <span>|</span>
+                            <li><a href="">Excel</a></li>
+                            <span>|</span>
+                            <li><a href="">PowerPoint</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">开发基础</a>
+                            <li><a href="">算法基础</a></li>
+                            <span>|</span>
+                            <li><a href="">数据结构</a></li>
+                            <span>|</span>
+                            <li><a href="">设计模式</a></li>
+                            <span>|</span>
+                            <li><a href="">软件工程</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">开发工具</a>
+                            <li><a href="">Git/Github</a></li>
+                            <span>|</span>
+                            <li><a href="">SVN</a></li>
+                            <span>|</span>
+                            <li><a href="">VI</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">开放标准</a>
+                            <li><a href="">OpenCL</a></li>
+                            <span>|</span>
+                            <li><a href="">Open XML</a></li>
+                            <span>|</span>
+                            <li><a href="">OpenGL/ELES</a></li>
+                        </ul>
+                    </div>
+                    <div id="cloud" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">云计算</a>
+                            <li><a href="">OpenStack</a></li>
+                            <span>|</span>
+                            <li><a href="">Docker</a></li>
+                            <span>|</span>
+                            <li><a href="">CloudStack</a></li>
+                            <span>|</span>
+                            <li><a href="">Windows Azure</a></li>
+                            <span>|</span>
+                            <li><a href="">IaaS</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">大数据</a>
+                            <li><a href="">Hadoop</a></li>
+                            <span>|</span>
+                            <li><a href="">Storm</a></li>
+                            <span>|</span>
+                            <li><a href="">Hive</a></li>
+                            <span>|</span>
+                            <li><a href="">Hbase</a></li>
+                            <span>|</span>
+                            <li><a href="">Spark</a></li>
+                            <span>|</span>
+                            <li><a href="">信息检索</a></li>
+                            <span>|</span>
+                            <li><a href="">数据分析</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">虚拟化</a>
+                            <li><a href="">VMware</a></li>
+                        </ul>
+                    </div>
+                    <div id="intelligence" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">硬件结构</a>
+                            <li><a href="">C51</a></li>
+                            <span>|</span>
+                            <li><a href="">ARM</a></li>
+                            <span>|</span>
+                            <li><a href="">Keil</a></li>
+                            <span>|</span>
+                            <li><a href="">Cortex-M</a></li>
+                            <span>|</span>
+                            <li><a href="">Cortex-A</a></li>
+                            <span>|</span>
+                            <li><a href="">AVR</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">物联网操作系统</a>
+                            <li><a href="">RTOS</a></li>
+                            <span>|</span>
+                            <li><a href="">Android Wear</a></li>
+                            <span>|</span>
+                            <li><a href="">Apple WatchKit</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">开源硬件平台</a>
+                            <li><a href="">Arduino</a></li>
+                            <span>|</span>
+                            <li><a href="">树莓派</a></li>
+                            <span>|</span>
+                            <li><a href="">mbed</a></li>
+                            <span>|</span>
+                            <li><a href="">Gokit</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">通信链接技术</a>
+                            <li><a href="">无线WiFi</a></li>
+                            <span>|</span>
+                            <li><a href="">移动通信</a></li>
+                            <span>|</span>
+                            <li><a href="">蓝牙</a></li>
+                            <span>|</span>
+                            <li><a href="">NFC</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">信息感知处理技术</a>
+                            <li><a href="">传感器</a></li>
+                            <span>|</span>
+                            <li><a href="">数据挖掘</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">人机交互技术</a>
+                            <li><a href="">语音识别</a></li>
+                            <span>|</span>
+                            <li><a href="">人脸识别</a></li>
+                            <span>|</span>
+                            <li><a href="">手势识别</a></li>
+                        </ul>
+                    </div>
+                    <div id="db" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">SQL</a>
+                            <li><a href="">MySQL</a></li>
+                            <span>|</span>
+                            <li><a href="">SQL Server</a></li>
+                            <span>|</span>
+                            <li><a href="">Oracle</a></li>
+                            <span>|</span>
+                            <li><a href="">SQLite</a></li>
+                            <span>|</span>
+                            <li><a href="">PostgreSQL</a></li>
+                            <span>|</span>
+                            <li><a href="">DB2</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">NoSQL</a>
+                            <li><a href="">Cassandra</a></li>
+                            <span>|</span>
+                            <li><a href="">Redis</a></li>
+                            <span>|</span>
+                            <li><a href="">MongoDB</a></li>
+                        </ul>
+                    </div>
+                    <div id="certificate" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">计算机等级考试</a>
+                            <li><a href="">一级</a></li>
+                            <span>|</span>
+                            <li><a href="">二级C</a></li>
+                            <span>|</span>
+                            <li><a href="">二级Java</a></li>
+                            <span>|</span>
+                            <li><a href="">耳机C++</a></li>
+                            <span>|</span>
+                            <li><a href="">网络工程师</a></li>
+                            <span>|</span>
+                            <li><a href="">数据库工程师</a></li>
+                            <span>|</span>
+                            <li><a href="">信息安全工程师</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">企业认证</a>
+                            <li><a href="">思科认证</a></li>
+                            <span>|</span>
+                            <li><a href="">Oracle认证</a></li>
+                            <span>|</span>
+                            <li><a href="">Linux认证</a></li>
+                            <span>|</span>
+                            <li><a href="">ARM认证</a></li>
+                        </ul>
+                    </div>
+                    <div id="enterpriseit" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">运维管理</a>
+                            <li><a href="">Shell</a></li>
+                            <span>|</span>
+                            <li><a href="">自动化运维</a></li>
+                            <span>|</span>
+                            <li><a href="">Nginx</a></li>
+                            <span>|</span>
+                            <li><a href="">Apache</a></li>
+                            <span>|</span>
+                            <li><a href="">运维监控</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">操作系统</a>
+                            <li><a href="">Linux</a></li>
+                            <span>|</span>
+                            <li><a href="">Windows</a></li>
+                            <span>|</span>
+                            <li><a href="">Mac OS</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">企业服务</a>
+                            <li><a href="">B2C</a></li>
+                        </ul>
+                    </div>
+                    <div id="testing" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">测试工具</a>
+                            <li><a href="">自动化测试</a></li>
+                        </ul>
+                    </div>
+                    <div id="productdesign" class="nav-tab-content hidden">
+                        <ul class="nav-tab-child">
+                            <a href="">设计基础</a>
+                            <li><a href="">Photoshop</a></li>
+                            <span>|</span>
+                            <li><a href="">Flash</a></li>
+                            <span>|</span>
+                            <li><a href="">Illustrator</a></li>
+                            <span>|</span>
+                            <li><a href="">Sketch</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">游戏设计</a>
+                            <li><a href="">界面设计</a></li>
+                            <span>|</span>
+                            <li><a href="">角色设计</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">产品经理</a>
+                            <li><a href="">需求分析</a></li>
+                            <span>|</span>
+                            <li><a href="">Axure</a></li>
+                            <span>|</span>
+                            <li><a href="">项目实战</a></li>
+                        </ul>
+                        <ul class="nav-tab-child">
+                            <a href="">视觉设计</a>
+                            <li><a href="">应用UI设计</a></li>
+                            <span>|</span>
+                            <li><a href="">网页UI设计</a></li>
+                            <span>|</span>
+                            <li><a href="">设计理论</a></li>
+                            <span>|</span>
+                            <li><a href="">图形设计</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 热门课程展示图片轮播 -->
+                <div class="nav-roll">
+                    <!-- <div class="container-fluid" id="slide-container">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> -->
+                    <!-- 小圆点指示器 -->
+                    <!-- <ol class="carousel-indicators" id="slide-indicator">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            </ol> -->
+                    <!-- 需要轮播的图片 -->
+                    <!--  <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="./img/main-roll1.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="./img/main-roll2.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="./img/main-roll3.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="./img/main-roll4.png" alt="...">
+                                </div>
+                                <div class="item">
+                                    <img src="./img/main-roll5.png" alt="...">
+                                </div>
+                            </div> -->
+                    <!-- 轮播控制 -->
+                    <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div> -->
+                    <!-- </div> -->
+                    <div class="imgbox">
+                        <a href="http://www.jikexueyuan.com/blog/449.html?huodong=freecourse_shouye_banner_0909" target="_blank"><img id="img1" class="showimg" src="./img/main-roll1.jpg" alt=""></a>
+                        <a href="http://jiuye.jikexueyuan.com/train/web?huodong=jiuye_web_shouye_banner_0910" target="_blank"><img id="img2" src="./img/main-roll2.jpg" alt=""></a>
+                        <a href="http://jiuye.jikexueyuan.com/train/java?huodong=jiuye_java_shouye_banner_0910" target="_blank"><img id="img3" src="./img/main-roll3.jpg" alt=""></a>
+                        <a href="http://jiuye.jikexueyuan.com/train/android?huodong=jiuye_android_shouye_banner" target="_blank"><img id="img4" src="./img/main-roll4.jpg" alt=""></a>
+                        <a href="http://www.jikexueyuan.com/blog/503.html?huodong=daili_shouye_banner_0917" target="_blank"><img id="img5" src="./img/main-roll5.jpg" alt=""></a>
+                    </div>
+                    <div class="indicator">
+                        <span name="#img1" id="indicator1" class="green"></span>
+                        <span name="#img2" id="indicator2"></span>
+                        <span name="#img3" id="indicator3"></span>
+                        <span name="#img4" id="indicator4"></span>
+                        <span name="#img5" id="indicator5"></span>
+                    </div>
+                    <div class="controls hidden">
+                        <span class="control-left"></span>
+                        <span class="control-right"></span>
+                    </div>
+                </div>
+                <div class="nav-query">
+                    <a class="query-jk" href="http://www.jikexueyuan.com/help/introduction.html" target="_blank">
+                        <h3>极客学院 让学习更有效</h3>
+                        <p>&radic;最新 | 系统 | 实战</p>
+                        <button>了解极客学院</button>
+                    </a>
+                    <a class="query-vip" href="http://www.jikexueyuan.com/vip/" target="_blank">
+                        <h3>成为VIP 极客启程</h3>
+                        <p>&radic;全部课程&nbsp;&nbsp;&radic;高清视频</p>
+                        <p>&radic;问答服务&nbsp;&nbsp;&radic;课程资料</p>
+                        <button>了解VIP权益</button>
+                    </a>
+                </div>
+            </div>
+            <!-- 热门推荐、最新课程、免费课程、项目实战、全球首发、合作企业 -->
+            <div id="hot-box">
+                <div class="category">
+                    <span href="#choice1">热门推荐</span>
+                    <span href="#choice2">最新课程</span>
+                    <span href="#choice3">免费课程</span>
+                    <span href="#choice4">项目实战</span>
+                    <span href="#choice5">全球首发</span>
+                    <span href="#choice6">企业合作</span>
+                </div>
+                <div class="choice" id="choice1">
+                    <div class="lesson lesson1">
+                        <div class="lesson-play">
+                            <img src="./img/hot/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2002.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2002.html" target="_blank">C 语言五子棋游戏项目分析与系统设计</a>
+                            <p>
+                                本课程对五子棋项目进行需求分析，进而进行系统设计，将系统划分成不同的模块，以便分模块完成系统开发。五子棋起源于中国古代，是一种传统的黑白棋种。它是一款能够训练人的逻辑思维严密性的小游戏。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2294人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 54分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/c/"><img src="./img/hot/more1.png" alt="C语言"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson2">
+                        <div class="lesson-play">
+                            <img src="./img/hot/2.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2008.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2008.html" target="_blank">R 语言基础之语法篇（3）</a>
+                            <p>
+                                本课程首先介绍 R 语法部分的控制结构，包括分支结构和循环结构的使用，然后介绍如何编写函数及包的使用，最后介绍R的特色运算——向量化运算和 apply 函数家族。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2165人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 45分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/dig/"><img src="./img/hot/more2.png" alt="R语言"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson3">
+                        <div class="lesson-play">
+                            <img src="./img/hot/3.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2007.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2007.html" target="_blank">GIS 基础之 GPS 全球定位系统</a>
+                            <p>
+                                本课程将讲解 GPS 全球定位系统的由来、组成及它的工作原理，使学员快速了解导航的原理并在实际工作中得到运用。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2149人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 38分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/phpbase/"><img src="./img/hot/more3.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson4">
+                        <div class="lesson-play">
+                            <img src="./img/hot/4.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2006.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2006.html" target="_blank">Photoshop——图层样式详解2</a>
+                            <p>
+                                本课程作为图层样式部分的第2课，主要通过讲解描边、斜面浮雕、颜色叠加、渐变叠加和图案叠加5个样式的面板数值设置效果，并初步了解第二部分样式的特性，熟悉如何运用样式进行效果设计。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2124人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 40分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/photoshop/"><img src="./img/hot/more4.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson5">
+                        <div class="lesson-play">
+                            <img src="./img/hot/5.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2001.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2001.html" target="_blank">OpenSceneGraph 概述</a>
+                            <p>
+                                本课程将深入讲解三维渲染引擎 OpenSceneGraph(OSG) 的历史，了解其性能优势和体系结构。然后解说 OSG 引擎的组成部分：核心库、节点扩展工具箱、文件读取插件、工具程序和示例集。最后推荐给大家一些学习渠道和资料。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2166人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 19分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/interface/"><img src="./img/hot/more5.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson6">
+                        <div class="lesson-play">
+                            <img src="./img/hot/6.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2003.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2003.html" target="_blank">Python 标准库与其他应用</a>
+                            <p>
+                                本课程主要介绍 Python 的标准库以及其他经常使用的一些东西的第一部分，并配以示例加以理解。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>21094人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 58分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/pythonbase/"><img src="./img/hot/more6.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson7">
+                        <div class="lesson-play">
+                            <img src="./img/hot/7.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1973.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1973.html" target="_blank">Android 开发实战：短信验证码自动填写</a>
+                            <p>
+                                本课程主要讲解在 Android 中使用短信验证功能时，自动获取发送到用户手机上的验证短信，并将其中的验证码提取出来自动填写到输入框中。通过 ContentObserver 方式监听短信变化，正则方式匹配验证码。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>3294人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 35分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/hot/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson8">
+                        <div class="lesson-play">
+                            <img src="./img/hot/8.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1967.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1967.html" target="_blank">Android 粒子效果之音量</a>
+                            <p>
+                                本课程继自定义 View 基础和原理及 Android 粒子效果之雨之后的系列课程，在系列课程中，我们会不断完善分装的 BaseView 来满足设计各种粒子动画效果。在本课程的讲解中，大家会觉得和 Android 粒子效果之雨的课程有很多相同，而接下来后面的粒子效果其实也有很多的类似行为和思路。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2584人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 67分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/hot/more8.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice" id="choice2">
+                    <div class="lesson lesson1">
+                        <div class="lesson-play">
+                            <img src="./img/latest/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2020.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2020.html" target="_blank">sed 基础应用</a>
+                            <p>
+                                本课程学习 sed 的基础语法、命令及功能，通过 sed 实现基础自动化运维。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2020人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 72分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/linuxsys/"><img src="./img/latest/more1.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson2">
+                        <div class="lesson-play">
+                            <img src="./img/latest/2.jpg">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2019.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2019.html" target="_blank">iOS 设计模式——装饰</a>
+                            <p>
+                                本课程主要讲解设计模式中的装饰模式，用一个例子来讲解装饰模式的基本原理，最后，扩展讲解一下系统已经实现了的装饰模式 category。
+                            </p>
+                            <div class="rank">
+                                <span class="level3"></span><span>2039人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 34分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/latest/more2.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson3">
+                        <div class="lesson-play">
+                            <img src="./img/latest/3.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2018.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2018.html" target="_blank">Bmob 后端云简介</a>
+                            <p>
+                                本课程主要从最近流行的移动后端服务（BaaS）方面对 BaaS 进行简单的功能上的介绍。针对 BaaS 中的比较好的后端云服务 Bmob 进行针对性的介绍及其相应的 API 主要功能。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2020人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 21分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/latest/more3.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson4">
+                        <div class="lesson-play">
+                            <img src="./img/latest/4.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2017.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2017.html" target="_blank">Java Web 项目：无限级分销系统项目介绍</a>
+                            <p>
+                                本课主要讲解 Java 无限级分销系统实战项目的概述以及项目中所用到的技术清单，还有学习本系列课程的学习前提和学完后所得达到的技术目标，另外一个重要的就是项目需求分析的讲解与整体项目功能的演示。通过本课程的讲解，学员能掌握该实战项目的整体介绍、学习前提以及学后技能目标和整个项目的业务需求，还有能一览无余的了解到实战项目的整体效果。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2030人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 24分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/jsp/"><img src="./img/latest/more4.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson5">
+                        <div class="lesson-play">
+                            <img src="./img/latest/5.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2016.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2016.html" target="_blank">Axure 制作幻灯片轮播案例</a>
+                            <p>
+                                本课程制作网站经常用到的幻灯片轮播的案例，深化对动态面板组件以及其他组件的使用，同时让大家学会如何制作幻灯片轮播效果。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2021人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 30分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/axure/"><img src="./img/latest/more5.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson6">
+                        <div class="lesson-play">
+                            <img src="./img/latest/6.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2015.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2015.html" target="_blank">Linux 系统编程之文件属性</a>
+                            <p>
+                                本课程学习文件属性的查看和修改方式，主要通过贯串讲解stat系列函数来学习具体文件的属性。通过本课程的学习完善对文件操作的认知，全面掌握Linux下文件的操作接口。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2031人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 68分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/linuxsys/"><img src="./img/latest/more6.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson7">
+                        <div class="lesson-play">
+                            <img src="./img/latest/7.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2014.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2014.html" target="_blank">Struts2 整合 Hibernate 框架</a>
+                            <p>
+                                本课程讲解 Struts2 整合 Hibernate 、基于泛型 DAO 模式的应用以及 OSIV 模式，通过本课程的学习能够掌握基于 Hibernate 的 Web 应用程序的开发。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2020人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 44分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/hibernate/"><img src="./img/latest/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson8">
+                        <div class="lesson-play">
+                            <img src="./img/hot/2.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2008.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2008.html" target="_blank">R 语言基础之语法篇（3）</a>
+                            <p>
+                                本课程首先介绍 R 语法部分的控制结构，包括分支结构和循环结构的使用，然后介绍如何编写函数及包的使用，最后介绍R的特色运算——向量化运算和 apply 函数家族。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2165人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 45分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/dig/"><img src="./img/hot/more2.png" alt="R语言"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice" id="choice3">
+                    <div class="lesson lesson1">
+                        <div class="lesson-play">
+                            <img src="./img/latest/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2020.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2020.html" target="_blank">sed 基础应用</a>
+                            <p>
+                                本课程学习 sed 的基础语法、命令及功能，通过 sed 实现基础自动化运维。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2020人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 72分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/linuxsys/"><img src="./img/latest/more1.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson2">
+                        <div class="lesson-play">
+                            <img src="./img/latest/3.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2018.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2018.html" target="_blank">Bmob 后端云简介</a>
+                            <p>
+                                本课程主要从最近流行的移动后端服务（BaaS）方面对 BaaS 进行简单的功能上的介绍。针对 BaaS 中的比较好的后端云服务 Bmob 进行针对性的介绍及其相应的 API 主要功能。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2020人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 21分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/latest/more3.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson3">
+                        <div class="lesson-play">
+                            <img src="./img/latest/4.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2017.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2017.html" target="_blank">Java Web 项目：无限级分销系统项目介绍</a>
+                            <p>
+                                本课主要讲解 Java 无限级分销系统实战项目的概述以及项目中所用到的技术清单，还有学习本系列课程的学习前提和学完后所得达到的技术目标，另外一个重要的就是项目需求分析的讲解与整体项目功能的演示。通过本课程的讲解，学员能掌握该实战项目的整体介绍、学习前提以及学后技能目标和整个项目的业务需求，还有能一览无余的了解到实战项目的整体效果。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2030人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 24分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/jsp/"><img src="./img/latest/more4.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson4">
+                        <div class="lesson-play">
+                            <img src="./img/hot/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2002.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2002.html" target="_blank">C 语言五子棋游戏项目分析与系统设计</a>
+                            <p>
+                                本课程对五子棋项目进行需求分析，进而进行系统设计，将系统划分成不同的模块，以便分模块完成系统开发。五子棋起源于中国古代，是一种传统的黑白棋种。它是一款能够训练人的逻辑思维严密性的小游戏。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2294人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 54分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/c/"><img src="./img/hot/more1.png" alt="C语言"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson5">
+                        <div class="lesson-play">
+                            <img src="./img/hot/5.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/2001.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/2001.html" target="_blank">OpenSceneGraph 概述</a>
+                            <p>
+                                本课程将深入讲解三维渲染引擎 OpenSceneGraph(OSG) 的历史，了解其性能优势和体系结构。然后解说 OSG 引擎的组成部分：核心库、节点扩展工具箱、文件读取插件、工具程序和示例集。最后推荐给大家一些学习渠道和资料。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2166人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 19分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/interface/"><img src="./img/hot/more5.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson6">
+                        <div class="lesson-play">
+                            <img src="./img/free/6.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1995.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1995.html" target="_blank">物联网概述</a>
+                            <p>
+                                本课程主要对物联网概述，内容包括物联网起源与发展，核心技术和应用发展前景。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2181人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 28分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/tel/"><img src="./img/free/more6.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson7">
+                        <div class="lesson-play">
+                            <img src="./img/free/7.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1984.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1984.html" target="_blank">Erlang 编程语言介绍</a>
+                            <p>
+                                本课程主要介绍 Erlang 编程语言的特点，讲解如何安装基础的 Erlang 编程语言环境，了解并发编程，最后通过一个 Wordcount 的例子展示如何使用 Erlang 编程语言。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2284人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 32分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/erlangbase/"><img src="./img/free/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson8">
+                        <div class="lesson-play">
+                            <img src="./img/free/8.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1982.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1982.html" target="_blank">OpenCL 设备 KERNEL 设计</a>
+                            <p>
+                                本课程中，我们将一起学习 OpenCL 的基本知识，如 OpenCL 架构的四种模型和 OpenCL C 语言。之后，我们学习一个例子，该例介绍了如何用 OpenCL 规范提供的一些常用 API 函数，去使用 OpenCL 设备完成并行计算代码的运行以及代码运行环境的配置和释放。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2071人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 42分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/opencl/"><img src="./img/hot/more8.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice" id="choice4">
+                    <div class="lesson lesson1">
+                        <div class="lesson-play">
+                            <img src="./img/practice/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1592.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1592.html" target="_blank">Android 项目开发实战：图案解锁</a>
+                            <p>
+                                本课程讲解在 Android 上实现一个自定义的图案解锁用户控件，并利用这个自定义控件为应用添加图案解锁功能。该应用可以允许用户设置自己的解锁图案，然后就可以使用该图案进行解锁。应用使用自定义 View 实现基本点的显示与切换，使用 Canvas 实现界面的绘制。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>4483人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 72分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/practice/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson2">
+                        <div class="lesson-play">
+                            <img src="./img/practice/2.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1348.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1348.html" target="_blank">Android 项目开发实战：语音播报计算器</a>
+                            <p>
+                                本课程带领大家一起完成一款带语音播报功能的计算器，并且有历史记录等扩展功能，包括下滑结果显示框出现历史记录，以及滑动删除等。除此之外，它还可以合计历史结果值。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>3730人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 48分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/practice/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson3">
+                        <div class="lesson-play">
+                            <img src="./img/practice/3.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1454.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1454.html" target="_blank">iOS实战项目开发:团购之导航栏搜索城市功能</a>
+                            <p>
+                                本节课将进一步优化导航栏的 UI 界面，运用 plist 文件读取解析，及字典转模型等方法，实现搜索城市及定位的界面及功能。 。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>3829人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 59分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/practice/more3.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson4">
+                        <div class="lesson-play">
+                            <img src="./img/practice/4.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1498.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1498.html" target="_blank">Android项目开发实战：语音播报计算器拓展功能实现</a>
+                            <p>
+                                本课程在语音播报计算器的基础上，实现更人性化的功能。它包括：下滑显示框展示历史记录、历史记录可滑动删除、合计历史记录功能、清除所有历史记录功能。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>3254人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 54分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/practice/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson5">
+                        <div class="lesson-play">
+                            <img src="./img/practice/5.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1552.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1552.html" target="_blank">构建轻博客系统之项目准备</a>
+                            <p>
+                                本课程主要带大家做一些前期的准备工作，为接下来的正式开发打好基础。课程内容包括项目分析、beego 的简单使用和数据库的配置。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2558人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 27分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/beego/"><img src="./img/practice/more5.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson6">
+                        <div class="lesson-play">
+                            <img src="./img/practice/6.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1274.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1274.html" target="_blank">Cocos2d-x 小小打飞机项目开发实战</a>
+                            <p>
+                                本课程通过学习开发一个打飞机的游戏项目开发，学习 Cocos2d-x 3.4 引擎常用知识，还会学习 Cocos2d-x 3.4 的点击等监听事件，贝塞尔曲线，帧动画，和一些存储数据技术，让大家掌握一个小游戏的完整开发流程。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2680人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>6课时 61分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/cocos/"><img src="./img/practice/more8.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson7">
+                        <div class="lesson-play">
+                            <img src="./img/practice/7.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1337.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1337.html" target="_blank">Android 项目开发实战：微博之项目搭建</a>
+                            <p>
+                                本课程带领大家实现微博类应用，首先简单的展示了下应用的功能，进行了微博应用的实现需求分析，其次讲解如何接入新浪微博的 SDK 及其使用方法。并进行项目环境的搭建，为后面的开发做好准备工作。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>4525人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 26分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/practice/more7.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson8">
+                        <div class="lesson-play">
+                            <img src="./img/practice/8.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/904.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/904.html" target="_blank">Cocos2d-x 游戏：功夫小子——概要及开发环境配置</a>
+                            <p>
+                                本课程主要根据实际的游戏演示，分析游戏的基本结构和特点，形成对游戏的整体认识。介绍开发游戏使用的 Cocos2d-x 版本并配置好开发环境。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>3005人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 23分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/cocos/"><img src="./img/practice/more8.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice" id="choice5">
+                    <div class="lesson lesson1">
+                        <div class="lesson-play">
+                            <img src="./img/global/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1221.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1221.html" target="_blank">Google IO 2015 大揭秘</a>
+                            <p>
+                                今天凌晨 Google IO 2015 大会举行，在大会上 Google 推出了包括 Android M、Android Studio 1.3、Android Wear、Brillo 在内的很多新的好玩的东西，我在第一时间录制这个视频和大家分享认知。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>4785人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 20分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/global/android.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson2">
+                        <div class="lesson-play">
+                            <img src="./img/global/2.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/643.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/643.html" target="_blank">WatchKit 的界面对象</a>
+                            <p>
+                                本课介绍 WatchKit 中的界面对象，也就是 UI 元素部分，包括界面对象的概念以及 WatchKit 中的界面对象，如标签、表、上下文菜单等。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2932人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 31分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/applewatchkit/"><img src="./img/global/applewatchkit.png" alt=""></a>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/global/apple.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson3">
+                        <div class="lesson-play">
+                            <img src="./img/global/3.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/642.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/642.html" target="_blank">WatchKit 的 Glance 和通知界面（下）</a>
+                            <p>
+                                本课是 WatchKit 的概览和通知界面课程的下半部分课程，主要讲解了为通知界面添加按钮的方法、通知类目的概念以及静态界面、动态界面的样式和界面指南。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2560人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 27分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/applewatchkit/"><img src="./img/global/applewatchkit.png" alt=""></a>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/global/apple.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson4">
+                        <div class="lesson-play">
+                            <img src="./img/global/4.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/641.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/641.html" target="_blank">WatchKit 的 Glance 和通知界面（上）</a>
+                            <p>
+                                本课介绍 WatchKit 中 Glance 和 Notification 界面，包括两种交互方式的概念和特点。其中上半部分的课程主要讲解了 Glance 的概念和布局原则，简单介绍了通知界面的两种类型。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2665人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 24分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/applewatchkit/"><img src="./img/global/applewatchkit.png" alt=""></a>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/global/apple.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson5">
+                        <div class="lesson-play">
+                            <img src="./img/global/5.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/624.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/624.html" target="_blank">WatchKit 布局和导航</a>
+                            <p>
+                                本课介绍 WatchKit 中布局和导航，包括布局中涉及到的 App Icon 尺寸、屏幕尺寸、WatchKit 的适配；导航的两种样式：分页和分层的概念和创建。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>3660人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 24分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/applewatchkit/"><img src="./img/global/applewatchkit.png" alt=""></a>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/global/apple.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson6">
+                        <div class="lesson-play">
+                            <img src="./img/global/6.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/603.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/603.html" target="_blank">WatchKit 基础知识简介</a>
+                            <p>
+                                本课介绍最基础 WatchKit 框架包括 WatchKit App 和 WatchKit Extension 功能和生命周期。了解何谓 Watch App，为以后的开发打下基础。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>4737人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 18分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/applewatchkit/"><img src="./img/global/applewatchkit.png" alt=""></a>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/global/apple.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson7">
+                        <div class="lesson-play">
+                            <img src="./img/global/7.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/595.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/595.html" target="_blank">苹果2015新产品发布会介绍</a>
+                            <p>
+                                本课根据苹果2015年3月10日的产品发布会总结而出，内容包括 AppleTV 介绍、iPhone 特性介绍、全新 Mac 系列产品介绍、Apple Watch 介绍。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>4298人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 16分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/applewatchkit/"><img src="./img/global/applewatchkit.png" alt=""></a>
+                                <a href="http://www.jikexueyuan.com/course/ios/"><img src="./img/global/apple.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson8">
+                        <div class="lesson-play">
+                            <img src="./img/global/8.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/590.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/590.html" target="_blank">GDC 2015 游戏开发者大会 与 Unity 5.0 介绍</a>
+                            <p>
+                                2015年3月3日，Unity 官方在 GDC2015 大会上正式发布了迄今为止最强大的的 Unity 版本：Unity5.0。 其中包含了大量的图形改进和扩展的编辑器功能集，让开发者具备跨越21个平台创造出色游戏的潜力。 在本套课程当中，就为大家详细介绍一下Unity5 的新特性，以及对应的下载与安装。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>8170人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 46分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/unity3d/"><img src="./img/global/game.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice" id="choice6">
+                    <div class="lesson lesson1">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/1.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1982.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1982.html" target="_blank">OpenCL 设备 KERNEL 设计</a>
+                            <p>
+                                本课程中，我们将一起学习 OpenCL 的基本知识，如 OpenCL 架构的四种模型和 OpenCL C 语言。之后，我们学习一个例子，该例介绍了如何用 OpenCL 规范提供的一些常用 API 函数，去使用 OpenCL 设备完成并行计算代码的运行以及代码运行环境的配置和释放。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2071人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 42分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/opencl/"><img src="./img/enterprise/devstd.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson2">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/2.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1981.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1981.html" target="_blank">OpenCL编程的开发环境与API</a>
+                            <p>
+                                本课介绍 OpenCL 编程的开发环境与API。课程首先对OpenCL编程的环境设置及准备工作做出介绍，之后通过一个实例对OpenCL编程Host代码流程进行介绍。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2086人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 10分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/opencl/"><img src="./img/enterprise/devstd.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson3">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/3.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1865.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1865.html" target="_blank">从Docker到CaaS（一）Docker集群管理介绍</a>
+                            <p>
+                                本课程针对使用 Docker 容器部署产品的应用开发者。通过本课程的学习使应用开发者了解Docker 在云端部署的方法，了解 Docker 集群管理以及 CaaS 的概念。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2500人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 25分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/docker/"><img src="./img/enterprise/cloud.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson4">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/4.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1861.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1861.html" target="_blank">在云端构建完整的企业级 IT 系统</a>
+                            <p>
+                                本课程可以帮助你完整的云计算资源组件，了解 QingCloud 网络组件，由浅入深地学会使用路由器、负载均衡器、公网 IP、二层和三层 GRE 隧道、VPN、IPSEC 等组件构建基础网络、私有网络（自管网络和受管网络）以及实现混合组网，搭建完整的、高可用的企业级 IT 系统。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>2741人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>7课时 48分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/iaas/"><img src="./img/enterprise/cloud.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson5">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/5.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1821.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1821.html" target="_blank">Android App 性能评测与调优</a>
+                            <p>
+                                本课程介绍了 Android App 各项性能如 CPU、内存消耗等都是开发测试中需要关注的指标，如何将 App 打造的更加“优雅”是开发者们需要不断追求探索的方向，本课从内存和流畅度两个纬度来说说如何对 Android App 进行评测和调优。
+                            </p>
+                            <div class="rank">
+                                <span class="level2"></span><span>3819人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>5课时 46分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/android/"><img src="./img/enterprise/android.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson6">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/6.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1818.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1818.html" target="_blank">Docker 源码分析(一) Docker 介绍</a>
+                            <p>
+                                本课从宏观的角度认识 Docker，首先介绍 Docker，认识 Docker 技术基础 ，以及 Docker 带来的便利；其次了解容器技术的发展历史；接着介绍 Docker 目前的生态；最后，通过演示展现 Docker 的魅力。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2841人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>4课时 29分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/docker/"><img src="./img/enterprise/cloud.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson7">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/7.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1597.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1597.html" target="_blank">如何接入直达号订单系统</a>
+                            <p>
+                                本课主要为大家介绍接入直达号的商家如何接入订单系统，需要做哪些事前准备，怎样做技术对接以及一些注意事项。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2477人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 32分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/b2c/"><img src="./img/enterprise/b2c.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson lesson8">
+                        <div class="lesson-play">
+                            <img src="./img/enterprise/8.jpg" alt="">
+                            <a class="lesson-cover" href="http://www.jikexueyuan.com/course/1586.html" target="_blank"><i></i></a>
+                        </div>
+                        <div class="description">
+                            <a href="http://www.jikexueyuan.com/course/1586.html" target="_blank">如何接入百度帐号</a>
+                            <p>
+                                本课主要为大家介绍接入百度帐号的基本方式，如何在平台获取所需参数及参数含义与配置，最后展示演示效果。
+                            </p>
+                            <div class="rank">
+                                <span class="level1"></span><span>2706人学习</span>
+                            </div>
+                            <div class="time">
+                                <span>3课时 16分钟</span>
+                                <a href="http://www.jikexueyuan.com/course/b2c/"><img src="./img/enterprise/b2c.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 实战路径图 -->
+            <div id="practice-path">
+                <div class="pratice-title">
+                    <a class="title" href="http://www.jikexueyuan.com/practice/" target="_blank">实战路径图</a><span class="question">?</span><span class="tips">适合新人系统化学习的最佳实践</span>
+                    <a class="more-about" href="http://www.jikexueyuan.com/practice/" target="_blank">更多&gt;&gt;</a>
+                </div>
+                <div class="path-content">
+                    <a class="path" href="http://www.jikexueyuan.com/practice/android/" target="_blank">
+                        <img src="./img/path/android.png" alt="android">
+                        <h2>Android路径图</h2>
+                        <p>迅速掌握核心知识</p>
+                        <p>提升自身竞争力</p>
+                        <p>成为Android开发高手</p>
+                        <button>立即学习</button>
+                    </a>
+                    <a class="path" href="http://www.jikexueyuan.com/practice/ios/" target="_blank">
+                        <img src="./img/path/ios.png" alt="iOS">
+                        <h2>iOS路径图</h2>
+                        <p>课程讲解细致入微</p>
+                        <p>迅速将知识应用到实战</p>
+                        <p>成为iOS开发工程师</p>
+                        <button>立即学习</button>
+                    </a>
+                    <a class="path" href="http://www.jikexueyuan.com/practice/html5/" target="_blank">
+                        <img src="./img/path/html5.png" alt="HTML5">
+                        <h2>HTML5路径图</h2>
+                        <p>由易到难的实战案例</p>
+                        <p>迅速掌握技术精髓</p>
+                        <p>成为HTML5开发工程师</p>
+                        <button>立即学习</button>
+                    </a>
+                    <a class="path" href="http://www.jikexueyuan.com/practice/cocos2d-x/" target="_blank">
+                        <img src="./img/path/cocos2d.png" alt="Cocos2d-x">
+                        <h2>Cocos2d-x路径图</h2>
+                        <p>最小可执行单元</p>
+                        <p>学习节奏灵活掌握</p>
+                        <p>变身Cocos2d-x游戏开发工程师</p>
+                        <button>立即学习</button>
+                    </a>
+                    <a class="path" href="javascript:void(0)" target="_blank">
+                        <img src="./img/path/unity3d.png" alt="Unity3D">
+                        <h2>精英海归布道师</h2>
+                        <p>讲授国外最先进技术</p>
+                        <p>学习节奏灵活掌握</p>
+                        <p>让你从“小白”一跃成为“大拿”</p>
+                        <button>立即学习</button>
+                    </a>
+                </div>
+            </div>
+            <!-- 知识体系图 -->
+            <div id="system">
+                <div class="system-title">
+                    <a class="title" href="http://www.jikexueyuan.com/path/" target="_blank">知识体系图</a><span class="question">?</span><span class="tips">最完整的知识学习体系</span>
+                    <a class="more-about" href="http://www.jikexueyuan.com/path/" target="_blank">更多&gt;&gt;</a>
+                </div>
+                <div class="system-content">
+                    <div class="row1">
+                        <a class="system-path column1" href="http://www.jikexueyuan.com/path/android/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/android.png" alt="">
+                                    <h2>Android</h2>
+                                    <p>77门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>774568人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/java/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/Java.png" alt="">
+                                    <h2>Java语言</h2>
+                                    <p>40门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>514929人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/html5/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/html.png" alt="">
+                                    <h2>HTML开发</h2>
+                                    <p>106门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>1347040人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/javaweb/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/javaweb.jpg" alt="">
+                                    <h2>Java Web</h2>
+                                    <p>65门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>507605人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/php/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/php.png" alt="">
+                                    <h2>PHP语言</h2>
+                                    <p>41门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>283108人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/ios/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/ios.png" alt="">
+                                    <h2>iOS开发</h2>
+                                    <p>34门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>291191人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row2">
+                        <a class="system-path column1" href="http://www.jikexueyuan.com/path/c/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/c.png" alt="">
+                                    <h2>C语言</h2>
+                                    <p>15门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>187925人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/csharp/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/csharp.png" alt="">
+                                    <h2>C#</h2>
+                                    <p>23门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>100614人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/bootstrap/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/bootstrap.png" alt="">
+                                    <h2>Bootstrap</h2>
+                                    <p>11门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>141428人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/http://www.jikexueyuan.com/path/unity3d//" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/unity3d.png" alt="">
+                                    <h2>Unity 3D</h2>
+                                    <p>44门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>206447人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/egret/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/egret.png" alt="">
+                                    <h2>Egret</h2>
+                                    <p>7门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>19371人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/swift/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/swift.png" alt="">
+                                    <h2>Swift</h2>
+                                    <p>6门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>59874人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row3">
+                        <a class="system-path column1" href="http://www.jikexueyuan.com/path/cocos2d-x/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/cocos2d-x.png" alt="">
+                                    <h2>Cocos2d-x游戏开发</h2>
+                                    <p>90门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>550652人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/msoffice/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/computer1.jpg" alt="">
+                                    <h2>计算机一级</h2>
+                                    <p>7门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>29042人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/ncrec/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/computer2.jpg" alt="">
+                                    <h2>计算机二级</h2>
+                                    <p>25门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>134319人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/http://www.jikexueyuan.com/path/watchkit/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/watchkit.png" alt="">
+                                    <h2>watchkit开发</h2>
+                                    <p>5门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>16561人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/gui/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/gui.png" alt="">
+                                    <h2>GUI</h2>
+                                    <p>27门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>110890人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/aspdotnet/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/asp.png" alt="">
+                                    <h2>Asp.Net</h2>
+                                    <p>61门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>409771人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row4">
+                        <a class="system-path column1" href="http://www.jikexueyuan.com/path/web/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/webfront.png" alt="">
+                                    <h2>Web前端</h2>
+                                    <p>180门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>1460759人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/python/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/python.png" alt="">
+                                    <h2>Python</h2>
+                                    <p>48门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>240770人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/docker/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/docker.png" alt="">
+                                    <h2>Docker</h2>
+                                    <p>9门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>27422人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/http://www.jikexueyuan.com/path/arduino/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/arduino.png" alt="">
+                                    <h2>Arduino</h2>
+                                    <p>11门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>37214人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/uiautomator/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/uiautomator.png" alt="">
+                                    <h2>Android UiAutomator</h2>
+                                    <p>20门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>63683人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="system-path" href="http://www.jikexueyuan.com/path/jwoccupation/" target="_blank">
+                            <div class="outer-box">
+                                <div class="front">
+                                    <img src="./img/system/jwoccupation.png" alt="">
+                                    <h2>Java Web 职业路径图</h2>
+                                    <p>61门课程</p>
+                                </div>
+                                <div class="back">
+                                    <p>81人学习</p>
+                                    <button>立即学习</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 战略合作企业 -->
+            <div id="partner">
+                <div class="partner-title">
+                    <p class="title">战略合作企业</p>
+                    <a class="more-about" href="http://www.jikexueyuan.com/partner" target="_blank">更多&gt;&gt;</a>
+                </div>
+                <div class="partner-list">
+                    <div class="partner-name">
+                        <a href=""><img src="./img/partner/microsoft.jpg" alt=""></a>
+                        <a href=""><img src="./img/partner/tengxun.jpg" alt=""></a>
+                        <a href=""><img src="./img/partner/chukong.jpg" alt=""></a>
+                        <a href=""><img src="./img/partner/gaotong.jpg" alt=""></a>
+                        <a href=""><img src="./img/partner/amd.jpg" alt=""></a>
+                        <a href=""><img src="./img/partner/xunfei.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 合作院校 -->
+            <div id="university">
+                <div class="university-title">
+                    <p class="title">合作院校</p>
+                    <a class="more-about" href="http://mooc.jikexueyuan.com/" target="_blank">更多&gt;&gt;</a>
+                </div>
+                <div class="university-list">
+                    <div class="university-name">
+                        <a href=""><img src="./img/university/university1.png" alt=""></a>
+                        <a href=""><img src="./img/university/university2.png" alt=""></a>
+                        <a href=""><img src="./img/university/university3.png" alt=""></a>
+                        <a href=""><img src="./img/university/university4.png" alt=""></a>
+                        <a href=""><img src="./img/university/university5.png" alt=""></a>
+                        <a href=""><img src="./img/university/university6.png" alt=""></a>
+                        <a href=""><img src="./img/university/university7.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 媒体报道 -->
+            <div id="media">
+                <div class="media-title">
+                    <p class="title">媒体报道</p>
+                </div>
+                <div class="media-list">
+                    <div class="media-name">
+                        <a href=""><img src="./img/media/media1.jpg" alt=""></a>
+                        <a href=""><img src="./img/media/media2.jpg" alt=""></a>
+                        <a href=""><img src="./img/media/media3.jpg" alt=""></a>
+                        <a href=""><img src="./img/media/media4.jpg" alt=""></a>
+                        <a href=""><img src="./img/media/media5.jpg" alt=""></a>
+                        <a href=""><img src="./img/media/media6.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部功能栏：极客学院、网站服务、帮助中心、交流合作及联系信息等 -->
+            <div id="map-jk">
+                <div class="jkxy">
+                    <ul class="map-list">
+                        <a class="map-title" href="http://www.jikexueyuan.com/course/">极客学院</a>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/course/">职业课程体系</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/path/">知识体系图</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/practice/">实战路径图</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/partner/">企业课程</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/resources/">资源下载</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/tag/">课程标签</a></li>
+                    </ul>
+                </div>
+                <div class="wzfu">
+                    <ul class="map-list">
+                        <a class="map-title" href="http://www.jikexueyuan.com/member/freevip.html">网站服务</a>
+                        <li>&bull;&nbsp;<a href="http://press.jikexueyuan.com/topic/">课程需求</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/member/freevip.html">免费体验vip</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/blog/">黑板报</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/sitemap.html">网站地图</a></li>
+                    </ul>
+                </div>
+                <div class="help-center">
+                    <ul class="map-list">
+                        <a class="map-title" href="http://wenda.jikexueyuan.com/">帮助中心</a>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/question/">技术问答</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/vip/">VIP权益</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/faq.html">常见问题</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/service.html">服务条款</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/copyright.html">版权声明</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/disclaimer.html">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="communication">
+                    <ul class="map-list">
+                        <a class="map-title" href="http://www.jikexueyuan.com/help/about.html">交流合作</a>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/about.html">关于我们</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/contact.html">联系我们</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/help/join.html">社会招聘</a></li>
+                        <li>&bull;&nbsp;<a href="http://press.jikexueyuan.com/evangelist/apply.html">布道师招聘</a></li>
+                        <li>&bull;&nbsp;<a href="mailto:hey@jikexueyuan.com?subject=%E4%B8%9A%E5%8A%A1%E5%92%A8%E8%AF%A2%E5%90%88%E4%BD%9C">合作咨询</a></li>
+                        <li>&bull;&nbsp;<a href="http://www.jikexueyuan.com/friendlink.html">友情链接</a></li>
+                        <li>&bull;&nbsp;<a href="http://jiuye.jikexueyuan.com/assistant/apply">极客助教招募</a></li>
+                    </ul>
+                </div>
+                <div class="search-share">
+                    <p class="slogan">极客学院，编程是一种信仰！</p>
+                    <a class="mobile" href="">
+                        <img src="./img/mobile.png" alt="">
+                        <div>
+                            <h2>手机客户端</h2>
+                            <span>离线缓存 随时学习&gt;</span>
+                        </div>
+                    </a>
+                    <div class="social-media">
+                        <a class="weibo" href="http://weibo.com/jikexueyuan" target="_blank"></a>
+                        <a class="tieba" href="http://tieba.baidu.com/f?kw=%BC%AB%BF%CD%D1%A7%D4%BA&fr=index" target="_blank"></a>
+                        <span class="weixin"><img src="./img/weixin-scan.png" alt=""></span>
+                    </div>
+                    <a class="contact-us" href="https://chat.meiqia.com/widget/desktop/index.html">
+                        <span></span>
+                        <div>
+                            <h3>联系我们</h3>
+                            <p>工作日9:00-21:00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 网站底部：版权、备案信息 -->
+        <div id="footer">
+            <p>Copyright &copy; 2013-2015 <a href="http://www.jikexueyuan.com/">极客学院</a> <a href="http://www.jikexueyuan.com/">jikexueyuan.com</a> All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802013056</p>
+        </div>
+    </div>
+    <!-- // <script src="./js/jquery-1.11.3.js"></script> -->
+    <!-- // <script src="./js/jkxy.js"></script> -->
+    
+    <!-- 通过sea.js加载器实现js文件的模块化加载 -->
+    <script src="js/sea.js"></script>
+    <script>
+    // seajs 的简单配置
+    seajs.config({
+        base: "./js/",
+        alias: {
+            "jquery": "jquery-sea.js"
+        }
+    });
+
+    // 加载入口模块
+    seajs.use("main");
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+/* 页面通用设置 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+        color: #000;
+    }
+
+    /* 页面整体大小、定位及背景 */
+    div#container {
+        background: url(../img/background.png);
+        width: 1259px;
+        height: 700px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    /* 页面顶部：雪碧Logo及导航链接 */
+    div#container #top {
+        width: 1259px;
+        height: 102px;
+    }
+    
+    #top .top-left img {
+        position: absolute;
+        top: 19px;
+        left: 35px;
+    }
+    
+    #top nav {
+        position: absolute;
+        top: 33px;
+        left: 307px;
+    }
+    
+    nav li a {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    nav a:hover {
+        color: #B6F0F2;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-right: 45px;
+    }
+    
+    nav li.about {
+        line-height: 34px;
+        background: url(../img/nav-ice.gif) no-repeat;
+        background-size: 102px 34px;
+        background-position: 5px 0;
+    }
+    
+    nav li.about a {
+        margin-left: 25px;
+        margin-right: 25px;
+        color: #37ADDD;
+    }
+    
+    /* <!-- 页面中部：产品宣传主体部分 --> */
+    div#container #middle {
+        width: 1259px;
+        height: 400px;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    #middle .sprite {
+        width: 829px;
+        height: 298px;
+        position: absolute;
+        left: 216px;
+        top: 125px;
+        z-index: 100;
+    }
+    
+    #middle .dolphin {
+        width: 158px;
+        height: 102px;
+        position: absolute;
+        left: 8px;
+        top: 316px;
+    }
+    
+    #middle .mongo {
+        width: 105px;
+        height: 66px;
+        position: absolute;
+        left: 606px;
+        top: 107px;
+    }
+    
+    #middle .ice-body {
+        width: 400px;
+        height: 169px;
+        position: absolute;
+        left: 700px;
+        top: 53px;
+    }
+    
+    #middle .brick-left {
+        width: 92px;
+        height: 59px;
+        position: absolute;
+        left: 237px;
+        top: 245px;
+    }
+    
+    #middle .brick-right {
+        width: 92px;
+        height: 59px;
+        position: absolute;
+        left: 894px;
+        top: 245px;
+    }
+    
+    #middle .tree {
+        width: 357px;
+        height: 97px;
+        position: absolute;
+        left: 1081px;
+        top: 316px;
+    }
+    
+    #middle .orange {
+        width: 90px;
+        height: 89px;
+        position: absolute;
+        left: 1196px;
+        top: 268px;
+    }
+    
+    /* 页面底部：分享到社交网站及版权信息 */
+    div#container #bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 1259px;
+        height: 333px;
+        background: url(../img/bottom.png) no-repeat;
+    }
+    
+    #bottom .social {
+        position: absolute;
+        left: 17px;
+        bottom: 14px;
+    }
+    
+    .social li {
+        display: inline-block;
+    }
+    
+    .social a {
+        color: #FFF;
+        font-size: 14px;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    
+    .social a:hover {
+        color: #B6F0F2;
+    }
+    
+    .social span {
+        color: #FFF;
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    
+    .social a img {
+        width: 16px;
+        height: 16px;
+        margin-bottom: -3px;
+        margin-left: -10px;
+    }
+    
+    #bottom p {
+        position: absolute;
+        right: 25px;
+        bottom: 14px;
+        font-size: 12px;
+        color: #FFF;
+    }
+    
+    #bottom .ice-heart {
+        position: absolute;
+        right: 58px;
+        bottom: 42px;
+    }
+    
+    #bottom .lemon {
+        width: 118px;
+        height: 43px;
+        position: absolute;
+        left: 490px;
+        top: 203px;
+        background: url(../img/lemon.gif);
+        text-align: center;
+        line-height: 43px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: #A7EEFF;
+    }
+    
+    #bottom .icecool {
+        width: 118px;
+        height: 43px;
+        position: absolute;
+        left: 624px;
+        top: 203px;
+        background: url(../img/icecool.gif);
+        text-align: center;
+        line-height: 43px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: #0582CD;
+    }

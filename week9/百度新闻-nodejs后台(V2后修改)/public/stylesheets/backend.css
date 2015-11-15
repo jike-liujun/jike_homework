@@ -1,0 +1,94 @@
+#wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* -----页面顶部----- */
+.navbar {
+    background: #33CCFF;
+}
+.navbar p.page-title {
+    width: 500px;
+    height: 36px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+}
+.navbar-brand img {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -8px;
+}
+
+/* -----页面主体区域----- */
+
+/* 左侧边栏导航标签 */
+#page .row .sidebar {
+    background-color: #F4F4F4;
+}
+#page .row .sidebar .column-title {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 0;
+}
+.sidebar ul {
+    position: relative;
+    margin-top: -10px;
+}
+.sidebar ul li {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* 页面内容展示面板 */
+#page .row .main .panel.mypanel {
+    position: relative;
+    margin-top: -10px;
+}
+#page .row .main .panel .panel-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+}
+/*页面加载时，仅显示【推荐】版块*/
+/*.mypanel:not(#recommend) {
+    display: none;
+}*/
+.mypanel{
+    display: none;
+}
+/* 新增数据行按钮*/
+#page .row .main .panel .panel-body #first{
+    float: right;
+    height:50px;
+}
+#page .row .main .panel .panel-body #first button {
+    font-size: 16px;
+}
+/*表格样式*/
+#page .row .main .panel .panel-body table {
+    border: 2px solid #F8B48E!important;
+}
+
+#page .row .main .panel .panel-body table thead th,
+#page .row .main .panel .panel-body table tfoot th {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #F8B48E;
+}
+#page .row .main .panel .panel-body table td {
+    text-align: center;
+    padding: 0;
+    vertical-align: middle;
+    max-width: 180px;
+    overflow: hidden;
+}
+#page .row .main .panel .panel-body table td:first-child {
+    width: 70px;
+}

@@ -1,0 +1,109 @@
+.container {
+    width: 162px;
+    height: 162px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -81px;
+    margin-top: -81px;
+    /*border: 2px solid purple;*/
+    -webkit-transform-style: preserve-3d;
+    /*-webkit-perspective: 500;*/
+    -webkit-perspective-origin: -200px -300px;
+    -webkit-animation-name: myanimation;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 5s;
+    /*-webkit-transform-origin: 81px 81px 0;*/
+}
+
+.square {
+    width: 162px;
+    height: 162px;
+    position: absolute;
+}
+
+.grid {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    float: left;
+}
+
+.container #front {
+    -webkit-transform: translateZ(81px);
+}
+
+.container #back {
+    -webkit-transform: rotateX(180deg) translateZ(81px);
+}
+
+.container #left {
+    -webkit-transform: rotateY(-90deg) translateZ(81px);
+}
+
+.container #right {
+    -webkit-transform: rotateY(90deg) translateZ(81px);
+}
+
+.container #top {
+    -webkit-transform: rotateX(90deg) translateZ(81px);
+}
+
+.container #bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(81px);
+}
+
+#front .grid {
+    background-color: orange;
+}
+
+#back .grid {
+    background-color: red;
+}
+
+#left .grid {
+    background-color: green;
+}
+
+#right .grid {
+    background-color: blue;
+}
+
+#top .grid {
+    background-color: yellow;
+}
+
+#bottom .grid {
+    background-color: white;
+}
+
+@-webkit-keyframes myanimation {
+    15% {
+        -webkit-transform: rotateX(360deg);
+    }
+    24% {
+        -webkit-transform: translateX(200px);
+    }
+    33% {
+        -webkit-transform: translateY(200px);
+    }
+    42% {
+        -webkit-transform: translateX(0px);
+    }
+    57% {
+        -webkit-transform: rotateY(-360deg);
+    }
+    66% {
+        -webkit-transform: translateY(-200px);
+    }
+    75% {
+        -webkit-transform: translateX(-200px);
+    }
+    84% {
+        -webkit-transform: translateX(0px);
+    }
+    100% {
+        -webkit-transform: rotateZ(720deg);
+    }
+}

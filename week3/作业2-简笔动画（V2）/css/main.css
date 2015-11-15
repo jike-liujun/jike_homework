@@ -1,0 +1,273 @@
+/* -------整个车身初始位置在页面垂直和水平居中------- */
+.container {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -252px;
+    margin-top: -202px;
+}
+
+/* -------定义车轮尺寸、颜色、位置等样式------- */
+.wheel {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 5px solid #000;
+    background-color: #E3EAEA;
+}
+
+#left.wheel {
+    position: absolute;
+    left: 100px;
+    bottom: 0px;
+}
+
+#right.wheel {
+    position: absolute;
+    right: 100px;
+    bottom: 0px;
+}
+
+.wheel .face {
+    width: 45px;
+    height: 45px;
+    border: solid #000;
+}
+
+.wheel .blue {
+    background-color: #2BB7DE;
+}
+
+.wheel .white {
+    background-color: #FFF;
+}
+
+.wheel .face:nth-child(1) {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 50px;
+}
+
+.wheel .face:nth-child(2) {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    border-left-width: 1px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 1px;
+    border-top-right-radius: 50px;
+}
+
+.wheel .face:nth-child(3) {
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    border-left-width: 2px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 2px;
+    border-bottom-left-radius: 50px;
+}
+
+.wheel .face:nth-child(4) {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-bottom-right-radius: 50px;
+}
+
+/* -------定义车身底部线条样式------- */
+.bottom1 {
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    bottom: 53px;
+    left: 50px;
+}
+
+.bottom2 {
+    width: 80px;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    bottom: 53px;
+    left: 210px;
+}
+
+.bottom3 {
+    width: 58px;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    bottom: 53px;
+    right: 42px;
+}
+
+/* -------定义车前身线条样式------- */
+.front1 {
+    width: 40px;
+    height: 50px;
+    border: 5px solid #000;
+    border-top-left-radius: 30px 40px;
+    border-bottom-left-radius: 30px 40px;
+    background-color: #4CE4A6;
+    position: absolute;
+    bottom: 53px;
+    left: 1px;
+}
+
+.front2 {
+    width: 20px;
+    height: 32px;
+    border: 5px solid #000;
+    background-color: #F25022;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    bottom: 111px;
+    left: 11px;
+}
+
+.front3 {
+    width: 40px;
+    height: 140px;
+    border: 5px solid #000;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 104px;
+    left: 62px;
+}
+
+/* -------定义车身顶盖线条样式------- */
+.top {
+    width: 265px;
+    height: 122px;
+    border: 5px solid #000;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-left-color: transparent;
+    /*border-left-color: #000;*/
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    /*border-right-color: #000;*/
+    position: absolute;
+    bottom: 221px;
+    left: 119px;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+
+@-moz-document url-prefix(){ 
+    .top {
+        border-left-color: #000;
+        border-right-color: #000;
+        width: 264px;
+        bottom: 224px;
+        left: 120px;
+    }
+}
+
+/* -------定义车后身线条样式------- */
+.back1 {
+    width: 65px;
+    height: 128px;
+    border: 5px solid #000;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -o-transform: rotate(150deg);
+    transform: rotate(150deg);
+    position: absolute;
+    bottom: 96px;
+    right: 68px;
+}
+
+.back2 {
+    width: 40px;
+    height: 69px;
+    border: 5px solid #000;
+    border-radius: 17px;
+    background-color: #F25022;
+    position: absolute;
+    bottom: 53px;
+    right: 27px;
+}
+
+/* -------定义车窗线条样式------- */
+.window1 {
+    width: 96px;
+    height: 92px;
+    border: 5px solid #000;
+    border-top-left-radius: 100px;
+    background-color: #9CAB79;
+    position: absolute;
+    left: 140px;
+    top: 80px;
+}
+
+.window2 {
+    width: 92px;
+    height: 96px;
+    border: 5px solid #000;
+    border-top-left-radius: 100px;
+    background-color: #9CAB79;
+    position: absolute;
+    right: 132px;
+    top: 78px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+/* -------定义车门拉手线条样式------- */
+.door1 {
+    width: 40px;
+    height: 10px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    background-color: #8A8A8C;
+    position: absolute;
+    left: 187px;
+    top: 195px;
+}
+
+.door2 {
+    width: 40px;
+    height: 10px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    background-color: #8A8A8C;
+    position: absolute;
+    right: 138px;
+    top: 195px;
+}

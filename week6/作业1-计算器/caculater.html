@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/calculater.css"><!-- 兼容chrome、firefox、safari等及IE9以上版本 -->
+    <!--[if lt IE 9]> 
+    <link rel="stylesheet" href="./css/calculater_IE.css">
+    <![endif]-->
+    <title>简易计算器逻辑实现</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="container">
+        <div class="row">
+            <div class="col-md-4" id="page">
+                <h2>简易计算器</h2>
+                <!-- 计算结果输出区域 -->
+                <div class="form-group" id="output-box">
+                    <input type="text" class="form-control" id="outcome">
+                </div> 
+                <!-- 输入区域 -->
+                <div class="form-group" id="input-box">
+                    <div id="mydiv">
+                        <button class="btn btn-success" id="plus" value="+">&#43;</button>
+                        <button class="btn btn-success" id="minus" value="-">&#45;</button>
+                        <button class="btn btn-success" id="times" value="*">&times;</button>
+                        <button class="btn btn-success" id="divide" value="/">&divide;</button>
+                        <button class="btn btn-success" id="equal" value="=">=</button>
+                        <button class="btn btn-primary" id="clear" onclick="clearValue()">C</button>
+                        <button class="btn btn-primary" id="del" value="del">del</button>
+                        <button class="btn btn-info" id="zero" value="0">0</button>
+                        <button class="btn btn-warning" id="negative" value="+/-">+/-</button>
+                        <button class="btn btn-warning" id="percentage" value="%">%</button>
+                        <button class="btn btn-info" id="one" value="1">1</button>
+                        <button class="btn btn-info" id="two" value="2">2</button>
+                        <button class="btn btn-info" id="three" value="3">3</button>
+                        <button class="btn btn-warning" id="sqrt" value="sqrt">sqrt</button>
+                        <button class="btn btn-warning" id="square" value="square">x<sup>2</sup></button>
+                        <button class="btn btn-info" id="four" value="4">4</button>
+                        <button class="btn btn-info" id="five" value="5">5</button>
+                        <button class="btn btn-info" id="six" value="6">6</button>
+                        <button class="btn btn-warning" id="sin" value="sin">sin</button>
+                        <button class="btn btn-warning" id="cos" value="cos">cos</button>
+                        <button class="btn btn-info" id="seven" value="7">7</button>
+                        <button class="btn btn-info" id="eight" value="8">8</button>
+                        <button class="btn btn-info" id="nine" value="9">9</button>
+                        <button class="btn btn-info" id="dot" value=".">.</button>
+                        <button class="btn btn-warning" id="pi" value="pi">&pi;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/calculater.js"></script> <!-- 兼容chrome、firefox、safari等及IE9以上版本 -->
+    <!--[if lt IE 9]> 
+    <script src="./js/calculater_IE.js"></script>
+    <![endif]-->
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+/* -----页面顶部导航条----- */
+.navbar {
+  background: #33CCFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navbar-brand img{
+	width:3rem;
+	height:3rem;
+	margin-top: -8px;
+}
+
+/* -----页面主体区域----- */
+/* 左侧边栏导航条 */
+#page .row .sidebar{
+	background-color: #F4F4F4;
+}
+/* 路径导航链接 */
+#page .row .main .breadcrumb li{
+font-size: 16px;
+}
+
+/* 页面内容展示面板 */
+#page .row .main .panel .panel-heading{
+	font-size: 1.8rem;
+	font-weight: 800;
+}
+
+/* 辅助工具栏：增加按钮、工具按钮、切换表格每页显示条数按钮、表格内容搜索框 */
+#page .row .main .panel .panel-body #first,
+#page .row .main .panel .panel-body #second{
+	height:50px;
+}
+
+#page .row .main .panel .panel-body .left{
+	float:left;
+}
+#page .row .main .panel .panel-body .right{
+	float:right;
+}
+
+#page .row .main .panel .panel-body #first #add{
+	font-size: 1.5rem;
+}
+#page .row .main .panel .panel-body #first #tools a{
+	font-size: 1.5rem;
+}
+
+#page .row .main .panel .panel-body #second .record{
+	margin-left: 0;
+}
+
+#page .row .main .panel .panel-body #second .table_search{
+	width:200px;
+}
+
+/* 数据表 */
+#page .row .main .panel .panel-body table{
+	border:2px solid #F8B48E!important;
+}
+
+#page .row .main .panel .panel-body table thead{
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	color:#fff;
+	background-color: #F8B48E;
+}
+
+#page .row .main .panel .panel-body table td{
+	text-align: center;
+	vertical-align: middle;
+}
+
+#page .row .main .panel .panel-body table .star{
+	color:#FF7A6C;
+	text-shadow: 0 0 1px rgba(234,90,78,0.7);
+}

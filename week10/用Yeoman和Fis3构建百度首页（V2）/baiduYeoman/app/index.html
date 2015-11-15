@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>baidu_yoeman</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/baidu.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="container">
+        <!-- 页面顶部工具栏 -->
+        <div id="top_bar">
+            <div id="nav_left">
+                <a class="weather" href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=杭州天气预报" target="_blank">
+                    <span class="city">杭州：</span>
+                    <span class="sunny"></span>
+                    <span class="temp">20℃</span>
+                    <span class="polution"><em>良&nbsp;</em><em>72</em></span>
+                </a>
+                <span>|</span>
+                <a href="">宝箱</a>
+                <a href="">换肤</a>
+                <a href="">消息</a>
+            </div>
+            <nav class="login">
+                <a href="http://news.baidu.com/" target="_blank">新闻</a>
+                <a href="http://www.hao123.com/" target="_blank">hao123</a>
+                <a href="http://map.baidu.com/" target="_blank">地图</a>
+                <a href="http://v.baidu.com/" target="_blank">视频</a>
+                <a href="http://tieba.baidu.com/" target="_blank">贴吧</a>
+                <a href="#" class="nav_normal">登录</a>
+                <a href="#" class="nav_normal">设置</a>
+                <a href="http://www.baidu.com/more/" class="nav_normal more_p" id="toggle_more">更多产品</a>
+            </nav>
+        </div>
+        <!-- [更多产品]悬浮下拉菜单 -->
+        <div class="bdmore_wrapper">
+            <a href="http://www.baidu.com/more/" class="tj_more">更多产品</a>
+            <a href="http://www.nuomi.com/?cid=002540" class="tj_nuomi"><span class="tj_item1"></span>糯米</a>
+            <a href="http://zhidao.baidu.com" class="tj_zhidao"><span class="tj_item2"></span>知道</a>
+            <a href="http://music.baidu.com" class="tj_mp3"><span class="tj_item3"></span>音乐</a>
+            <a href="http://image.baidu.com" class="tj_img"><span class="tj_item4"></span>图片</a>
+            <a href="http://wenku.baidu.com" class="tj_wenku"><span class="tj_item5"></span>文库</a>
+            <a href="http://top.baidu.com" class="tj_bang"><span class="tj_item6"></span>风云榜</a>
+            <a href="http://e.baidu.com/?refer=888" class="tj_tuiguang"><span class="tj_item7"></span>百度推广</a>
+            <a href="https://www.baidu.com/more/" class="tj_total">全部产品&gt;&gt;</a>
+        </div>
+        <!-- 页面中部：百度Logo、搜索框以及按钮部分 -->
+        <div class="middle">
+            <div id="baidu_logo">
+                <img src="./images/bd_logo.png" alt="百度logo">
+            </div>
+            <form>
+                <span class="test">
+                    <span class="bd_mic"></span>
+                <input type="text" class="search_content" autofocus>
+                </span>
+                <input type="submit" value="百度一下" class="baidu_button">
+            </form>
+        </div>
+        <div id="panel">
+            <div class="left_tab">
+                <a href="#right_box1" class="menus">导航</a>
+                <a href="#right_box2" class="menus">新闻</a>
+                <a href="#right_box3" class="menus">购物</a>
+                <a href="#right_box4" class="menus">音乐</a>
+                <a href="" class="set menus"><span></span></a>
+            </div>
+            <div class="right_box" id="right_box1">
+                <div class="nav-shift">
+                    <span href="#choose1">我的导航</span>
+                    <span href="#choose2">推荐导航</span>
+                </div>
+                <div class="my-sites choose" id="choose1">
+                    <ul>
+                        <li>
+                            <a href="https://www.taobao.com/"><img src="./images/s-taobao.png" />淘宝网</a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/"><img src="./images/s-weibo.png" />新浪微博</a>
+                        </li>
+                        <li>
+                            <a href="http://www.youku.com/"><img src="./images/s-youku.png" />优酷网</a>
+                        </li>
+                        <li>
+                            <a href="http://www.hao123.com/"><img src="./images/s-hao123.png" />hao123</a>
+                        </li>
+                        <li>
+                            <a href="http://www.jd.com/"><img src="./images/s-jd.png" />京东商城</a>
+                        </li>
+                        <li>
+                            <a href="http://www.iqiyi.com/"><img src="./images/s-iqiyi.png" />爱奇艺</a>
+                        </li>
+                        <li>
+                            <a href="http://www.163.com/"><img src="./images/s-netease.png" />网易</a>
+                        </li>
+                        <li>
+                            <a href="http://www.sina.com.cn/"><img src="./images/s-sina.png" />新浪</a>
+                        </li>
+                        <li>
+                            <a href="http://www.ifeng.com/"><img src="./images/s-ifeng.png" />凤凰网</a>
+                        </li>
+                        <li>
+                            <a href="http://36kr.com/"><img src="./images/s-36kr.png" />36氪</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-sites choose" id="choose2">
+                    <div class="hot-title">热门网址</div>
+                    <div class="hot-sites">
+                        <a href="https://www.taobao.com/" target="_blank"><img src="./images/taobao.png" alt="" /></a>
+                        <a href="http://vip.baidu.com/taobao/" target="_blank"><img src="./images/tb_fanli.png" alt="" /></a>
+                        <a href="http://www.jd.com/" target="_blank"><img src="./images/jd.png" alt="" /></a>
+                        <a href="http://www.nuomi.com/" target="_blank"><img src="./images/nuomi.png" alt="" /></a>
+                        <a href="http://www.yhd.com/" target="_blank"><img src="./images/yhd.png" alt="" /></a>
+                        <a href="http://www.ctrip.com/" target="_blank"><img src="./images/xiecheng.png" alt="" /></a>
+                        <a href="http://www.suning.com/" target="_blank"><img src="./images/suning.png" alt="" /></a>
+                        <a href="http://vip.baidu.com/" target="_blank"><img src="./images/bd_vip.png" alt="" /></a>
+                        <a href="http://www.mafengwo.cn/" target="_blank"><img src="./images/mafengwo.png" alt="" /></a>
+                        <a href="http://hz.58.com/" target="_blank"><img src="./images/58.png" alt="" /></a>
+                        <a href="http://hangzhou.baixing.com/" target="_blank"><img src="./images/baixing.png" alt="" /></a>
+                        <a href="http://www.xywy.com/" target="_blank"><img src="./images/xunyi.png" alt="" /></a>
+                        <a href="http://hangzhou.bitauto.com/" target="_blank"><img src="./images/yiche.png" alt="" /></a>
+                        <a href="http://www.zongheng.com/" target="_blank"><img src="./images/zongheng.png" alt="" /></a>
+                        <a href="http://www.zhen.com/" target="_blank"><img src="./images/zhenpin.png" alt="" /></a>
+                        <a href="http://www.iqiyi.com/" target="_blank"><img src="./images/iqiyi.png" alt="" /></a>
+                        <a href="http://www.sina.com.cn/" target="_blank"><img src="./images/sina.png" alt="" /></a>
+                        <a href="http://caipiao.baidu.com/" target="_blank"><img src="./images/bd_caipiao.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right_box" id="right_box2">
+                <!-- 热点新闻图片轮播 -->
+                <div class="picture">
+                    <div class="container-fluid" id="slide-container">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- 小圆点指示器 -->
+                            <ol class="carousel-indicators" id="slide-indicator">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            </ol>
+                            <!-- 需要轮播的图片 -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="./images/news/news-1.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p class="slide-title">故宫三百年铜缸被情侣刻字"秀恩爱"</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./images/news/news-2.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p class="slide-title">辽宁盘山巨锅蒸肥蟹 众人闻香而至</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./images/news/news-3.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p class="slide-title">开学了 看世界各地孩子们的表情</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./images/news/news-4.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p class="slide-title">汤姆克鲁斯新片剧组飞机坠毁</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="./images/news/news-5.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                        <p class="slide-title">沈阳现直径3米巨型韩式拌饭</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 轮播控制 -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-hot">
+                    <div class="fyb-title">
+                        <a href="http://top.baidu.com/" class="fyb"><span class="fyb-icon"></span>搜索风云榜</a>
+                        <a href="" class="change"><span class="change-icon"></span>换一换</a>
+                    </div>
+                    <div class="fyb-content">
+                        <ul>
+                            <li><a href="#">&bull;&nbsp;皇马大胜西班牙人</a></li>
+                            <li><a href="#">&bull;&nbsp;梅西替补绝杀马竞</a></li>
+                            <li><a href="#">&bull;&nbsp;梅西替补绝杀马竞</a></li>
+                            <li><a href="#">&bull;&nbsp;内地导演评分出炉</a></li>
+                            <li><a href="#">&bull;&nbsp;范冰冰疑怀孕</a></li>
+                            <li><a href="#">&bull;&nbsp;周星驰对谈撒贝宁</a></li>
+                            <li><a href="#">&bull;&nbsp;教官打伤高中生</a></li>
+                            <li><a href="#">&bull;&nbsp;郭美美被判5年</a></li>
+                            <li><a href="#">&bull;&nbsp;考研时间公布</a></li>
+                            <li><a href="#">&bull;&nbsp;汪峰发飙质疑媒体</a></li>
+                            <li><a href="#">&bull;&nbsp;村民自制迫击炮</a></li>
+                            <li><a href="#">&bull;&nbsp;恒大3-0胜上港</a></li>
+                            <li><a href="#">&bull;&nbsp;FIFA调查嘘国歌</a></li>
+                            <li><a href="#">&bull;&nbsp;美国民众插国旗</a></li>
+                            <li><a href="#">&bull;&nbsp;挑战者联盟开播</a></li>
+                            <li><a href="#">&bull;&nbsp;日本洪水泛滥</a></li>
+                            <li><a href="#">&bull;&nbsp;麦加大清真寺事故</a></li>
+                            <li><a href="#">&bull;&nbsp;胡军与女儿亲吻</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right_box" id="right_box3">
+                <div class="box-title">
+                    <a href="#" class="box-title-word">今日优选</a>
+                    <a href="#" class="box-title-word">美食</a>
+                    <a href="#" class="box-title-word add-border">电影</a>
+                    <a href="#" class="box-title-word">娱乐</a>
+                    <a href="#" class="box-title-word">酒店</a>
+                    <a href="#" class="box-title-word">猜你喜欢</a>
+                    <a href="#" id="myAccount">我的账户<span></span></a>
+                    <a href="http://www.nuomi.com/movie?cid=quanyi" id="moreMovies">更多影片</a>
+                </div>
+                <div class="box-content">
+                    <div class="movie-now">
+                        <img src="./images/shopping/movie1.jpg" alt="滚蛋吧！肿瘤君" />
+                        <p>滚蛋吧！肿瘤君</p>
+                        <span class="movie-score"><span class="movie-star"></span>8.1</span>
+                        <a href="http://hz.nuomi.com/film/9541?cid=quanyi" class="ticket" target="_blank">购票</a>
+                    </div>
+                    <div class="movie-now">
+                        <img src="./images/shopping/movie2.jpg" alt="终结者：创世纪" />
+                        <p>终结者：创世纪</p>
+                        <span class="movie-score"><span class="movie-star"></span>8.1</span>
+                        <a href="http://hz.nuomi.com/film/9578?cid=quanyi" class="ticket" target="_blank">购票</a>
+                    </div>
+                    <div class="movie-now">
+                        <img src="./images/shopping/movie3.jpg" alt="捉妖记" />
+                        <p>捉妖记</p>
+                        <span class="movie-score"><span class="movie-star"></span>8.9</span>
+                        <a href="http://hz.nuomi.com/film/9519?cid=quanyi" class="ticket" target="_blank">购票</a>
+                    </div>
+                    <div class="movie-now">
+                        <img src="./images/shopping/movie4.jpg" alt="烈日灼心" />
+                        <p>烈日灼心</p>
+                        <span class="movie-score"><span class="movie-star"></span>8.3</span>
+                        <a href="http://hz.nuomi.com/film/9586?cid=quanyi" class="ticket" target="_blank">购票</a>
+                    </div>
+                    <div class="movie-now">
+                        <img src="./images/shopping/movie5.jpg" alt="这里的黎明静悄悄" />
+                        <p>这里的黎明静悄悄</p>
+                        <span class="movie-score"><span class="movie-star"></span>7.8</span>
+                        <a href="http://hz.nuomi.com/film/9602?cid=quanyi" class="ticket" target="_blank">购票</a>
+                    </div>
+                    <div class="movie-now" id="movie-find">
+                        <ul id="list1">
+                            <li class="list-bold">找影院</li>
+                            <li><a href="http://hz.nuomi.com/cinema/5c2dc21d971fee1d6fc02cc2" target="_blank">UME国际影城</a></li>
+                            <li><a href="http://hz.nuomi.com/cinema/0-0/subd/cb139-d10000-s0-o-b1-f0-p1#cinema-nav" target="_blank">百老汇影城</a></li>
+                            <li><a href="http://hz.nuomi.com/cinema/0-0/subd/cb76-d10000-s0-o-b1-f0-p1?cid=quanyi" target="_blank">大地数字影院</a></li>
+                            <li class="list-more"><a href="http://hz.nuomi.com/cinema/0-0/subd/cb0-d10000-s0-o-b1-f0-p1?cid=quanyi" target="_blank">更多影院</a></li>
+                        </ul>
+                        <ul id="list2">
+                            <li class="list-bold">找团购</li>
+                            <li><a href="http://hz.nuomi.com/10345/331" target="_blank">拱墅区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://hz.nuomi.com/10345/326" target="_blank">西湖区</a></li>
+                            <li><a href="http://hz.nuomi.com/10345/325" target="_blank">下城区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://hz.nuomi.com/10345/330" target="_blank">江干区</a></li>
+                            <li><a href="http://hz.nuomi.com/10345/328" target="_blank">上城区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://hz.nuomi.com/10345/333" target="_blank">滨江区</a></li>
+                            <li class="list-more"><a href="http://hz.nuomi.com/345?cid=quanyi">更多商圈</a></li>
+                        </ul>
+                    </div>
+                    <div class="user-list">
+                        <a href="#">代金卷</a>
+                        <a href="#">我的订单</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right_box" id="right_box4">
+                <div class="music-col" id="music-cover">
+                    <!-- <div class="cover-paper"></div> -->
+                    <div class="cover-paper rotate"></div>
+                    <span id="play-state" class="play-on"></span>
+                </div>
+                <div class="music-col" id="music-play">
+                    <a class="song-name" href="http://music.baidu.com/song/3458687?pst=sug" target="_blank">Better Man</a>
+                    <a class="song-author" href="http://music.baidu.com/artist/3978" target="_blank">Robbie Williams</a>
+                    <audio id="audio" src="betterman.mp3" autoplay loop controls></audio>
+                    <a class="download" href="http://music.baidu.com/song/3458687/download?__o=%2Fsong%2F3458687" target="_blank">下载</a>
+                    <div class="lyrics">
+                        <span>
+                             <b style="font-size:25px;">Better Man</b>&nbsp;&nbsp;<em style="color:#389cff;">Robbie Williams</em>
+                             <br>Send someone to love me.
+                             <br>I need to rest in arms.
+                             <br>Keep me safe from harm.
+                             <br>In pouring rain.
+                             <br>Give me endless summer.
+                             <br>Lord I fear the cold.
+                             <br>Feel I'm getting old.
+                             <br>Before my time.
+                             <br>As my soul heals the shame.
+                             <br>I will grow through this pain.
+                             <br>Lord I'm doing all I can.
+                             <br>To be a better man.
+                             <br><span>--------------------------</span>
+                        <br>Go easy on my conscience.
+                        <br>Cause it's not my fault.
+                        <br>I know I've been taught.
+                        <br>To take the blame.
+                        <br>Rest assured my angels.
+                        <br>Will catch my tears.
+                        <br>Walk me out of here.
+                        <br>I'm in pain.
+                        <br>As my soul heals the shame.
+                        <br>I will grow through this pain.
+                        <br>Lord I'm doing all I can.
+                        <br>To be a better man.
+                        <br>Once U've found that lover.
+                        <br>U're homeward bound.
+                        <br>Love is all around.
+                        <br>Love is all around.
+                        <br>I know some have fallen on stony ground.
+                        <br>But Love is all around.
+                        <br>Send someone to love me.
+                        <br>I need to rest in arms.
+                        <br>Keep me safe from harm.
+                        <br>In pouring rain.Give me endless summer.
+                        <br>Lord I fear the cold.
+                        <br>Feel I'm getting old.
+                        <br>Before my time.
+                        <br>As my soul heals the shame.
+                        <br>I will grow through this pain.
+                        <br>Lord I'm doing all I can.
+                        <br>To be a better man.
+                        </span>
+                    </div>
+                    <hr class="music-hr">
+                    <a class="music-logo" href="http://music.baidu.com/" target="_blank"></a>
+                </div>
+                <div class="music-col" id="music-hot">
+                    <div id="chanel">热门频道</div>
+                    <div id="chanel-list">
+                        <a href="#" class="private add-music-bg"><i></i>私人频道</a>
+                        <a href="#" class="heart-chanel"><i></i>红心频道</a>
+                        <a href="#"><i></i>随便听听</a>
+                        <a href="#"><i></i>欧美</a>
+                        <a href="#"><i></i>经典老歌</a>
+                        <a href="#"><i></i>DJ舞曲</a>
+                        <a href="#"><i></i>热歌</a>
+                        <a href="#"><i></i>网络红歌</a>
+                        <a href="#"><i></i>成名曲</a>
+                        <a href="#"><i></i>火爆新歌</a>
+                        <a href="#"><i></i>流行</a>
+                        <a href="#"><i></i>快乐舞曲</a>
+                        <a href="#"><i></i>KTV金曲</a>
+                        <a href="#"><i></i>伤感频道</a>
+                        <a href="#"><i></i>80后</a>
+                        <a href="#"><i></i>90后</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页面底部：百度简介、版权以及备案信息部分 -->
+        <footer class="login">
+            <p id="cp" class="login">设为首页&nbsp;&nbsp;&nbsp;&copy;2015&nbsp;&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/">&nbsp;使用百度前必读</a>&nbsp;&nbsp;<a href="http://jianyi.baidu.com/">意见反馈</a>&nbsp;&nbsp;京ICP证030173号&nbsp;<i class="c-icon"></i></p>
+        </footer>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/baidu.js"></script>
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

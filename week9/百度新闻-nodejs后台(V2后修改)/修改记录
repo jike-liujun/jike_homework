@@ -1,0 +1,13 @@
+文件/public/javascripts/backend.js:
+1. 删除数据时弹出确认提示框
+2. 修复添加数据后无法立即显示该条数据
+3. 增加默认当前系统时间(当未填写时间时自动填充系统时间)
+文件/routes/index.js:
+1. 修复添加数据时undefined错误
+2. 将curd操作归到一个orm.connect下面，精简重复代码
+3. 查询数据时按发布时间降序排列，优先显示最近新闻
+
+
+点评后修改：
+1、由于火狐/safari不识别Y-M-D的时间格式，转为Y/M/D格式
+2、由于火狐不支持innerText，因此将innerText改为textContent（所有主流浏览器均支持textContent属性, IE > 8）

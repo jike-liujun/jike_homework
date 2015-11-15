@@ -1,0 +1,980 @@
+body {
+    background-color: #eff0f0;
+    margin: 0;
+    padding: 0;
+    font: 14px/100% arial, "Hiragino Sans GB", "Hiragino Sans GB W3", \5b8b\4f53;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f30;
+    text-decoration: underline;
+}
+
+.hao-ib {
+    display: inline-block;
+}
+
+
+/* -----顶部工具栏：设hao123为首页、登录、签到等----- */
+#container .topbar-wrap {
+    width: 100%;
+    height: 28px;
+    background-color: #f7f7f7;
+}
+
+.topbar-wrap .topbar-header {
+    position: relative;
+    width: 1000px;
+    height: 28px;
+    margin: 0 auto;
+    font: 12px/26px tahoma;
+}
+
+.topbar-header .sethome {
+    display: inline-block;
+    line-height: 28px;
+    height: 28px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+
+.topbar-header .sethome:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+.sethome .home-total {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 13px;
+    padding-right: 9px;
+}
+
+.home-total .home-icon {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    line-height: 12px;
+    vertical-align: top;
+    position: relative;
+    top: 8px;
+    left: -5px;
+    text-decoration: none;
+    background-image: url(../img/b_icon.png);
+    background-position: -253px -150px;
+}
+
+.home-total .home-word {
+    color: #34a637;
+    margin-left: -4px;
+}
+
+.topbar-header .topbar-header-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.topbar-header-right a {
+    display: inline-block;
+    position: relative;
+    padding: 0 9px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    color: #333
+}
+
+.topbar-header-right a:hover {
+    color: #f30;
+    background-color: #EEE;
+    text-decoration: none;
+}
+
+a.sign {
+    color: #f30;
+}
+
+a.sign,
+a.yunpan,
+a.fankui {}
+
+a.login .login-total .login-icon {
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    line-height: 28px;
+    vertical-align: top;
+    position: relative;
+    top: 1px;
+    left: 0;
+    text-decoration: none;
+    background-image: url(../img/b_icon.png);
+    background-position: -99px -119px;
+}
+
+
+/* -----除顶部工具栏外的主体内容区域----- */
+#container .main-wrap {
+    width: 100%;
+    background-color: #FBFBFB;
+}
+
+
+/* 工具栏：日历、天气等信息 */
+.main-wrap .toolbar-wrap {
+    width: 100%;
+    height: 60px;
+    *border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(204, 204, 204, .5);
+}
+
+.toolbar-wrap .toolbar-content {
+    position: relative;
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.toolbar-content div {
+    vertical-align: top;
+}
+
+.toolbar-content .hao123-logo a img {
+    width: 210px;
+    height: 60px;
+}
+
+.toolbar-content .life-service {
+    width: 342px;
+    height: 60px;
+    margin-left: 22px;
+}
+
+.toolbar-content a {
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #999;
+}
+
+.toolbar-content a:hover {
+    color: #f30;
+}
+
+.life-service .calendar {
+    width: 78px;
+    height: 50px;
+    position: relative;
+    margin: 9px 10px 0px 10px;
+}
+
+.calendar a span.ri {
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: #999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.life-service .city {
+    width: 70px;
+    height: 50px;
+    position: relative;
+    margin: 9px 10px 0 0;
+}
+
+.life-service .weather {
+    width: 115px;
+    height: 50px;
+    position: relative;
+    margin: 9px 10px 0 0;
+}
+
+.weather a span {
+    position: absolute;
+    margin-left: 6px;
+}
+
+.life-service .slide {
+    width: 17px;
+    height: 60px;
+    position: relative;
+    background: url(../img/b_icon.png) no-repeat -337px -144px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+
+.toolbar-content .tools {
+    width: 234px;
+    height: 60px;
+}
+
+.tools>span {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 60px;
+    text-align: center;
+}
+
+.tools i {
+    display: block;
+    width: 36px;
+    height: 16px;
+    margin-top: 14px;
+    margin-left: 11px;
+    background: url(../img/b_icon.png) no-repeat;
+}
+
+.browser i {
+    background-position: -240px -264px;
+}
+
+.mobile i {
+    background-position: -299px -264px;
+}
+
+.pc i {
+    background-position: -356px -264px;
+}
+
+.email i {
+    background-position: -412px -264px;
+}
+
+.toolbar-content .advertise {
+    width: 174px;
+    height: 54px;
+    position: absolute;
+    top: 3px;
+    right: 0px;
+}
+
+
+/* 搜索框及周围区域 */
+.main-wrap .search-wrap {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.search-wrap .search-content {
+    position: relative;
+    width: 1000px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+/* 切换搜索类别 */
+.search-content nav {
+    display: block;
+    width: 442px;
+    height: 24px;
+    position: relative;
+    top: 20px;
+    margin-left: 247px;
+}
+
+nav a {
+    width: 44px;
+    height: 24px;
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+nav a:last-child {
+    width: 50px;
+}
+
+a.check {
+    background-color: #34a637;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 百度logo、搜索框及【百度一下】按钮 */
+.search-content .search-box {
+    width: 662px;
+    height: 38px;
+    position: relative;
+    top: 18px;
+    margin-left: 140px;
+}
+
+.search-box .baidu {
+    width: 97px;
+    height: 32px;
+    position: relative;
+    top: 10px;
+    margin-right: 6px;
+}
+
+.search-box .search-input input {
+    width: 440px;
+    height: 34px;
+    border: 1px solid #ababab;
+    padding-left: 6px;
+    box-shadow: inset 0 0 2px 2px rgba(204, 204, 204, .4);
+}
+
+.search-box .search-input input:focus {
+    outline: none;
+}
+
+.search-box .search-input .hotword {
+    position: absolute;
+    right: 116px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/b_icon.png) no-repeat -352px -798px;
+}
+
+.search-box .search-button {
+    width: 100px;
+    height: 38px;
+    position: relative;
+    top: 1px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 500;
+    background: #ddd url(../img/baidu-form.png) no-repeat;
+    cursor: pointer;
+}
+
+.search-content .change {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+}
+
+/* 点击更换主题颜色按钮 */
+.change li {
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    height: 25px;
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.change button {
+    width: 35px;
+    height: 25px;
+    border: 0;
+    cursor: pointer;
+}
+
+.change button:focus {
+    outline: none;
+}
+
+button.color1 {
+    background-color: #34A637;
+}
+
+button.color1:hover {
+    box-shadow: 0 0 1px 1px rgba(52, 166, 55, 0.5);
+}
+
+button.color2 {
+    background-color: #AB73E4;
+}
+
+button.color2:hover {
+    box-shadow: 0 0 1px 1px rgba(171, 115, 228, 0.5);
+}
+
+button.color3 {
+    background-color: #FD5B78;
+}
+
+button.color3:hover {
+    box-shadow: 0 0 1px 1px rgba(253, 91, 120, 0.5);
+}
+
+button.color4 {
+    background-color: #0EADF1;
+}
+
+button.color4:hover {
+    box-shadow: 0 0 1px 1px rgba(14, 173, 241, 0.5);
+}
+
+/* 热门搜索主题词链接 */
+.search-content .hotbox {
+    display: block;
+    width: 448px;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    margin-left: 246px;
+}
+
+.hotbox ul {
+    padding: 0;
+}
+
+.hotbox ul li {
+    margin-right: 7px;
+}
+
+.hotbox ul li:last-child {
+    position: absolute;
+    top: 0;
+    right: -5px;
+}
+
+.hotbox ul li button {
+    line-height: 20px;
+    font: 12px/16px 'Tahoma';
+    color: #34a637;
+    border: 1px solid #EAEAEA;
+    background-color: #FCFCFC;
+}
+
+.hotbox ul li button:hover {
+    cursor: pointer;
+    border: 1px solid #A29A9A;
+}
+
+.hotbox a {
+    font: 12px/20px 'Tahoma';
+    color: #999;
+    text-decoration: none;
+}
+
+.hotbox a:hover {
+    color: #f30;
+}
+
+
+/* 主题颜色导航栏 */
+.main-wrap .menus {
+    width: 1001px;
+    height: 45px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 11px;
+}
+
+.menus .menu-icons {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: 13px;
+    margin-right: 7px;
+    float: left;
+    margin-left: 23px;
+    background: url(../img/s_icon.png);
+}
+
+.menus span {
+    margin-left: -16px;
+}
+
+.menus ul {
+    border-top: 2px solid #34A637;
+    padding: 0;
+}
+
+/* 点击更换主题按钮，主题导航栏主题颜色随之改变-Begin */
+.menus ul.setgreen>li {
+    background-color: #34A637;
+}
+
+.menus ul.setgreen>li:hover {
+    background-color: #EEE;
+}
+
+.menus ul.setgreen a {
+    color: #FFF;
+}
+
+.menus ul.setpurple {
+    border-top: 2px solid #AB73E4;
+}
+
+.menus ul.setpurple>li {
+    background-color: #AB73E4;
+}
+
+.menus ul.setpurple>li:hover {
+    background-color: #EEE;
+}
+
+.menus ul.setpurple a {
+    color: #FFF;
+}
+
+.menus ul.setpink {
+    border-top: 2px solid #FD5B78;
+}
+
+.menus ul.setpink>li {
+    background-color: #FD5B78;
+}
+
+.menus ul.setpink>li:hover {
+    background-color: #EEE;
+}
+
+.menus ul.setpink a {
+    color: #FFF;
+}
+
+.menus ul.setblue {
+    border-top: 2px solid #0EADF1;
+}
+
+.menus ul.setblue>li {
+    background-color: #0EADF1;
+}
+
+.menus ul.setblue>li:hover {
+    background-color: #EEE;
+}
+
+.menus ul.setblue a {
+    color: #FFF;
+}
+/* 点击更换主题按钮，主题导航栏主题颜色随之改变-End */
+
+.menus li {
+    height: 44px;
+    line-height: 44px;
+    width: 124px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    background-color: #F9F9F9;
+    overflow: hidden;
+    border-bottom: 1px solid #CECECE;
+    border-left: 1px solid #CECECE;
+}
+
+.menus li:last-child {
+    border-right: 1px solid #CECECE;
+}
+
+.menus li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.menus li:hover {
+    background-color: #EEE;
+}
+
+.menus .www-icon {
+    background-position: -2px -357px;
+}
+
+.menus .series-icon {
+    background-position: -2px -177px;
+}
+
+.menus .movies-icon {
+    background-position: -2px -195px;
+}
+
+.menus .hotnews-icon {
+    background-position: -2px -303px;
+}
+
+.menus .hotgames-icon {
+    background-position: -2px -267px;
+}
+
+.menus .minigames-icon {
+    background-position: -2px -429px;
+}
+
+.menus .discount-icon {
+    background-position: -2px -429px;
+}
+
+.menus .trips-icon {
+    background-position: -1px -499px;
+}
+
+
+/* 热门站点导航区域 */
+.main-wrap .site-links {
+    position: relative;
+    width: 1001px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+
+/* 今日头条图片 */
+.site-links .toutiao {
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.toutiao img {
+    width: 238px;
+    height: 58px;
+    border: 1px solid #ABABAB;
+}
+
+
+/* 分类链接 */
+.site-links .links-left {
+    width: 238px;
+    height: 169px;
+    border: 1px solid #ABABAB;
+    position: absolute;
+    top: 76px;
+    left: 0;
+}
+
+.links-left .link-icons {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: -2px;
+    margin-right: 4px;
+    float: left;
+    margin-left: 3px;
+    background: url(../img/s_icon.png);
+}
+
+.links-left .i-tv {
+    background-position: -2px -177px;
+}
+
+.links-left .i-games {
+    background-position: -2px -268px;
+}
+
+.links-left .i-movies {
+    background-position: -2px -196px;
+}
+
+.links-left .i-cartoon {
+    background-position: -2px -520px;
+}
+
+.links-left .i-topnews {
+    background-position: -2px -304px;
+}
+
+.links-left .i-travel {
+    background-position: -1px -499px;
+}
+
+.links-left .i-lottery {
+    background-position: -2px -232px;
+}
+
+.links-left .i-novel {
+    background-position: -2px -322px;
+}
+
+.links-left .i-life {
+    background-position: -2px -160px;
+}
+
+.links-left .i-education {
+    background-position: -2px -214px;
+}
+
+.links-left ul {
+    padding: 0;
+}
+
+.links-left li {
+    height: 23px;
+    padding-left: 6px;
+    margin-bottom: 8px;
+}
+
+li.cartoon,
+li.travel,
+li.novel,
+li.education {
+    margin-left: 15px;
+}
+
+.links-left li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.links-left li a:hover {
+    color: #f30;
+    text-decoration: underline;
+}
+
+.links-left .split {
+    padding: 0 1px;
+    color: #999;
+    position: relative;
+    top: -1px;
+}
+
+
+/* 热门网站链接 */
+.site-links .links-right {
+    width: 748px;
+    height: 266px;
+    border: 1px solid #9ed18e;
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+
+
+/* 网址导航区域1 */
+.links .zone1 {
+    width: 100%;
+}
+
+.links-right ul {
+    padding: 0;
+}
+
+/* 区域1：重点热门网站链接 */
+.zone1 ul li {
+    width: 118px;
+    height: 21px;
+    margin: 0 -6px 5px 9px;
+    padding-left: 2px;
+    margin-bottom: 8px;
+    float: left;
+}
+
+.links-right ul li a {
+    color: #000;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.links-right ul li a:hover {
+    color: #f30;
+    text-decoration: underline;
+}
+
+.zone1 .website-icons {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    margin-right: 4px;
+    float: left;
+    margin-left: 3px;
+}
+
+.zone1 .site-baidu {
+    background: url(../img/banner.png) no-repeat 2px -198px;
+}
+
+.zone1 .site-sina {
+    background: url(../img/banner.png) no-repeat 2px -278px;
+}
+
+.zone1 .site-sohu {
+    background: url(../img/banner.png) no-repeat 2px -318px;
+}
+
+.zone1 .site-qq {
+    background: url(../img/banner.png) no-repeat 2px -38px;
+}
+
+.zone1 .site-netease {
+    background: url(../img/banner.png) no-repeat 2px -157px;
+}
+
+.zone1 .site-iqiyi {
+    background-image: url(../img/iqiyi.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-tianmao {
+    background-image: url(../img/tianmao.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-jx {
+    background-image: url(../img/jx.png);
+    width: 52px;
+    height: 13px;
+    position: relative;
+    left: 63px;
+    top: -17px;
+}
+
+.zone1 .site-ifeng {
+    background: url(../img/banner.png) no-repeat 2px -238px;
+}
+
+.zone1 .site-taobao {
+    background: url(../img/banner.png) no-repeat 2px -358px;
+}
+
+.zone1 .site-youxi {
+    background-image: url(../img/youxi.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-4399 {
+    background: url(../img/banner.png) no-repeat 2px 2px;
+}
+
+.zone1 .site-xinhua {
+    background-image: url(../img/xinhua.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-jd {
+    background-image: url(../img/jd.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-juhuasuan {
+    background-image: url(../img/jhs.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-tejia {
+    background-image: url(../img/tejia.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-yingshi {
+    background-image: url(../img/ys.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-auto {
+    background: url(../img/banner.png) 2px -518px no-repeat;
+}
+
+.zone1 .site-qunar {
+    background-image: url(../img/qunar.png);
+    width: 16px;
+    height: 16px;
+}
+
+.zone1 .site-add {
+    position: absolute;
+    top: 71px;
+    right: 6px;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/b_icon.png);
+    background-repeat: no-repeat;
+    background-position: -278px -396px;
+    border: 1px dotted #BBB;
+}
+
+div.addsite {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33px;
+    height: 33px;
+    background-image: url(../img/s_icon.png);
+    background-repeat: no-repeat;
+    background-position: -17px -119px;
+    cursor: pointer;
+}
+
+.line-split {
+    width: 728px;
+    height: 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #EFEEE9;
+    position: relative;
+    top: 88px;
+}
+
+/* 区域2：一般热门网站链接 */
+.links-right .zone2 {
+    width: 748px;
+    height: 170px;
+    position: absolute;
+    top: 96px;
+}
+
+.zone2 ul li {
+    width: 120px;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 -17px 5px 15px;
+    padding-left: 5px;
+    margin-bottom: 8px;
+    float: left;
+}
+
+ul li a.red-site {
+    color: #f30;
+    ;
+}
+
+ul li a.green-site {
+    color: #009c04;
+}
+
+ul li a.green-site:hover {
+    color: #009c04;
+}
+
+/* 点击更换主题按钮，底排链接网址字体颜色随之改变-Begin */
+ul li a.setgreen {
+    color: #34A637;
+}
+
+ul li a.setpurple {
+    color: #AB73E4;
+}
+
+ul li a.setpink {
+    color: #FD5B78;
+}
+
+ul li a.setblue {
+    color: #0EADF1;
+}
+/* 点击更换主题按钮，底排链接网址字体颜色随之改变-End */

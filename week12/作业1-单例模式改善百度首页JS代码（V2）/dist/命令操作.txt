@@ -1,0 +1,6 @@
+fis3 server start/stop  打开/关闭fis3内置server
+fis3 server open  打开server所在文件夹
+fis3 server clean  清除server/www中已发布的文件
+fis3 release  默认发布文件到server/www目录下
+fis3 release -wL  监控源代码的变化，并实时刷新浏览器
+fis3 release -d dist  发布文件到fis-config.js所在目录/dist目录下

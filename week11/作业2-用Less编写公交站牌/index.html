@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>用Less编写公交站牌</title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 当前公交站名 -->
+        <div class="box" id="this-station">
+            <div class="inner">
+                <p>
+                    <span class="chinese">一</span>
+                    <br>
+                    <span class="pinyin">YI</span>
+                </p>
+                <p>
+                    <span class="chinese">清</span>
+                    <br>
+                    <span class="pinyin">QING</span>
+                </p>
+                <p>
+                    <span class="chinese">新</span>
+                    <br>
+                    <span class="pinyin">XIN</span>
+                </p>
+                <p>
+                    <span class="chinese">村</span>
+                    <br>
+                    <span class="pinyin">CUN</span>
+                </p>
+            </div>
+        </div>
+        <!-- 36路公交车 -->
+        <div class="box" id="line36">
+            <!-- 线路信息：线路名称、运营时间、下一站信息 -->
+            <div class="line-info">
+                <div class="line-number">36</div>
+                <div class="line-time">首班06:15&nbsp;末班21:50</div>
+                <div class="next-station">
+                    <p>下站</p>
+                    <p class="next-station-name">仓基新村</p>
+                    <hr>
+                </div>
+            </div>
+            <!-- 所有停靠站点标示 -->
+            <ul class="line-list">
+                <li><span>公</span><span>交</span><span>一</span><span>公</span><span>司</span></li>
+                <li><span>节</span><span>能</span><span>公</span><span>司</span></li>
+                <li><span>翠</span><span>苑</span><span>一</span><span>区</span><span>东</span></li>
+                <li><span>文</span><span>一</span><span>路</span><span>学</span><span>院</span><span>路</span><span>口</span></li>
+                <li><span>白</span><span>荡</span><span>海</span></li>
+                <li><span>︵</span><span>电</span><span>子</span><span>科</span><span>大</span><span>︶</span></li>
+                <li class="current"><span>一</span><span>清</span><span>新</span><span>村</span></li>
+                <li><span>仓</span><span>基</span><span>新</span><span>村</span></li>
+                <li><span>婆</span><span>娑</span><span>桥</span></li>
+                <li><span>哑</span><span>巴</span><span>弄</span></li>
+                <li><span>长</span><span>乐</span><span>路</span></li>
+                <li><span>二</span><span>纺</span><span>机</span><span>总</span><span>厂</span></li>
+                <li><span>沈</span><span>塘</span><span>湾</span></li>
+                <li><span>善</span><span>贤</span><span>社</span><span>区</span></li>
+                <li><span>善</span><span>贤</span><span>坝</span></li>
+                <li><span>皋</span><span>亭</span><span>坝</span><span>北</span></li>
+                <li><span>墙</span><span>门</span><span>里</span></li>
+                <li><span>科</span><span>园</span><span>路</span></li>
+            </ul>
+            <!-- 当前路线开往方向 -->
+            <div class="direction">
+                <div class="dir-word">开往方向</div>
+                <div class="dir-arrow"></div>
+                <div class="dir-arrow-sharp"></div>
+            </div>
+        </div>
+        <!-- 43路公交车 -->
+        <div class="box" id="line43">
+            <!-- 线路信息：线路名称、运营时间、下一站信息 -->
+            <div class="line-info">
+                <div class="line-number">43</div>
+                <div class="line-time">首班05:10&nbsp;末班19:00</div>
+                <div class="next-station">
+                    <p>下站</p>
+                    <p class="next-station-name">德胜路东粮泊巷口</p>
+                    <hr>
+                </div>
+            </div>
+            <!-- 所有停靠站点标示 -->
+            <ul class="line-list">
+                <li><span>蒋</span><span>村</span><span>公</span><span>交</span><span>中</span><span>心</span><span>站</span></li>
+                <li><span>蒋</span><span>村</span><span>商</span><span>住</span><span>区</span></li>
+                <li><span>骆</span><span>家</span><span>庄</span></li>
+                <li><span>雅</span><span>士</span><span>苑</span></li>
+                <li><span>益</span><span>乐</span><span>新</span><span>村</span></li>
+                <li><span>文</span><span>一</span><span>西</span><span>路</span><span>东</span><span>口</span></li>
+                <li><span>宋</span><span>江</span><span>村</span></li>
+                <li><span>翠</span><span>苑</span><span>一</span><span>区</span></li>
+                <li><span>文</span><span>一</span><span>路</span><span>学</span><span>院</span><span>路</span><span>口</span></li>
+                <li><span>白</span><span>荡</span><span>海</span></li>
+                <li><span>︵</span><span>电</span><span>子</span><span>科</span><span>大</span><span>︶</span></li>
+                <li class="current"><span>一</span><span>清</span><span>新</span><span>村</span></li>
+                <li><span>德</span><span>胜</span><span>路</span><span>东</span><span>粮</span><span>泊</span><span>巷</span><span>口</span></li>
+                <li><span>德</span><span>胜</span><span>新</span><span>村</span><span>南</span></li>
+                <li><span>德</span><span>胜</span><span>里</span></li>
+                <li><span>德</span><span>胜</span><span>东</span><span>村</span></li>
+                <li><span>长</span><span>城</span><span>机</span><span>电</span></li>
+                <li><span>白</span><span>田</span><span>畈</span></li>
+                <li><span>三</span><span>里</span><span>亭</span></li>
+                <li><span>天</span><span>城</span><span>路</span><span>范</span><span>家</span><span>路</span><span>口</span></li>
+                <li><span>火</span><span>车</span><span>东</span><span>站</span><span>西</span></span>
+                </li>
+            </ul>
+            <!-- 当前路线开往方向 -->
+            <div class="direction">
+                <div class="dir-word">开往方向</div>
+                <div class="dir-arrow"></div>
+                <div class="dir-arrow-sharp"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

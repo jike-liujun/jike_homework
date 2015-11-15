@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/me.css">
+    <title>Bootstrap后台管理界面</title>
+</head>
+
+<body>
+    <!-- 页面顶部导航条 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- 公司Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/Twitter.png" alt="brand_logo">
+                </a>
+            </div>
+            <!-- 导航链接、页面全局搜索框及账户管理下拉菜单 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <!-- 全局搜索框 -->
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索...">
+                    </div>
+                    <button type="submit" class="btn btn-default">Go!</button>
+                </form>
+                <!-- 用户管理下拉菜单 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">账户管理 <span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">账户信息</a></li>
+                            <li><a href="#">收件箱</a></li>
+                            <li><a href="#">日程安排</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html">锁屏</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面主体部分 -->
+    <div class="container-fluid" id="page">
+        <div class="row">
+            <!-- 左侧边栏：后台管理导航栏 -->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a data-toggle="collapse" href="#">会员管理</a></li>
+                    <li><a href="#">会员信息</a></li>
+                    <li><a href="#">充值记录</a></li>
+                    <li><a href="#">会员活动</a></li>
+                    <li class="active"><a href="#">商品管理</a></li>
+                    <li><a href="#">商品列表</a></li>
+                    <li><a href="#">添加商品</a></li>
+                    <li><a href="#">下架商品</a></li>
+                    <li><a href="#">缺货登记</a></li>
+                    <li><a href="#">品牌管理</a></li>
+                    <li class="active"><a href="#">供应商管理</a></li>
+                    <li><a href="#">供应商信息</a></li>
+                    <li><a href="#">订单管理</a></li>
+                    <li><a href="#">物流物流</a></li>
+                </ul>
+            </div>
+            <!-- 主区域：信息显示区 -->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <!-- 路径导航链接 -->
+                <ol class="breadcrumb">
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="#">会员管理</a></li>
+                    <li class="active">会员信息</li>
+                </ol>
+                <!-- 主体面板：会员信息记录表 -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">会员信息记录表</div>
+                    <div class="panel-body">
+                        <div id="first">
+                            <button type="button" class="btn btn-success left" id="add">增 加 <span class="glyphicon glyphicon-plus"></span></button>
+                            <button type="button" class="btn btn-default right dropdown" id="tools">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">工 具 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">打印</a></li>
+                                    <li><a href="#">保存为PDF</a></li>
+                                    <li><a href="#">导出表格</a></li>
+                                </ul>
+                            </button>
+                        </div>
+                        <div id="second">
+                            <div class="row left record">
+                                <div >
+                                    <label class="form-inline">
+                                        <select class="form-control">
+                                            <option value="1">5</option>
+                                            <option value="1" selected>10</option>
+                                            <option value="1">20</option>
+                                            <option value="1">50</option>
+                                        </select>&nbsp;&nbsp;条记录/页
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group right table_search">
+                                <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">搜索表格</button>
+                            </span>
+                                <input type="text" class="form-control" placeholder="Search for...">
+                            </div>
+                        </div>
+                        <!-- 数据表显示区 -->
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <td>用户ID</td>
+                                <td>真实姓名</td>
+                                <td>邮件</td>
+                                <td>手机号</td>
+                                <td>会员等级</td>
+                                <td>积分</td>
+                                <td>注册时间</td>
+                                <td>编辑</td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>10001</td>
+                                <td>齐达内</td>
+                                <td>zidane@gmail.com</td>
+                                <td>18000000000</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>50000</td>
+                                <td>1999.09.01</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10002</td>
+                                <td>大罗</td>
+                                <td>ronaldo@outlook.com</td>
+                                <td>18000000001</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>48898</td>
+                                <td>1999.09.08</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10003</td>
+                                <td>贝克汉姆</td>
+                                <td>beckham@hotmail.uk</td>
+                                <td>18912340002</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>66666</td>
+                                <td>2000.01.01</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10004</td>
+                                <td>菲戈</td>
+                                <td>figo@gmail.com</td>
+                                <td>18900002012</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>46668</td>
+                                <td>2000.04.01</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10005</td>
+                                <td>劳尔</td>
+                                <td>raul@aliyun.com</td>
+                                <td>15988886666</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>39999</td>
+                                <td>2000.08.08</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10006</td>
+                                <td>欧文</td>
+                                <td>owen@gmail.uk</td>
+                                <td>18613145888</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>44444</td>
+                                <td>2001.02.08</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10009</td>
+                                <td>拉姆</td>
+                                <td>lahm@gmail.de</td>
+                                <td>18021348000</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>66668</td>
+                                <td>2005.11.12</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10011</td>
+                                <td>C罗</td>
+                                <td>C.ronaldo@outlook.com</td>
+                                <td>17036668008</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>46880</td>
+                                <td>2007.02.14</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10012</td>
+                                <td>卡卡</td>
+                                <td>kaka@yahoo.com</td>
+                                <td>17126548888</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>86668</td>
+                                <td>2007.11.22</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10013</td>
+                                <td>梅西</td>
+                                <td>messi@gmail.com</td>
+                                <td>17044246688</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                    <span class="glyphicon glyphicon-star star"></span>
+                                </td>
+                                <td>82658</td>
+                                <td>2008.01.06</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-sm">编 辑</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <nav class="text-right" id="page_divide">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

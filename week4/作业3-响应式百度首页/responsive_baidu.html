@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link media="screen and (max-device-width:1080px)" rel="stylesheet" href="./css/baidu_mobile.css" />
+    <link media="screen and (min-device-width:1081px)" rel="stylesheet" href="./css/baidu_pc.css" />
+    <title>响应式百度</title>
+    <!--[if lt IE 9]> 
+    <script> 
+       (function() {  
+         if (!  
+         /*@cc_on!@*/  
+         0) return;  
+         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');  
+         var i= e.length;  
+         while (i--){  
+             document.createElement(e[i]);  
+         }  
+       })()
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 移动版可弹性伸缩百度首页 -->
+    <div class="mobile">
+        <!-- 页面头部区域：包含登录按钮、百度Logo、搜索框及常规导航栏 -->
+        <div id="header">
+            <div id="user_info">
+                <div id="login">
+                    <a href="#">
+                        <img src="./image/avatar.png" alt="登录按钮">
+                    </a>
+                </div>
+            </div>
+            <div id="logo">
+                <img src="./image/plus_logo.png" alt="百度一下,你就知道">
+            </div>
+            <form autocomplete="off">
+                <div class="search-wrap">
+                    <span class="total">
+                        <span class="bd_mic"></span>
+                    <input type="text" class="search_content">
+                    </span>
+                    <input type="submit" value="百度一下" class="baidu_button">
+                </div>
+            </form>
+            <div id="navs">
+                <a href="#"><i class="navs-news"></i>新闻</a>
+                <a href="#"><i class="navs-novel"></i>小说</a>
+                <a href="#"><i class="navs-video"></i>视频</a>
+                <a href="#"><i class="navs-life"></i>生活+</a>
+                <a href="#"><i class="navs-map"></i>地图</a>
+                <a href="#"><i class="navs-more"></i>更多</a>
+            </div>
+        </div>
+        <!-- 页面中部区域：卡片式内容栏，包含常用网址、实时热点和周边服务 -->
+        <div id="plus-card">
+            <!-- 常用网址 -->
+            <div class="daily plus">
+                <div class="plus-title">
+                    <span class="daily-nav icon"></span>
+                    <h2>常用网址</h2>
+                    <a href="#"><span class="icon-edit"></span></a>
+                </div>
+                <div class="plus-content">
+                    <a href="#"><span>贴吧</span></a>
+                    <a href="#"><span>hao123</span></a>
+                    <a href="#"><span>地图</span></a>
+                    <a href="#"><span>应用</span></a>
+                    <a href="#"><span>图片</span></a>
+                    <a href="#"><span>音乐</span></a>
+                    <a href="#"><img src="./image/plus-icon.png"></a>
+                </div>
+            </div>
+            <!-- 实时热点 -->
+            <div class="hot plus">
+                <div class="plus-title">
+                    <span class="hot-nav icon"></span>
+                    <h2>实时热点</h2>
+                    <span class="icon-refresh">换一批</span>
+                    <a href="#"><span class="icon-edit"></span></a>
+                </div>
+                <div class="plus-content">
+                    <a href="#"><span>金星炮轰黄子韬</span></a>
+                    <a href="#"><span>网友品皇家七夕宴</span></a>
+                    <a href="#"><span>施瓦辛格录好声音</span></a>
+                    <a href="#"><span>女子逼小学生让座</span></a>
+                    <a href="#"><span>王健林成华人首富</span></a>
+                    <a href="#"><span>杨万里去世</span></a>
+                </div>
+            </div>
+            <!-- 周边服务 -->
+            <div class="service plus">
+                <div class="plus-title test1">
+                    <span class="service-nav icon"></span>
+                    <h2>周边服务</h2>
+                    <a href="#"><span class="icon-edit"></span></a>
+                </div>
+                <div class="gps_zone test2">
+                    <p>点击定位，查看附近位置信息</p>
+                    <span class="icon-position">定位</span>
+                </div>
+                <div class="plus-content test3">
+                    <ul id="service_list">
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon1"></div>
+                                <p>看电影</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon2"></div>
+                                <p>美食</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon3"></div>
+                                <p>酒店</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon4"></div>
+                                <p>银行</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon5"></div>
+                                <p>公交站</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon6"></div>
+                                <p>景点</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon7"></div>
+                                <p>外卖</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon" id="icon8"></div>
+                                <p>团购</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 页面底部区域：切换页面版本、意见反馈栏及网站备案信息 -->
+        <div id="copyright">
+            <div class="switch">
+                <p id="p1"><a href="#">极速版</a></p>
+                <p id="p2"><a href="#">用户反馈</a></p>
+            </div>
+            <p id="p3"><a href="#">使用百度前必读&nbsp;Baidu&nbsp;京ICP证030173号</a></p>
+        </div>
+    </div>
+    <!-- PC版百度首页 -->
+    <div class="pc">
+        <div class="container">
+            <!-- 页面顶部：右上角导航栏部分 -->
+            <nav>
+                <a href="http://news.baidu.com/">新闻</a>
+                <a href="http://www.hao123.com/">hao123</a>
+                <a href="http://map.baidu.com/">地图</a>
+                <a href="http://v.baidu.com/">视频</a>
+                <a href="http://tieba.baidu.com/">贴吧</a>
+                <a href="https://www.baidu.com/">登录</a>
+                <a href="https://www.baidu.com/">设置</a>
+                <a href="http://www.baidu.com/more/" class="more_p">更多产品</a>
+            </nav>
+            <!-- 页面中部：百度Logo、搜索框以及按钮部分 -->
+            <div class="middle">
+                <div id="baidu_logo">
+                    <img src="./image/bd_logo.png" alt="百度logo">
+                </div>
+                <form>
+                    <span class="test">
+                    <span class="bd_mic"></span>
+                    <input type="text" class="search_content" autofocus>
+                    </span>
+                    <input type="submit" value="百度一下" class="baidu_button">
+                </form>
+            </div>
+            <!-- 页面底部：百度简介、版权以及备案信息部分 -->
+            <footer>
+                <p class="about_baidu">
+                    <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为首页</a>
+                    <a href="http://home.baidu.com/">关于百度</a>
+                    <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-homeprofile">About  Baidu</a>
+                </p>
+                <p id="cp">&copy;2015&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp;<a href="http://jianyi.baidu.com/">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i class="c-icon"></i></p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
